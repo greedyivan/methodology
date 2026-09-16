@@ -28,7 +28,7 @@ The execution stage of a change. Terminology — [`../../reference/glossary.md`]
 ## Cycle
 
 1. File exchange: `.claude/tmp/realize-change-<slug>/` — `impl-ledger.md` (RL-n records, an id-space shared with the spec registry R-xx).
-2. The orchestrator hands the realizer the spec + charter + registry paths + the codebase; research artifacts are NOT input — a need for them = halt + a scope-completeness finding (fix the spec, do not build a shadow channel). The orchestrator cross-checks relayed numeric claims (counters, sizes, line counts) by a run before retransmission into task prompts and summaries.
+2. The orchestrator hands the realizer the spec + charter + registry paths + the codebase; research artifacts are NOT input — a need for them = halt + a scope-completeness finding (fix the spec, do not build a shadow channel). Relayed numeric claims (counters, sizes, line counts) enter task prompts and summaries only as copy-paste from a fresh run, with the run command quoted in the brief — not from memory or arithmetic.
 3. On completion: the orchestrator runs the gate canons, confirms Tier-1 green, starts verify-change. For eval-first RUN channels the orchestrator also re-runs the blank counters (T3/consensus fields) after the readers finish — the closing RUN gate is a re-run, not a relay (a run-discipline RCA of a real incident series).
 4. **LAND point (self-change cycles):** the L1–L5 invariant table × evidence + a SHADOW line in the tmp dir (`invariants-L.md`); the cycle's realize directory is entered into the metrics-ledger window list (M8 visibility of realize SENSOR lines; monitor.md "Window").
 

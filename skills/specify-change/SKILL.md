@@ -57,9 +57,10 @@ The decision is **criterion-oriented**, not preference-based (Keeney, *Value-Foc
 ## Cycle
 
 1. File exchange: `.claude/tmp/specify-change-<slug>/`.
-2. The orchestrator — a pure coordinator (passes paths, reads the spec header, emits checkpoints). The orchestrator re-verifies relayed numeric claims (counters, sizes, line counts) by a run before retransmission into task prompts and summaries. Before launching audit — a control re-run of the spec's own counters (header, registry tables, summary records): a discrepancy — return to the Specifier (materialized by reconcile from a real incident series).
+2. The orchestrator — a pure coordinator (passes paths, reads the spec header, emits checkpoints). Relayed numeric claims (counters, sizes, line counts) enter task prompts and summaries only as copy-paste from a fresh run, with the run command quoted in the brief — not from memory or arithmetic. Before launching audit — a control re-run of the spec's own counters (header, registry tables, summary records): a discrepancy — return to the Specifier (materialized by reconcile from a real incident series).
 3. **Specifier** — a subagent (fresh for complex changes). Mandate — [`assets/specifier-charter.md`](assets/specifier-charter.md). Produces the 5-strata spec from the charter + the codebase. Self-change cycle: the finalized spec carries the L1–L5 × evidence invariant table (PCC; legitimacy-invariants).
 4. Checkpoint 1 → the authoring point (halt) → resolution → (Checkpoint 2) → spec finalized → passed to `audit-change`.
+5. **Exit self-check (spec → FINAL):** the final re-run enumerates the spec's own gates — every S1/S2 line declaring a runnable check (grep/probe/command) enters FINAL only with an authoring-time run record beside it, both directions; a gate absent from the re-run enumeration = red (not FINAL). Escalation rider: one more instance of the gate-without-run-pin class in any cycle → a mandatory mechanical exit gate.
 
 ## Multi-type changes
 
