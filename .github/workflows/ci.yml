@@ -1,0 +1,55 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: shell syntax
+        run: bash -n tools/run-in-docker.sh
+
+      - name: python compile
+        run: python3 -m py_compile tools/validate_events.py tools/validate_sensor.py tools/collect_xes.py tools/dprime_measure.py
+
+      - name: validators over ci-fixtures (positive + negative)
+        run: |
+          python3 tools/validate_sensor.py tools/ci-fixtures/sensor.txt
+          python3 tools/validate_events.py tools/ci-fixtures/events.jsonl
+          if python3 tools/validate_sensor.py tools/ci-fixtures/sensor-bad.txt; then
+            echo "FAIL: sensor validator accepted a bad fixture"; exit 1
+          fi
+          if python3 tools/validate_events.py tools/ci-fixtures/events-bad.jsonl; then
+            echo "FAIL: events validator accepted a bad fixture"; exit 1
+          fi
+
+      - name: purity pin (private markers vs allowlist)
+        env:
+          LC_ALL: C.UTF-8
+        run: |
+          MARKERS='[а-яА-ЯёЁ]|anyval-|gbon|ts-eslint-11543|react-router-9991|vitest-8339|gbo7|0f7b825|450fe80|eeabd10|6373bd94|775c5f57|method-lab'
+          grep -rniP "$MARKERS" . --exclude-dir=.git --exclude=purity-allowlist.txt --exclude=ci.yml | sed -E 's#^\./([^:]+):[0-9]+:#\1:#' | sort | diff tools/ci-fixtures/purity-allowlist.txt -
+
+      - name: md links resolve
+        run: |
+          python3 - <<'EOF'
+          import os, re, subprocess, sys
+          bad = []
+          md = subprocess.run(['git', 'ls-files', '*.md'], capture_output=True, text=True).stdout.split()
+          for f in md:
+              text = open(f, encoding='utf-8').read()
+              for m in re.finditer(r'\[[^\]]*\]\(([^)]+)\)', text):
+                  t = m.group(1).split('#')[0]
+                  if not t or ':' in t:
+                      continue
+                  if not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(f), t))):
+                      bad.append(f'{f} -> {t}')
+          print('\n'.join(f'BROKEN {b}' for b in bad) or 'md links: 0 broken')
+          sys.exit(1 if bad else 0)
+          EOF

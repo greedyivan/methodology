@@ -1,0 +1,7 @@
+norms/integration-canon.md:grep -rhE '^- \*\*(anchor set|якорный набор):\*\*' operational-repo/registry/deferred-options.md \
+norms/integration-canon.md:grep -rnE 'materialized by reconcile|материализовано reconcile' --include='*.md' . \
+norms/legitimacy-invariants.md:Lines emitted before the W3 latinization carry the legacy RU field spellings (`программа=`, `verdict=сохранены/нарушен L(i)`, `таблица=`) — they remain valid historical records of the metrics-ledger.
+norms/monitor.md:- **Retro list:** instances of the double-loop class «посылка о состоянии артефакта не сверена» — in the metrics-ledger with window sources as provenance (absorbed by the forward convention as they accumulate).
+norms/monitor.md:| M4 | recurrent classes | classes with ≥2 instances across cycles; identification — REG-C13 (see below) | the `class:|класс:` label in findings/process + the ledger retro list |
+norms/monitor.md:| M6 | registry live hits | the marker `FIRED` in the context of the trigger-matching sections of charters (glossary `trigger-matching point`); exception: pattern mentions (spec/meta-artifacts — in backticks or as prose about the pattern, not in the context of an actual reconciliation) | `FIRED|СРАБОТАЛ` over the window |
+norms/monitor.md:| M7 | remediation regressions | events per finding-id (a fix introduces a new error in the fix zone); a lexical counter is unreliable | the `regression|регресс` annotation in findings round N+1 ↔ round N |

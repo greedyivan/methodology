@@ -1,0 +1,1 @@
+SENSOR | kind=bogus | actor=CI | stage=verify | outcome=averted | point=in-moment | bad tail without separator
