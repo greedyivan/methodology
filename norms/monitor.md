@@ -6,6 +6,8 @@ An orchestrator procedure (MAPE-K Monitor+Analyze; counters, not interpretation 
 
 The list of formal-era directories — in `metrics-ledger` (instance-state: `operational-repo/telemetry/metrics-ledger.md`; the first line = the provenance base). Criterion: round-ledger cycles; the M6/M8 canon sources are outside the criterion — covered by the list. Verdict-only directories without a round-ledger (the pre-formal era) and product cycles — outside the window; when inventoried → a coverage-gap observation (not an error). Extending the list — an explicit authoring decision at the monitor summary (a new summary announces the extended window and recomputes the norms; pre-registration is preserved); between summaries, new self-change cycles carry a SHADOW line against the norms of the active window and do not enter the list.
 
+Policy (author decision at the galaxy-macrostates program boundary, 2026-09-18): product-domain cycles (external project clones, e.g. physics-notes) stay outside the window by default — the norms are pre-registered on the self-change corpus, and blending structurally different severity economics would distort the baselines; their standing form is a SHADOW line plus the program-summary class ledger, and coverage-gap is the standing procedural observation carrying their escalations (the SHADOW disposition channel delivered the classes' RCAs without window membership). Same-corpus continuations of existing window lineages (gbon) remain in-window by historical membership. Extension remains available at any future monitor summary on more data (recompute + announcement, pre-registration preserved).
+
 
 ## Closed set M1–M8 (formulas; grep carriers)
 
