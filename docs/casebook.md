@@ -97,15 +97,28 @@ generalize to any spec carrying derived fixtures and numeric pins.
     caught only by the next audit round.
 
 11. **The orchestrator's pre-audit run of fenced fixtures** (the "an
-    operational fixture recorded without a run" RCA class: 2 BLOCKERs across
-    the rounds + 4 SENSOR for one spec): right after the spec is finalized
-    (CPs closed) and BEFORE audit is launched, the orchestrator executes
-    every fenced command fixture of the spec in its exact form and
-    reconciles the output with the declared one; a discrepancy is returned
-    to specify before the audit. Reason: the rule "a pattern is written by a
-    run" has no forcing function at the Specifier's — the fenced block
-    documents the run, but does not execute it, and an aspirational entry
-    survives the self-check (two lines are blind identically: the author of
-    the insertion and its re-reading). The successor of the form — entry 5;
-    applied in a later cycle (3 fixtures → the verifier zone reproduced
-    before launch, no relapses of the class).
+     operational fixture recorded without a run" RCA class: 2 BLOCKERs across
+     the rounds + 4 SENSOR for one spec): right after the spec is finalized
+     (CPs closed) and BEFORE audit is launched, the orchestrator executes
+     every fenced command fixture of the spec in its exact form and
+     reconciles the output with the declared one; a discrepancy is returned
+     to specify before the audit. Reason: the rule "a pattern is written by a
+     run" has no forcing function at the Specifier's — the fenced block
+     documents the run, but does not execute it, and an aspirational entry
+     survives the self-check (two lines are blind identically: the author of
+     the insertion and its re-reading). The successor of the form — entry 5;
+     applied in a later cycle (3 fixtures → the verifier zone reproduced
+     before launch, no relapses of the class).
+
+12. **An explanation of a run-fact is itself a run-fact** (the "unrun-RCA"
+     class, 2 instances in one cycle: a pinned exit-code literal transcribed
+     from memory; an RCA narrative attributing the wrong pin to a property
+     of the "old form" — the explanation itself never run): a claim about
+     run behavior — a pinned literal, a count, or a causal explanation of
+     why a run behaved as recorded — enters a spec/record only born by the
+     run it describes; an RCA explaining a defect without re-running the
+     defective thing is a hypothesis, and is recorded as one (or run).
+     Reason: the correction record for the first instance was itself the
+     second — the correction path re-generates the class unless the run is
+     forced; both instances were caught by fresh auditors' runs,
+     pre-realize.
