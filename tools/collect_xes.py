@@ -223,7 +223,7 @@ def main():
     ap.add_argument("--project", required=True)
     ap.add_argument("--slug", required=True)
     ap.add_argument("--tmp-root", type=Path, required=True)
-    ap.add_argument("--out", type=Path, default=Path("operational-repo/telemetry/xes"))
+    ap.add_argument("--out", type=Path, required=True, help="output directory for the event stores (required; carrier placement is instance-owned)")
     ap.add_argument("--trace-attr", action="append", default=[])
     args = ap.parse_args()
 

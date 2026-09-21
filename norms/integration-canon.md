@@ -16,7 +16,7 @@ The canon is the Ostrom minimum: boundaries, discipline, a resolution mechanism,
 ## Merge model
 
 - Under divergence — **merge, not rebase** (rebase multiplies conflicts by the number
-  of local commits; precedent — a real conflict series of the pre-publication history).
+  of local commits).
 - Content conflicts — **keep-both**: the lines are additive by nature
   (materialized lessons); state lines ("Alive after revision…") — from
   the corrected (later by provenance) line.
@@ -24,31 +24,35 @@ The canon is the Ostrom minimum: boundaries, discipline, a resolution mechanism,
   recorded in the session artifact (the repair-time registry — a health
   metric of the corpus).
 
-## Merge-integrity checks (run by the integrator on the merged tree; u2c runs from the corpus repo root; the u2a/u2b registry path is instance-state — resolved from the instance root, not the corpus repo root; glossary `instance`, `instance-state`)
+## Merge-integrity checks (run by the integrator on the merged tree; u2c runs from the corpus repo root; the u2a/u2b subject is the registry — an instance-state role — resolved at launch from the instance's `carrier declaration`, not from the corpus repo root; glossary `instance`, `instance-state`, `carrier declaration`)
 
 ```bash
+# u2a/u2b shared input: reg = the registry path, resolved at launch from
+# the instance's carrier declaration (glossary `carrier declaration`)
+reg='<resolved from the carrier declaration>'
+
 # u2a — registry item id uniqueness (empty output = clean)
-grep -rh '^- \*\*id:\*\*' operational-repo/registry/deferred-options.md \
+grep -rh '^- \*\*id:\*\*' "$reg" \
   | sed 's/^- \*\*id:\*\* //' | sort | uniq -d
 
 # u2b — shared item anchors (output = the integrator's review list;
 # full automation impossible: an anchor match ≠ a trigger collision;
 # EN field form with the legacy RU form tolerated — W3 transition)
-grep -rhE '^- \*\*(anchor set|якорный набор):\*\*' operational-repo/registry/deferred-options.md \
+grep -rhE '^- \*\*(anchor set|якорный набор):\*\*' "$reg" \
   | grep -oE '[A-Za-z0-9_.-]+\.(md|go|ts|tsx|php)|[A-Z][A-Za-z-]+ (19|20)[0-9]{2}' \
   | sort | uniq -c | awk '$1>1'
 
-# u2c — files where reconcile materialized >1 rule (per-file stamp density;
-# output = review: complementarity vs homonymy, BLN taxonomy;
-# EN stamp form with the legacy RU form tolerated — W3 transition)
-grep -rnE 'materialized by reconcile|материализовано reconcile' --include='*.md' . \
-  | grep -v deferred-options | cut -d: -f1 | sort | uniq -c | awk '$1>1'
+# u2c — artifacts carrying >1 casebook forward link (forward-link density;
+# output = review: complementarity vs homonymy, BLN taxonomy)
+grep -h 'materialized into:' docs/casebook.md \
+  | grep -oE '[A-Za-z0-9_./-]+\.(md|go|ts|tsx|py)' | sort | uniq -c | awk '$1>1'
 ```
 
 Dispositions for the u2b/u2c lists are recorded by the integrator (the decision — what is
 complementary, what is a homonym; a homonym → rename/merging of norms). u2c aggregation
-semantics (post-W3): per-file stamp density — the review trigger is "multiple rules
-materialized in one file"; per-source identity is not retained in the aggregation.
+semantics (post-sweep): per-artifact forward-link density — the review trigger is
+"multiple casebook entries materializing into one artifact"; per-entry identity is
+not retained in the aggregation.
 Honest declaration: u2b/u2c — a review channel, not an auto-gate.
 
 ## Escalation ladder (registry)

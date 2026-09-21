@@ -33,8 +33,8 @@ jobs:
         env:
           LC_ALL: C.UTF-8
         run: |
-          MARKERS='[а-яА-ЯёЁ]|anyval-|gbon|ts-eslint-11543|react-router-9991|vitest-8339|gbo7|0f7b825|450fe80|eeabd10|6373bd94|775c5f57|method-lab'
-          grep -rniP "$MARKERS" . --exclude-dir=.git --exclude=purity-allowlist.txt --exclude=ci.yml | sed -E 's#^\./([^:]+):[0-9]+:#\1:#' | sort | diff tools/ci-fixtures/purity-allowlist.txt -
+          MARKERS='[а-яА-ЯёЁ]|anyval-|gbon|ts-eslint-11543|react-router-9991|vitest-8339|gbo7|0f7b825|450fe80|eeabd10|6373bd94|775c5f57|method-lab|materialized by reconcile|from a real incident series|precedent —'
+          grep -rniP "$MARKERS" . --exclude-dir=.git --exclude=purity-allowlist.txt --exclude=ci.yml --exclude=casebook.md | sed -E 's#^\./([^:]+):[0-9]+:#\1:#' | sort | diff tools/ci-fixtures/purity-allowlist.txt -
 
       - name: md links resolve
         run: |

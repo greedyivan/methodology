@@ -16,15 +16,15 @@ The final stage of the chain. Terminology — [`../../reference/glossary.md`](..
 
 ## What it does
 
-1. **Registry revision** (the revision point — operational-repo/registry/deferred-options.md, the schema/R4 there as well): a per-item expiry check; the expired and the fulfilled → drop with a rationale (bypassing the registry) by the author's decision; the alive — stay. The items that fired in the cycle — their firings have already been processed by the trigger-matching points (glossary: `trigger-matching point`) of their own stages; here — only the item's fate.
+1. **Registry revision** (the revision point — the registry, an instance-state role; glossary: `instance-state role`, `carrier declaration`; the schema/R4 there as well): a per-item expiry check; the expired and the fulfilled → drop with a rationale (bypassing the registry) by the author's decision; the alive — stay. The items that fired in the cycle — their firings have already been processed by the trigger-matching points (glossary: `trigger-matching point`) of their own stages; here — only the item's fate.
 2. **Disposition of process findings:** the process findings of the round-ledgers, the RCA notes of verify, L0-tolerations with a revision-condition — each receives an outcome:
-   - **process edit** — a micro-diff of an artifact (a subagent's charter / the glossary / the monitor norms), materializing the dimension into the next cycle's checklist (glossary: `frozen checklist`);
+   - **process edit** — a micro-diff of an artifact (a subagent's charter / the glossary / the monitor norms), materializing the dimension into the next cycle's checklist (glossary: `frozen checklist`); the emitted text and history follow the `## Materialization form` contract;
    - **DEFER** — a record into the registry by the 7-field schema (by a `trigger predicate` (glossary), not by a date);
    - **to-tracking** — a report line with an escalation trigger condition.
 3. **k12 protocol** (enters here by the k12 item's build-path): adjudications L2–L4 with a terminological root-cause → the "Flagged ambiguities" section in the glossary (the term split/banned + the ground). The section is started by the first case, not in advance.
 4. **Ledger hygiene:** a check of the metrics-ledger against the artifacts (the formal-era windows, SHADOW lines, sufficiency marks); a divergence — a reconcile finding.
-5. **Task-list sync** (the stage's standing deliverable; the carrier — `operational-repo/tasks/task-list.md`): a check of the "Deferred" mirror against the registry (id + expiry; a divergence — a sync defect) and the removal of the completed items' cards; the mechanics of the lists — the instance-topology task-list norm of the instance's agent-instructions surface.
-6. **instance-spec delta** (the stage's standing deliverable; the carrier — the instance's surface inventory `instance-spec.md`, an instance-state artifact at the typed path of the operational overlay — the live inventory of the instance's surfaces): the ADDED / MODIFIED / REMOVED delta is applied to the completing cycle's changeset — a mechanical derivation from `git diff --name-status` against the registry's rows and classes (not an opinion). The depth — the registry's rows: a skill — the skill's row (SKILL.md); the assets of all skills are accounted for by a class row (a new skill: ADDED of the skill's row + the increment of the assets class row); mass directories — by class rows; paths outside the inventory classes (the `cycle workspace` (glossary), session memory) generate no delta; a rename (R100) — MODIFIED of the row with the path updated; a delete and a re-add in one changeset — MODIFIED. The moment — intra-changeset: the edit of the inventory body enters the cycle's closing changeset before the land (reconcile's self-application — in the same order); the delta list (classes + rows) — in the reconcile report and the commit message. By the same step — a drift check: `git ls-files` of both repos against the registry's rows; a divergence (an orphan row, an uncovered file) — a finding, closed by the same cycle's delta or by an authoring question.
+5. **Task-list sync** (the stage's standing deliverable; the carrier — the task lists, an instance-state role resolved via the instance's `carrier declaration`): a check of the "Deferred" mirror against the registry (id + expiry; a divergence — a sync defect) and the removal of the completed items' cards; the mechanics of the lists — the instance-topology task-list norm of the instance's agent-instructions surface.
+6. **instance-spec delta** (the stage's standing deliverable; the carrier — the surface inventory, an instance-state role resolved via the instance's `carrier declaration` — the live inventory of the instance's surfaces): the ADDED / MODIFIED / REMOVED delta is applied to the completing cycle's changeset — a mechanical derivation from `git diff --name-status` against the registry's rows and classes (not an opinion). The depth — the registry's rows: a skill — the skill's row (SKILL.md); the assets of all skills are accounted for by a class row (a new skill: ADDED of the skill's row + the increment of the assets class row); mass directories — by class rows; paths outside the inventory classes (the `cycle workspace` (glossary), session memory) generate no delta; a rename (R100) — MODIFIED of the row with the path updated; a delete and a re-add in one changeset — MODIFIED. The moment — intra-changeset: the edit of the inventory body enters the cycle's closing changeset before the land (reconcile's self-application — in the same order); the delta list (classes + rows) — in the reconcile report and the commit message. By the same step — a drift check: `git ls-files` of both repos against the registry's rows; a divergence (an orphan row, an uncovered file) — a finding, closed by the same cycle's delta or by an authoring question.
 
 ## Rules
 
@@ -33,12 +33,20 @@ The final stage of the chain. Terminology — [`../../reference/glossary.md`](..
 - Spec/code are not edited: L1 is closed by verify; L2–L4 require their own cycle (re-spec), not ad-hoc.
 - Resync (k14): a new/changed skill ⇒ a same-changeset delta of the corpus README and the glossary.
 
+## Materialization form
+
+The output contract of every **process edit** (item 2 of "What it does"). Genre rules, the marker-phrase set, and the genre assignment — [`../../norms/llm-consumed-invariants.md`](../../norms/llm-consumed-invariants.md) `## Genre canon`: the single source, referenced here (pattern literals live there). Writer-side rules:
+
+1. Emit directive-form text — instructions to the executor of the target artifact. Derivation history (provenance phrases of the canon's marker set, incident narrative, class names, counts, dates, hashes) goes to the history carrier (rule 2), never into the emitted text.
+2. Record the derivation history as an entry in `docs/casebook.md` carrying a forward link `materialized into: <artifact>, <section>` — in the same changeset as the artifact edit.
+3. Emit one-directional traceability: the forward link lives in the entry and points at the target; the emitted artifact text carries directives.
+
 ## Cycle
 
 1. File exchange: `.claude/tmp/reconcile-change-<slug>/` (the slug of a cycle or a program).
 2. The orchestrator gathers the inputs: the registry, the metrics-ledger, the cycle's round-ledgers and verdicts, the glossary; prepares a per-item summary with recommendations.
 3. The authoring point: the author's package of decisions (drops / edits / DEFER).
-4. Application: artifact edits + the report + the task-list sync (item 5 of "What it does") + the instance-spec delta (item 6 of "What it does"); the skill's VERIFY — the run itself (the processing of a real case).
+4. Application: artifact edits (each following `## Materialization form`) + the report + the task-list sync (item 5 of "What it does") + the instance-spec delta (item 6 of "What it does"); the skill's VERIFY — the run itself (the processing of a real case).
 
 ## Launch
 

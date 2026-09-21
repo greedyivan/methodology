@@ -27,6 +27,38 @@ Authoring invariants: discrete check questions. Invariants 1–5 — SKILL.md di
       4. gradual weakenings — check: modality parity — count of deontic must-markers of the RU fragment = count of the EN version; run-pin: modality-marker counts over the faithful/corrupted variants (validated baseline runs).
       5. paraphrase evasion — check: quote verbatimness — every quote-anchor of the run form verified by grep -F against the fragment; run-pin: quote verbatimness by grep -F, MISS = 0 (validated baseline scoring).
 
+## Genre canon
+
+Four genres over the No. 6 class, assigned per surface: **directive** (instructions to the executor: routing, task intake, gates, output formats, stopping conditions), **reference** (definitions and term rules, consumed by lookup), **case-law** (case-derived norms carrying their derivation history), **prose** (description, read as context). Assignment:
+
+| Surface | Genre |
+|---|---|
+| skills/audit-change/SKILL.md | directive |
+| skills/init-change/SKILL.md | directive |
+| skills/realize-change/SKILL.md | directive |
+| skills/reconcile-change/SKILL.md | directive |
+| skills/scope-change/SKILL.md | directive |
+| skills/specify-change/SKILL.md | directive |
+| skills/verify-change/SKILL.md | directive |
+| skills/init-change/assets/interview-protocol.md | directive |
+| skills/realize-change/assets/realizer-charter.md | directive |
+| skills/scope-change/assets/decomposer-charter.md | directive |
+| skills/specify-change/assets/specifier-charter.md | directive |
+| skills/audit-change/assets/verifier-charter.md | directive |
+| skills/verify-change/assets/verifier-charter.md | directive |
+| norms/integration-canon.md | directive |
+| norms/legitimacy-invariants.md | directive |
+| norms/monitor.md | directive |
+| norms/llm-consumed-invariants.md | directive |
+| reference/glossary.md | reference |
+| docs/casebook.md | case-law |
+| README.md | directive |
+
+- **Directive purity.** A directive-genre surface carries instructions to the executor only. Derivation history (provenance phrases, incident narrative, class names and counts, dates, hashes) lives in the case-law genre: a norm born from incidents enters a directive surface as its current rule, and its history is recorded as an entry in `docs/casebook.md` carrying a forward link `materialized into: <artifact>, <section>`. Traceability runs one way — from the entry to its target; references to entries appear in rule bodies as backticked/quoted pattern-mentions only, and the casebook-consumption pointers of the skill assets are the mechanism exception.
+- **Marker set (the directive-purity backstop).** The canonical derivation-history marker phrases: `materialized by reconcile`, `from a real incident series`, `precedent —`. A site names them in backticked pattern-mention form only; a live occurrence in a directive-genre surface is narrative regeneration. Gate forms over this set, and the exclusions the case-law genre requires, derive from this canon when the gate extends.
+- **Prose boundary.** Chain roles enter prose surfaces by an explicit pointer to the instructive surface defining them; prose carries description, and instructions to executors are emitted on directive surfaces.
+- **Reference genre.** A reference-genre entry carries its definition and a `Basis:` one-liner (academic anchors); incident narrative stays in the case-law genre.
+
 ## Resync rule (k14)
 
 A change of skill behavior ⇒ a same-changeset delta: the skill's row in README + glossary (if terms are affected). Antipattern — "a router that lies" (README describes behavior that no longer exists).

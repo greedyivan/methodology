@@ -26,18 +26,17 @@ exposed to the agent) for the project you adopt the methodology in.
    as-is, no install step. Verify the hookup: the skill file opens through
    the project path — `cat <project>/.claude/skills/init-change/SKILL.md`.
 
-2. Create the operational overlay — the typed paths for your operational
-   artifacts (the reference topology — glossary: `instance`; the
-   convention — glossary: `instance-state`). Minimal skeleton:
+2. Provide the operational carriers — the instance's side of the carriers
+   contract (the reference topology — glossary: `instance`; the carrier
+   classes — glossary: `instance-state role`). The instance obligations:
 
-   | Path | Carries |
-   |---|---|
-   | `operational-repo/registry/` | the deferred-options registry |
-   | `operational-repo/telemetry/` | the metrics-ledger, events, SENSOR archives |
-   | `operational-repo/tasks/` | task lists |
-   | `operational-repo/memory/` | session memory |
-   | `operational-repo/meta/` | cycle archives |
-   | `projects/` | external project clones |
+   - a carrier declaration (glossary: `carrier declaration`) covering
+     every role referenced by the corpus instructive text — the typed
+     table resolving each instance-state role to a path at one of the two
+     instance-topology bases;
+   - the declared carriers exist and stay existing at their bases;
+   - the corpus-shipped checker (`tools/check-carriers`) wired into the
+     instance selfcheck over the live declaration.
 
 3. First chain run: read
    [`skills/init-change/SKILL.md`](skills/init-change/SKILL.md) and run the
@@ -59,16 +58,17 @@ exposed to the agent) for the project you adopt the methodology in.
   proof obligation), `integration-canon.md` (sync discipline/merge model/
   integrity checks of the shared corpus), `monitor.md` (M1–M8 aggregation,
   signals against the norms).
-- `tools/` — maintenance scripts ×5: a container runner, an XES converter,
-  events/sensor validators, a d′ meter.
+- `tools/` — maintenance scripts ×6: a container runner, an XES converter,
+  events/sensor validators, a d′ meter, a carrier-declaration checker.
 - `docs/` — the casebook (`docs/casebook.md`: case-derived norms — an
   instructive asset of the No. 6 class) + descriptive prose
   ([`docs/methodology.md`](docs/methodology.md) — a corpus overview).
 
-The instance-state convention (glossary: `instance-state`): operational artifact carriers
-live in the instance's operational repo at typed paths — the metrics-ledger
-of the Monitor's formal-era window list
-(`operational-repo/telemetry/metrics-ledger.md`).
+Operational artifact carriers (glossary: `instance-state role`) are
+instance state — the metrics-ledger of the Monitor's formal-era window
+list among them: placed by the instance, resolved per its carrier
+declaration (glossary: `carrier declaration`); the corpus prescribes
+roles, the instance prescribes paths.
 
 ## Skills
 
@@ -84,5 +84,5 @@ of the Monitor's formal-era window list
 | [`audit-change`](skills/audit-change/) | Adversarial verification of the spec before realize (retained for non-tool-authority; lighter/skip for tool-authoritative). 4 categories: silently-made/deferred, mis-classified, scope-completeness. A check against the frozen checklist (the freeze precedes round 1); the verdict by the audit-cycle exit contract (0 blocker/major ∧ MINOR with disposition); scoped re-inspection. Round observations pass a trigger reconciliation with the deferred-options registry (a hit → the R4 authoring question at the verdict point). Round-ledger + amplitude control bounds M/N (RCA / the stop question "re-decompose?"). Verdict-only, does not edit the spec. |
 | [`realize-change`](skills/realize-change/) | The execution stage: a Tier-1 continuous closed-loop (edit→gate→edit) over the spec's implementation-units within the frame; the exit criterion — Tier-1 green, confirmed by the orchestrator (executor ≠ authority: a product repo — the test/typecheck/knip gates; a process repo — authoring invariants + grep canons + self-application). The Realizer — a subagent or the orchestrator in the Tier-1 loop (the R-21 threshold: process-mode × severity — realizer-charter); every realize decision — an impl-ledger record at the moment it is taken; spike-before-edit (R4: the registry flag "unfamiliar mechanics" → a spike before the edit, the product — claims); halting — STOP + an authoring question (frame threat / research need / a significant fork). |
 | [`verify-change`](skills/verify-change/) | A Tier-2 sparse semantic checkpoint post-realize: assertion-guards (observable outcome + an independent `test-oracle`), doc factual truth, design aptness. A fresh Verifier (≠ realizer). Adjudications pass a trigger reconciliation with the deferred-options registry (the verify-adjudication class). Output — adjudication L0–L4 + trigger classification; applied L1 fixes close with a read-reinspect (a fresh reader; glossary). |
-| [`reconcile-change`](skills/reconcile-change/) | The final stage: deferred-options registry revision (the revision point), disposition of process findings/RCA (micro-edits of process artifacts \| DEFER \| kept-for-tracking), the lab task-list sync (a standard deliverable), the instance-spec delta (an inventory of the instance's surfaces; ADDED/MODIFIED/REMOVED per the cycle's changeset), the k12 protocol of ambiguities. |
+| [`reconcile-change`](skills/reconcile-change/) | The final stage: deferred-options registry revision (the revision point), disposition of process findings/RCA (micro-edits of process artifacts \| DEFER \| kept-for-tracking), the lab task-list sync (a standard deliverable), the instance-spec delta (an inventory of the instance's surfaces; ADDED/MODIFIED/REMOVED per the cycle's changeset), the k12 protocol of ambiguities, the materialization form of process edits (directive-form output; history to the casebook with a forward link). |
 

@@ -1,0 +1,171 @@
+#!/usr/bin/env python3
+"""Carrier-declaration checker (glossary: `carrier declaration`).
+
+Usage: check-carriers <corpus-root> <declaration-path>
+
+Legs (findings one per line, prefixed by the failing leg):
+  columns:   a data row without exactly 3 tab-separated columns, or a
+             missing/invalid header row
+  role:      an unknown role or a duplicate declaration row
+  base:      a base outside {instance-root, workspace-repo}
+  superset:  a role referenced by corpus instructive text with no
+             declaration row
+  existence: a declared carrier missing at its base, or an unresolvable
+             base root
+
+Base resolution: workspace-repo = the git superproject of the corpus
+root (fallback: the corpus repo toplevel); instance-root = the parent
+directory of the declaration's git toplevel. Exit 0 = clean, 1 =
+findings, 2 = invocation error.
+"""
+
+import subprocess
+import sys
+from pathlib import Path
+
+REFERENCED_ROLES = (
+    "registry",
+    "metrics-ledger",
+    "telemetry store",
+    "task lists",
+    "session memory",
+    "cycle workspace",
+    "cycle archive",
+    "surface inventory",
+    "project profile",
+)
+BASES = ("instance-root", "workspace-repo")
+HEADER = ("role", "path", "base")
+
+
+def git_out(cwd, *args):
+    res = subprocess.run(
+        ["git", "-C", str(cwd), *args], capture_output=True, text=True
+    )
+    value = res.stdout.strip() if res.returncode == 0 else ""
+    return value or None
+
+
+def workspace_repo_root(corpus):
+    return (
+        git_out(corpus, "rev-parse", "--show-superproject-working-tree")
+        or git_out(corpus, "rev-parse", "--show-toplevel")
+    )
+
+
+def instance_root(declaration):
+    top = git_out(declaration.parent, "rev-parse", "--show-toplevel")
+    if top:
+        return str(Path(top).parent)
+    return None
+
+
+def parse(declaration, findings):
+    rows = []
+    header_seen = False
+    for lineno, raw in enumerate(
+        declaration.read_text(encoding="utf-8").splitlines(), start=1
+    ):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        cols = raw.split("\t")
+        if not header_seen:
+            if tuple(c.strip() for c in cols) != HEADER:
+                findings.append(
+                    f"columns: line {lineno}: header row must be "
+                    "'role<tab>path<tab>base'"
+                )
+            header_seen = True
+            continue
+        if len(cols) != 3:
+            findings.append(
+                f"columns: line {lineno}: expected 3 tab-separated "
+                f"columns, got {len(cols)}"
+            )
+            continue
+        rows.append((lineno, *(c.strip() for c in cols)))
+    if not header_seen:
+        findings.append("columns: no header row found")
+    return rows
+
+
+def main():
+    if len(sys.argv) != 3:
+        print(
+            "usage: check-carriers <corpus-root> <declaration-path>",
+            file=sys.stderr,
+        )
+        return 2
+    corpus = Path(sys.argv[1])
+    declaration = Path(sys.argv[2])
+    if not corpus.is_dir():
+        print(f"check-carriers: not a directory: {corpus}", file=sys.stderr)
+        return 2
+    if not declaration.is_file():
+        print(f"existence: declaration file not found: {declaration}")
+        return 1
+
+    findings = []
+    rows = parse(declaration, findings)
+    declared = {}
+    roots = {}
+
+    def base_root(base):
+        if base not in roots:
+            if base == "workspace-repo":
+                roots[base] = workspace_repo_root(corpus)
+            else:
+                roots[base] = instance_root(declaration)
+        return roots[base]
+
+    for lineno, role, path, base in rows:
+        if role not in REFERENCED_ROLES:
+            findings.append(f"role: line {lineno}: unknown role '{role}'")
+            continue
+        if role in declared:
+            findings.append(
+                f"role: line {lineno}: duplicate declaration for role "
+                f"'{role}'"
+            )
+            continue
+        if base not in BASES:
+            findings.append(
+                f"base: line {lineno}: base '{base}' outside "
+                "{instance-root, workspace-repo}"
+            )
+            continue
+        declared[role] = (path, base)
+
+    for role in REFERENCED_ROLES:
+        if role not in declared:
+            findings.append(
+                f"superset: no carrier declared for referenced role "
+                f"'{role}'"
+            )
+
+    for role, (path, base) in declared.items():
+        root = base_root(base)
+        if root is None:
+            findings.append(
+                f"existence: {role}: base '{base}' unresolvable "
+                "(no git toplevel behind the declaration or the corpus "
+                "root)"
+            )
+            continue
+        resolved = Path(root) / path
+        if not resolved.exists():
+            findings.append(
+                f"existence: {role}: '{path}' does not exist at base "
+                f"'{base}' (resolved: {resolved})"
+            )
+
+    if findings:
+        for line in findings:
+            print(line)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
