@@ -515,3 +515,61 @@ pattern applied to scoring inputs.
 materialized into: skills/realize-change/assets/realizer-charter.md,
 mechanical-probe riders (the existence-guard form rides the probe
 canon's next editorial touch; recorded here as the case domain).
+
+## 32. Numeric anchors without a run — the D5 trap family
+
+Class: spec/pin hygiene — numeric anchors and counters (line numbers,
+sha sums, pattern-dependent counts) asserted without a run at writing
+time; the self-referential sub-class (counts invalidated by the very
+act of recording them) is structurally unhonest-able: agents tried
+"fair" pins with out-of-count caveats and reproduced the defect.
+Instance: audit gbon-slotpop-canonical, RCA-1 «pin-счётчик» ×3,
+RCA-2 «pin-точность» ×4 (line-anchored RCAs in the audit
+round-ledger), RCA-3 — the recurrence after discipline RCAs exposed a
+design defect of the enumeration itself (raw uniq catches any new
+"@-token"); fixed by whitelist-filtering the enumeration command
+(design-level, not vigilance). In-cycle remediation: every numeric
+anchor carries its deriving command adjacent; content-counters
+(REQ/INV/PBT/scenario tags) are stable and pin by a run; self-
+referential size-pins banned; named-anchor convention + mechanized
+lint (entry 33) as the durable exit.
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+anchor discipline (rides the canon's next editorial touch; recorded
+here as the case domain per entry 17's form)
+
+## 33. Manual anchor re-pinning at scale — mechanize the lint
+
+Class: spec maintenance — hand re-pinning anchors across a large
+living spec errs always (850-line spec, six-round drift streak);
+discipline RCAs raise the writing bar but do not survive scale.
+Instance: audit gbon-slotpop-canonical, RCA-5 «pin-класс» ×6;
+remediation applied in-cycle: mechanized anchor-lint.sh
+(DEAD(eof)/MOVED(span)/SUSPECT(non-func identifiers)) — the lint run
+is a mandatory exit-self-check pre-condition of the FINAL status;
+SUSPECT types are hand-verified, only the removed-function class is
+blocking. The durable directive: any cycle carrying named anchors
+against a moving tree ships its anchor-lint as a gate, not a habit.
+
+materialized into: skills/specify-change/assets/specifier-charter.md
++ skills/verify-change/assets/verifier-charter.md, anchor/lint canon
+(rides the canon's next editorial touch; recorded here as the case
+domain)
+
+## 34. WIP-basis drift between realize waves — one active basis
+
+Class: basis discipline — amendments pin their anchors against a
+moving WIP tree between realize waves; basis layers accumulate and
+the spec becomes multi-basis without declaration (line-count and
+MAY-anchor verifications die silently).
+Instance: audit gbon-slotpop-canonical, RCA-4 «базис-дрейф» ×2
+(N1-r4, N1r7 BLOCKER, amplitude-M); remediation applied in-cycle
+(charter Доп.5/RCA-4): ONE active WIP basis — every amendment takes a
+fresh snapshot (git diff HEAD, both index and worktree states) and
+re-pins ALL WIP anchors against it; the previous snapshot retires to
+history; the basis declaration (sha256 + wc pins) lives in the spec
+header.
+
+materialized into: skills/realize-change/assets/realizer-charter.md,
+WIP-basis section (rides the charter's next editorial touch; recorded
+here as the case domain)
