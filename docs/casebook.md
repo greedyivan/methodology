@@ -573,3 +573,104 @@ header.
 materialized into: skills/realize-change/assets/realizer-charter.md,
 WIP-basis section (rides the charter's next editorial touch; recorded
 here as the case domain)
+
+## 35. Dispatch/return completion discipline — the two-branch rule
+
+Class: dispatch-completion — return points at every dispatch boundary of the
+chain governed by no stated contract: a completed launch re-entered on a
+rework command; a crashed launch's task silently re-dispatched fresh (or
+lost); completion judged by no parseable rule; freshness constraints scoped
+to named counterparts instead of the whole launch set.
+Case domain: the dispatch-session-modes program (cycle A, corpus): the
+provider-empty-return incident class (12+ instances recorded in the
+deferred-options registry's fate blocks; the change card's explicit
+request), the relayed-numeric-claims class, and this program's own
+orchestration.
+Derivation: profiled as a program of 2 (corpus A / workspace B, sequenced);
+the canon's placement resolved at CP1 — the procedure in a norms file, the
+terms as glossary keys, the role moments inline in the role charters, a
+one-line rule + pointer at each dispatch site; the return-point judge
+resolved at CP2 — orchestrator-judged (the role emits its deliverable per
+its charter's Output contract, the orchestrator applies the parse rule and
+is the roster's single writer; the in-artifact completion marker absorbed as
+an optional contract-field); the spike class reconciled into coverage
+(completion = the named product artifact parses into the mandate's declared
+contract form; the R4 spike-before-edit stays outside the class — executed
+by the realizer themself); the verifier-crash case reconciled at fix-pass
+round 3 ("always completed" names the completion moment — the verdict/report
+— not an exemption from the two-branch rule; a launch ending without a
+parsable verdict/report is incomplete on the identity branch).
+Directive state: `norms/dispatch-completion.md` (Two-branch rule / Fences /
+Per-role completion moments / Role roster protocol / Output contracts /
+Carrier-agnostic form); one-line rule + pointer at the SKILL.md
+dispatch/return sites and the orchestrator's roster steps; Output contract
+blocks in the six role charters; the six glossary keys.
+
+materialized into: norms/dispatch-completion.md, all sections;
+skills/scope-change/SKILL.md + skills/specify-change/SKILL.md +
+skills/audit-change/SKILL.md + skills/realize-change/SKILL.md +
+skills/verify-change/SKILL.md, the dispatch/return sites + the orchestrator
+steps; skills/scope-change/assets/decomposer-charter.md,
+skills/specify-change/assets/specifier-charter.md,
+skills/realize-change/assets/realizer-charter.md,
+skills/audit-change/assets/verifier-charter.md,
+skills/verify-change/assets/verifier-charter.md,
+skills/init-change/assets/interview-protocol.md, the Output contract blocks
+
+## 36. Registry hygiene — a closure record transplanted into a live item's section
+
+Class: registry-hygiene — a fate/closure block narrating one item's
+build-path copied into a different (live) item's section; a status read by
+the narrative instead of the section-header marker then mislabels the live
+item as dead (the header-only status rule caught the divergence: the mirror
+bijection counted the item live while the fate block claimed drop-executed).
+Case domain: the dispatch-session-modes program (cycle A reconcile): the
+provider-empty-return section carried the closure record of
+gbon-cyclic-narrowing-cells (the decode-fix build-path narrative) and was
+read as drop-executed by the profiling stage's trigger-matching walk.
+Derivation: the disposition restored the section to its own fields
+(id/essence/anchors/trigger/build-path/expiry/provenance), added no death
+marker (the item is live — expiry 2027-03-20), and pinned the correction in
+the provenance line; the class joins the header-only status canon rather
+than weakening it.
+
+materialized into: operational/registry/deferred-options.md, the
+provider-empty-return section (provenance line)
+
+## 37. Stale embedded triggers — charter text pointing at a dead registry item
+
+Class: stale-embedded-trigger — a process artifact's operative text embeds a
+live pointer to a registry item's checkpoint branch; when the item dies, the
+pointer rots and every future edit of the artifact re-arms a question whose
+referent no longer exists (the spike inventory caught it as a live
+self-referential trigger; the spec carried it as an author-decision row).
+Case domain: the dispatch-session-modes program (cycle A reconcile): the
+realizer charter's sentence activating the checkpoint branch of
+sweep-mechanical-carrier ([DROP 2026-09-17 absorption], verified by a
+registry probe before the deletion — the behavior-absence probe of the
+doc-line rule).
+Derivation: the sentence removed outright (the item is dead; no replacement
+pointer exists); the removal recorded here; embedded item references in
+operative text are candidates for the same probe at every reconcile touching
+the artifact.
+
+materialized into: skills/realize-change/assets/realizer-charter.md, the
+Rules section (the sentence after the close-out-refresh clause, removed)
+
+## 38. Findings-header reconciliation — the header re-derives from its own list
+
+Class: findings-header-arithmetic — a findings artifact's header counters
+(total / blockers / majors / minors) diverging from the artifact's own
+findings list (a minor counted twice through a re-label); the round-ledger
+inherits the header numbers and propagates the defect into dispositions and
+monitor rows.
+Case domain: the dispatch-session-modes program (cycle A audit round 1): the
+header printed minors: 6 over a list carrying five MINOR rows (1+1+6 ≠ 7);
+caught by the next round's process observations; the ledger corrected to the
+list's ground truth with a provenance note.
+Derivation: the header's issuance rule now requires the reconciliation at
+the moment of writing — the list is the ground truth, a diverging header is
+fixed before issuance.
+
+materialized into: skills/audit-change/assets/verifier-charter.md, the
+Output section (the header-reconciliation sentence)

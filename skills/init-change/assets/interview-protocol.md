@@ -2,6 +2,10 @@
 
 Per-dimension questions for eliciting the calibration. Ask by dimension (or by cluster); record the answers with a rationale.
 
+## Output contract
+
+The deliverable — the compiled calibration + the surfaced divergences; the launch is completed when `docs/change-calibration.md` is compiled and the divergences against the existing docs are surfaced (glossary: `dispatch-completion`).
+
 ## 1. External issues (ISO 4.1)
 - Who is the customer / the product's end consumer?
 - Which upstream dependencies (external services/APIs the project depends on)? What is the ownership model (ours/theirs)?

@@ -23,7 +23,7 @@ You are the Profiler of the `scope-change` skill. Fresh context (not the change-
 
 ## Knowledge-gap registry (R2)
 
-After profiling — before the frame freeze — the Profiler emits knowledge gaps: a falsifiable question + risk exposure; the prior — the recurrent class M4 as a frequency estimate of risk (Boehm 1988, spiral: risk-driven information gathering before commitment). Firing threshold: a gap with cat.4/BLOCKER potential ("inventory incompleteness of surfaces") OR an M4-recurrent prior → a mandatory spike before the frame freeze (glossary: `spike`); executed by a fresh subagent (≠ verifier ≠ realizer; integration by artifacts, not shared context — O'Reilly–Tushman 2004); the product — claims by the canonical line `CL-<n> | statement | anchor | confidence` (glossary: `claim-list`, the "risk" facet). Other gaps — into the charter-registry with a revision-condition (handover to the Specifier). A pathway option, not a stage: the trigger — this cycle's threshold, before the frame freeze; grounding — Lempert RDM (robust decision making: reducing the decision's vulnerability to ignorance before commitment).
+After profiling — before the frame freeze — the Profiler emits knowledge gaps: a falsifiable question + risk exposure; the prior — the recurrent class M4 as a frequency estimate of risk (Boehm 1988, spiral: risk-driven information gathering before commitment). Firing threshold: a gap with cat.4/BLOCKER potential ("inventory incompleteness of surfaces") OR an M4-recurrent prior → a mandatory spike before the frame freeze (glossary: `spike`); executed by a fresh subagent (≠ verifier ≠ realizer; integration by artifacts, not shared context — O'Reilly–Tushman 2004); the product — claims by the canonical line `CL-<n> | statement | anchor | confidence` (glossary: `claim-list`, the "risk" facet). Dispatch/return — the two-branch completion rule (glossary: `dispatch-completion`; canon — [`../../../norms/dispatch-completion.md`](../../../norms/dispatch-completion.md)): completion = the spike's named product artifact parses into the mandate's declared contract form; a product-less return is incomplete — the same agent completes it. Other gaps — into the charter-registry with a revision-condition (handover to the Specifier). A pathway option, not a stage: the trigger — this cycle's threshold, before the frame freeze; grounding — Lempert RDM (robust decision making: reducing the decision's vulnerability to ignorance before commitment).
 
 ## Rules
 
@@ -56,6 +56,8 @@ Every item = a check question + a criterion; the result is recorded in the chart
 - **GATE** — Pfeffer–Sutton 2000, *The Knowing-Doing Gap* (a rule not tied to a gate is not applied; cured by invoking the checklist at the decision point).
 
 ## Output (charter format)
+
+Output contract — the deliverable is the charter file at the path the orchestrator passed; the parse rule the orchestrator applies at the return point: the launch is completed when the file parses into the `decomposition:` block below (verdict + topology + cycles + sequencing + registry) and carries `options_for_authoring` where a re-decomposition is presented; a charter missing any of these parses as not-done and the launch is incomplete (glossary: `dispatch-completion`).
 
 ```
 decomposition:

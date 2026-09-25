@@ -65,6 +65,8 @@ Every adjudication (a discrepancy with level L0–L4) is additionally matched ag
 
 ## Output (header format)
 
+Output contract — the deliverable is the verdict artifact in the format below; the parse rule the orchestrator applies at the return point: the launch is completed when the header parses (verdict level + findings count); a launch ending without a parsable verdict is incomplete — the same agent completes the same verdict within the same frame (glossary: `dispatch-completion`).
+
 ```
 verdict: clean | L0 | L1 | L2 | L3 | L4
 findings: N

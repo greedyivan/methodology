@@ -50,6 +50,8 @@ Every round (full and scoped) ends by matching **all observations of the round**
 
 ## Output (header format — the orchestrator reads only the header)
 
+Output contract — the deliverable is the findings/verdict artifact in the format below; the parse rule the orchestrator applies at the return point: the launch is completed when the header parses (total / blockers / majors / minors, the exit-contract role per the glossary `verdict`); a launch ending without a parsable header is incomplete — the same agent completes the same verdict within the same frame (glossary: `dispatch-completion`).
+
 ```
 total: N
 blockers: N
@@ -64,7 +66,7 @@ minors: N
 Outside the standard (process observations): <list — NOT included in the counters>
 ```
 
-The header — a momentary snapshot of the round (bl/mj/minors), carries no undisposed flag. Number the findings (N1..Nk) — round-ledger disposition records bind by id.
+The header — a momentary snapshot of the round (bl/mj/minors), carries no undisposed flag. Number the findings (N1..Nk) — round-ledger disposition records bind by id. The header counters reconcile with the findings list at issuance: `total = blockers + majors + minors`, and the minor count equals the number of `[MINOR …]` rows in the list — the list is the ground truth; a header that does not reconcile with its own list is a defect of the record, fixed before issuance.
 
 ## Rules
 

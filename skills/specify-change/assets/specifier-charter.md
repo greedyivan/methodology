@@ -66,6 +66,8 @@ If a change mixes types — invariants and scope-completeness per-concern (DCE-f
 
 ## Output (spec format)
 
+Output contract — the deliverable is the spec file at the path the orchestrator passed; the parse rule the orchestrator applies at the return point: the launch is completed when the spec carries the FINAL status with the exit self-check green (the mechanically reconciled check/run-record enumeration) and the header (type, strata, counters) parses; a spec halted at a checkpoint parses as not-done and the same launch continues after resolution; a post-FINAL return opens a fresh Specifier with the fix-pass brief (glossary: `dispatch-completion`).
+
 ```
 type: <dead-code-removal | refactor | contract-change | feature-add | mixed>
 strata:
