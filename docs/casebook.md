@@ -674,3 +674,55 @@ fixed before issuance.
 
 materialized into: skills/audit-change/assets/verifier-charter.md, the
 Output section (the header-reconciliation sentence)
+
+## 39. Correlated adversarial generation — the witness author is the pattern author
+
+Class: correlated-adversary — negative witnesses for a birth fence are
+crafted from the same mental model that authored the pattern, so the
+witness's blind spot coincides with the pattern's; the fence records a
+run over a class the check cannot miss by construction, while the
+realistic leak class (a differently-shaped spelling of the same token)
+stays green.
+Case domain: the gbon-0.3-constitution cycle (audit round 1): a
+version-token ban `\b0\.[12]\b` was born green over the bare form
+"0.2" while the repository family's tags are all v-prefixed (v0.2.1);
+a neutrality seed word-bounded and singular-only was born green while
+plurals and verbal paradigms (slicing, panicked) are the natural
+English leak forms. The audit's independent crafts reddened both; the
+M-bound RCA traced the cluster to this mechanism (a second instance
+the same round: a birth fence diffing against a nonexistent witness
+path — a green byte-identical to file-not-found).
+Derivation: negatives are drawn from corpus facts (live spellings,
+baseline shapes) wherever they exist; a positive whose output is
+byte-identical to the failure mode is no witness; the fix-pass
+applied a per-escape-class sweep (a check × escape-class table, every
+cell legged or bounded) and the class collapsed from 4 MAJOR to 2
+zone MINORs in two rounds.
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+the 5-element-form canon (adversary-independence / per-escape-class
+witnessing / degenerate-positive ban clauses)
+
+## 40. Escape-class residuals — closure at the boundary of the enumerated list
+
+Class: escape-class-residual — after a per-escape-class closure sweep,
+surviving findings sit on the boundary of the fixed class list itself
+(carrier well-formedness of the stripping helper, typo-depth of
+mention suffixes, prefix casing), not on the classes the sweep
+enumerated; each is either one more leg, one more bound, or a
+declared noise-floor edge.
+Case domain: the gbon-0.3-constitution cycle (audit rounds 3-4): all
+legged claims of the closure table held under independent crafts; the
+residuals were an unclosed-fence suppression in the shared prose
+stripper, a mention token still forgiving 4-letter suffixes, a
+skeleton-prefix casing surface, and two record-level inaccuracies —
+each one-guard or one-bound sized, disposed at the noise floor.
+Derivation: the sweep is the standing remedy shape for a
+false-security cluster: enumerate the classes once, leg or bound every
+cell, and verify the table itself for completeness at every audit
+round of the cycle.
+
+materialized into: skills/audit-change/assets/verifier-charter.md,
+the Checklist derivation procedure (escape-class closure dimension);
+skills/specify-change/assets/specifier-charter.md, the per-escape-class
+witnessing clause
