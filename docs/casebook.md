@@ -726,3 +726,56 @@ materialized into: skills/audit-change/assets/verifier-charter.md,
 the Checklist derivation procedure (escape-class closure dimension);
 skills/specify-change/assets/specifier-charter.md, the per-escape-class
 witnessing clause
+
+## 41. Acceptance-domain mismatch — the instrument accepts less or more than the declaration
+
+Class: declaration-instrument-domain — the realized gate accepts a
+domain narrower or wider than the declared oracle it claims to
+implement; the divergence lives on structural grains the declaration
+does not name (heading level, list membership, whitespace skeleton,
+column-value domain, role association, extraction orthography), so
+every projection of closure (leg↔Check, tag↔unit, counter↔run,
+twin↔pin) stays green while the acceptance domains disagree.
+Case domain: the gbon-0.3-grammar cycle (audit round 1: six MAJOR of
+one family — fence-blind banned scan, unpinned refusal-list
+composition, unpinned frozen-table rows, level-blind id scan, global
+equality instead of per-article walk, MUST-preserve without a leg)
+after two prior cross-cycle instances of the same family; the RCA
+family treatment (six mechanisms) closed the cluster 12→5→4→3→1 over
+five rounds, with the residuals predicted as boundary-of-closure
+grains and confirmed as such.
+Derivation: routing a canon candidate into a registry trigger-item
+without landing the clause gives detection without prevention — the
+next cycle pays a blocked round, a fix-pass, and a re-audit to
+re-discover the same family; the landed clause (quantifier mirroring,
+composition pins, direction-pair cells, substrate inheritance, frame
+projection) moves the forms from author discipline into the letter of
+the charter.
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+the per-escape-class witnessing clause (direction-pair cells) and the
+quantifier-mirroring / composition-pin / substrate-inheritance /
+frame-projection clauses
+
+## 42. Unprobed angles — verify-stage semantics on what S2 never shot at
+
+Class: s2-angle-gap — the semantic verifier finds discrepancies on
+angles of the contract that the spec's scenario set never aimed at:
+the open tail of an "exhaustive" definition (a probe satisfying every
+literal predicate while violating the definition's intent), and
+interpretational ambiguity where two readings of the same articles
+both stand (an L0 with no provable contradiction).
+Case domain: the gbon-0.3-grammar cycle (verify: the two-root stream
+probe passing the letter of CONF-1 — closed by an L1 one-line
+requirement plus a refusal-class phrase; the intern-space view
+identity question — tolerated with an authoring fork recorded for
+reconcile).
+Derivation: an invariant declared exhaustive earns boundary probes in
+S2 — the degenerate compositions of the defined whole (empty body,
+two roots, surplus tail, deficit tail) each get a scenario pinning
+the refusal class that catches it; where two readings coexist, the
+spec records the fork instead of resolving it silently.
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+the frame-projection clause (the frame leg pairing); the boundary
+probe practice rides the scenario-wiring canon of this charter
