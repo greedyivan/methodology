@@ -779,3 +779,36 @@ spec records the fork instead of resolving it silently.
 materialized into: skills/specify-change/assets/specifier-charter.md,
 the frame-projection clause (the frame leg pairing); the boundary
 probe practice rides the scenario-wiring canon of this charter
+
+## 43. Letter-only clauses — the family migrates to the parts the clause does not reach
+
+Class: part-level witnessing gap — a materialized canon clause executed at
+the granularity of the whole (the gate, the check, the artifact) while the
+defect lives in a part (one conjunct of a composite predicate, the
+pattern's carrier form, a transcribed literal); every projection of
+closure stays green because the unit of witnessing is coarser than the
+unit of failure.
+Case domain: the gbon-0.3-binding-parameters cycle (audit round 1: six
+findings of the standing declaration-instrument family despite the canon
+landed by the predecessor cycle — a vacuous phrase subcheck blind to the
+target's own line wrap, a line-count where an occurrence-count was
+declared, a token-blind carrier pattern missing a live requirement line,
+transcribed anchors not born by runs; the RCA separated the causes: a
+transposed escape-matrix executed as class→demo-check prose, the leg as
+the witnessing unit instead of the conjunct, adversary-independence
+binding the witnesses but not the pattern sources, and a finalization
+manifest that was incomplete without blocking; the family treatment
+materialized the matrix as a 12×8×2 table, isolated every conjunct with
+its own red witness, re-derived the carrier patterns from live trees,
+and closed the cycle 11→5→7→3→1 over five rounds).
+Derivation: a clause with a mechanical carrier prevents — the
+substrate-inherited fence guard closed its sub-family to zero findings
+across two consecutive cycles; a letter-only clause shrinks the family
+without preventing it, because execution prose can satisfy the clause's
+letter at a coarser grain; the fix is to name the unit — the cell, the
+conjunct, the pattern source, the manifest pass — inside the clause and
+give that unit a mechanical enumeration at exit.
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+the material escape-matrix carrier / conjunct-level witnessing /
+pattern-source independence / finalization-pass manifest clauses
