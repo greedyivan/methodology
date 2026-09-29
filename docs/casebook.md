@@ -812,3 +812,66 @@ give that unit a mechanical enumeration at exit.
 materialized into: skills/specify-change/assets/specifier-charter.md,
 the material escape-matrix carrier / conjunct-level witnessing /
 pattern-source independence / finalization-pass manifest clauses
+
+## 44. The carrier inventory — the same class re-entering through each new instrument
+
+The case: a docs cycle whose audit returned the same blocker class
+four rounds in a row — first a gate scoped to one section while its
+invariant was section-independent, then the same narrowing inside the
+remediation's own wiring table, then a discriminator authored from
+the spec's citation of the forms (a correlated witness), then a
+provenance tail no enumeration had swept. Each fix added a new
+instrument and the class re-entered through it; incremental,
+finding-local closing moved it one carrier at a time. The cure was
+exhaustive, not incremental: a one-pass enumeration of every
+carrier shape an assertion could ride (fields, zones, tails,
+mentions, bodies, bindings — K1..K25) closed as a material matrix,
+cell by cell, both directions; the next round's hunt for a 26th
+shape came up empty (~20 candidates, every one caught or grounded),
+and the class did not return. Three author rulings carried the
+escalation ladder (continue with fix self-verification → derive
+patterns from independent sources → close the inventory
+exhaustively).
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+the assertion-carrier matrix clause; skills/audit-change/assets/
+verifier-charter.md, the assertion-carrier matrix standing dimension
+and the next-shape hunt standing duty.
+
+## 45. Fix-pass self-verification — instruments that reproduce the disease they treat
+
+The case: two consecutive fix-passes closed their findings and
+simultaneously re-created the same defect class inside the new
+instruments they introduced — a wiring row that silently narrowed
+the invariant's domain, a pin-table discriminator with holes in both
+directions. The self-verification duty (re-run every prior round's
+probe forms plus own negative probes of the fixed class before
+returning FINAL) exposed the blind spots of the next fix, and the
+pattern-source rule (runner patterns derived by enumeration runs
+over independent carriers, transcripts beside the pattern) removed
+the correlated-witness root. After both were in force, the remaining
+findings were mutation-coverage gaps inside closed rows, and the
+final rounds closed at the minor noise floor.
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+the post-FINAL fix-pass self-verification clause and the
+pattern-source rider for gate-runner discriminators.
+
+## 46. Edges in no arm — projections whose decode/encode edges nobody enumerated
+
+The case: a verify stage found two discrepancies of one class — a
+binding's projection mapped a sort onto its carrier and a position
+onto its rendering without enumerating the EDGES: which wire inputs
+the decode position accepts (an odd-length byte sequence at a
+character-sequence position), which carrier values the encode
+accepts (a nonzero scale on an arbitrary-precision integer). Each
+edge lay in no arm of the declared outcome trichotomy
+(preserve / refuse / surrogate), so the document was silent where a
+decoder or encoder had to behave somehow. Neither the cross-check's
+union leg (encode-side observability only) nor any form gate swept
+per-projection edge coverage — the class is invisible to both
+mechanical and comparative checks unless edges are enumerated
+against arms explicitly.
+
+materialized into: skills/audit-change/assets/verifier-charter.md,
+the projection-edge arm coverage dimension.
