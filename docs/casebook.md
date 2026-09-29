@@ -875,3 +875,50 @@ against arms explicitly.
 
 materialized into: skills/audit-change/assets/verifier-charter.md,
 the projection-edge arm coverage dimension.
+
+## 47. Relay transcription ×2 — brief-borne literals nobody verified at dispatch
+
+The case: two orchestrator relay defects in one session, both caught
+downstream by the receiving verifier with zero blast radius — a
+prestate witness hash relayed into an audit round brief with one
+doubled character (65 hex chars against the authoritative zone pin's
+64; deleting the doubled char yields the true value), and a verify
+brief citing a verdict-form asset the corpus never carried (a
+glitched listing; the corpus git history is empty for the path). The
+standing relayed-claims canon covered numeric claims only (counters,
+sizes, line counts), so a hash string and a path/asset reference
+passed unverified at dispatch. The cure generalizes the canon's form
+without touching its shape: every relayed literal — numeric or
+string-form (hash, path, asset reference) — is copy-paste from its
+authoritative carrier (a fresh run for numbers; the pinned file, the
+live tree, or the corpus index for a string reference) and is
+verified against that carrier before dispatch; a relayed value is
+never load-bearing — the receiving verifier re-hashes/re-reads the
+authoritative pin regardless.
+
+materialized into: skills/audit-change/SKILL.md,
+skills/realize-change/SKILL.md, skills/specify-change/SKILL.md — the
+relayed-literal-claims rule of the Cycle item 2 (the orchestrator
+side).
+
+## 48. Spec-pinned volatile state — transcribe nothing, re-derive by run
+
+The case: a migration cycle whose spec's operative record pinned a
+live census of the carriers the units edit (task-list line map,
+mirror size, store event counts, note count). Between the spec's
+birth and realize, sibling sessions moved the live state (the list
+grew 322→478 lines, the mirror 46→54 cards, the stores 68→80
+events); the spec's numbers were honest at birth and stale at
+realize. The realizer pinned the birth state by run before the first
+edit (file witnesses + sha256 pins + repository HEAD pins),
+re-derived every consumed census value by run at the moment of use,
+and recorded each spec-pin↔live delta as a dated ledger record —
+the migration arithmetic was built from the re-derived values, and
+the conservation expectations closed against the re-derivation, not
+against the spec's transcription. The verify-side volatile-pin norm
+(drift with date/HEAD is not a discrepancy) already covered the
+adjudication; the realize-side duty — pin at birth, re-derive by
+run, record per delta — was not carried.
+
+materialized into: skills/realize-change/assets/realizer-charter.md,
+the volatile-state reads clause (Rules).
