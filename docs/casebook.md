@@ -973,3 +973,93 @@ materialized into: skills/specify-change/assets/specifier-charter.md —
 the D4 instrumental-check run-pin rule and the birth-check FINAL rule
 (the standing catching mechanism; no new clause minted — the case
 closes under the existing canon).
+
+## 51. Obligation-keyed instrumentation — the check set tiling the input pipeline
+
+The case: a spec committed edit obligations (additions, relocations,
+rewritings its own tables enumerated) while its instrument legs were
+keyed to finding ids — the legs covered the findings the audit had
+already named, and every obligation no finding had named passed
+unlegged; the finalization frame projection legged MUST-preserve
+articles only, and the must-LAND direction was an open gap. The family
+then tiled itself across the whole input pipeline over three cycles of
+the program: the generating-command internals (a composite check over
+generated artifacts legged the author's fixtures while the generator
+emitted shapes no fixture reproduced), the generator's output shapes,
+the checker's invocation forms (swapped, doubled and extra arguments
+and partial-range inputs stayed green; a usage string fenced nothing),
+and the metadata carriers of a declared clause (a tag/tagger clause
+declared and never probed — an annotated tag with the legacy tagger
+shape passed the whole battery green until objecttype/tagger probes
+legged both directions). Sixth-to-eighth cross-cycle instances of the
+declaration↔instrument family; the cure keys every leg to the
+obligation itself (an obligation table reconciled mechanically at the
+exit gate), derives the shape enumeration from the generator rather
+than the fixtures, pins the invocation forms of every composite
+checker, and names the probe form of a declared clause over a metadata
+field (objecttype/tagger enumeration).
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+Rules — the obligation-keyed instrumentation and generator-shape
+legging clauses (the frame projection's dual direction) and the
+invocation-contract clause.
+
+## 52. Compensating arithmetic — totals that match while the labels are wrong
+
+The case: a count reconciliation over two record families closed on
+aggregate equality — the totals matched (47 = 47) while both member
+labels were wrong (31+16 against the true 29+18), and the arithmetic
+fence itself ("31/31") transcribed one of the wrong labels as its
+expected state. The same class fired in a sibling program the same
+week (a migration whose census closed on global sums while per-article
+members disagreed), making the pair cross-program. The
+self-referential half of the family (a record counting a set that
+includes its own carrier) is carried by the self-referential
+evidence-records clause and its own casebook entry — not restated
+here. The cure closes per-label: each family's count is fenced by its
+own run in both directions, and an aggregate-equality form is named a
+compensating error that closes nothing.
+
+materialized into: skills/specify-change/assets/specifier-charter.md,
+Rules — the per-label count fences clause (beside the Birth-check
+block).
+
+## 53. The walk that miscounts its own live set — a trigger-matching cascade
+
+The case: an audit line's trigger-matching walk reported a live
+registry set of 8 items, then 17, then 9 across three rounds of one
+cycle with no registry revision between them — dead, DROP-marked items
+fired phantom matches in the middle round, and every count was born
+from memory rather than from the walk's own run; the registry's mtime
+predating all three verdicts proved the drift was walk-side each time.
+The standing clauses constrained what the walk reads (status by the
+section-header marker only) and that it enumerates all live items —
+nothing pinned the correctness of the walk itself. The cure pins the
+cardinality: the live-set count is stated in the round-ledger firing
+line, born by the walk's own header-grep run with its output pasted,
+and a count change between rounds without a registry revision is
+itself disclosed as a matching defect and re-walked.
+
+materialized into: skills/audit-change/assets/verifier-charter.md —
+the walk count-pin bullet of the Trigger-matching point (Matching
+completeness context).
+
+## 54. The guard as the largest leak — ban instruments carrying banned dictionaries
+
+The case: an identity-leak guard carried a banned-token dictionary of
+the very literals it existed to catch — name, e-mail, employer domain,
+handles — as plain literals inside a tracked, pushed tool script; by
+byte volume the guard was the leak's largest single edition of the
+banned content, whatever its scan coverage. The adjacent canon
+(final-gate patterns derived by a run from the spec's own
+id-inventory) actively misleads for this class: deriving a dictionary
+from an inventory publishes it. The cure inverts the instrument: the
+guard pins the expected composition positively (exact-composition
+constants over the expected neutral state, any deviation red) and
+carries no transcribed dictionary of the banned literals — a negative
+dictionary inside a tracked artifact is itself an instance of the leak
+class, independent of how well it scans.
+
+materialized into: skills/realize-change/assets/realizer-charter.md,
+Rules — the ban-instruments rider to the final-gate scan-pattern
+clause.
