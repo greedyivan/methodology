@@ -117,7 +117,7 @@ role-local blocks):
 ## Role roster protocol
 
 - The orchestrator maintains a **role roster** file in the cycle workspace
-  for every cycle: `.claude/tmp/<cycle-slug>/roster.md`; one data row per
+  for every cycle; one data row per
   dispatched launch (role | launch id | state), updated at the moment of each
   state change; the state vocabulary is closed: `dispatched | completed |
   incomplete | closed`.

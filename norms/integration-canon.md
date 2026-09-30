@@ -1,9 +1,7 @@
 # Integration canon of the shared corpus (methodology)
 
 The corpus is a common pool: several projects of the operator share the same
-norm files (charters, registry, README). The founding incident — a merge of a
-real integration conflict (two process lines, append-hotspot conflicts; provenance —
-a pre-publication analysis artifact of the instance's cycle zone).
+norm files (charters, registry, README).
 The canon is the Ostrom minimum: boundaries, discipline, a resolution mechanism, monitoring.
 
 ## Sync discipline
@@ -36,9 +34,8 @@ grep -rh '^- \*\*id:\*\*' "$reg" \
   | sed 's/^- \*\*id:\*\* //' | sort | uniq -d
 
 # u2b — shared item anchors (output = the integrator's review list;
-# full automation impossible: an anchor match ≠ a trigger collision;
-# EN field form with the legacy RU form tolerated — W3 transition)
-grep -rhE '^- \*\*(anchor set|якорный набор):\*\*' "$reg" \
+# full automation impossible: an anchor match ≠ a trigger collision)
+grep -rhE '^- \*\*anchor set:\*\*' "$reg" \
   | grep -oE '[A-Za-z0-9_.-]+\.(md|go|ts|tsx|php)|[A-Z][A-Za-z-]+ (19|20)[0-9]{2}' \
   | sort | uniq -c | awk '$1>1'
 

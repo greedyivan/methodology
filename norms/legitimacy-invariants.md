@@ -28,8 +28,6 @@ Every process improvement, before land, self-applies in instrumented mode (RTA/S
 
 SHADOW line format: `SHADOW | program=<slug> | M1=<baseline→actual> | ... | verdict=preserved|violated L(i) | table=<path>`
 
-Lines emitted before the W3 latinization carry the legacy RU field spellings (`программа=`, `verdict=сохранены/нарушен L(i)`, `таблица=`) — they remain valid historical records of the metrics-ledger.
-
 ## Acceptance canon
 
 A shadow delta ≥ baseline norms (M1 within bounds; the invariant table complete) → the authoring question "land?" → the switch decision. Not an auto-gate.

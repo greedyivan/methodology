@@ -1,12 +1,12 @@
 # Monitor — the aggregation procedure and norms (the Monitor→Analyze pipeline of self-healing)
 
-An orchestrator procedure (MAPE-K Monitor+Analyze; counters, not interpretation — the exit-predict/M-N precedent). Runs at the LAND point (verify-change Checkpoint 5) upon completion of every change/cycle. Formative — never gates work (Scriven). The formulas are a closed set; extension via reconcile.
+An orchestrator procedure (MAPE-K Monitor+Analyze; counters, not interpretation). Runs at the LAND point (verify-change Checkpoint 5) upon completion of every change/cycle. Formative — never gates work (Scriven). The formulas are a closed set; extension via reconcile.
 
 ## Window
 
-The list of formal-era directories — in the metrics-ledger (an instance-state role, resolved via the instance's `carrier declaration`; the first line = the provenance base). Criterion: round-ledger cycles; the M6/M8 canon sources are outside the criterion — covered by the list. Verdict-only directories without a round-ledger (the pre-formal era) and product cycles — outside the window; when inventoried → a coverage-gap observation (not an error). Extending the list — an explicit authoring decision at the monitor summary (a new summary announces the extended window and recomputes the norms; pre-registration is preserved); between summaries, new self-change cycles carry a SHADOW line against the norms of the active window and do not enter the list.
+The window list — in the metrics-ledger (an instance-state role, resolved via the instance's `carrier declaration`; the first line = the provenance base). Criterion: round-ledger cycles; the M6/M8 canon sources are outside the criterion — covered by the list. Verdict-only directories without a round-ledger and product cycles — outside the window; when inventoried → a coverage-gap observation (not an error). Extending the list — an explicit authoring decision at the monitor summary (a new summary announces the extended window and recomputes the norms; pre-registration is preserved); between summaries, new self-change cycles carry a SHADOW line against the norms of the active window and do not enter the list.
 
-Policy (author decision at the galaxy-macrostates program boundary, 2026-09-18): product-domain cycles (external project clones, e.g. physics-notes) stay outside the window by default — the norms are pre-registered on the self-change corpus, and blending structurally different severity economics would distort the baselines; their standing form is a SHADOW line plus the program-summary class ledger, and coverage-gap is the standing procedural observation carrying their escalations (the SHADOW disposition channel delivered the classes' RCAs without window membership). Same-corpus continuations of existing window lineages (gbon) remain in-window by historical membership. Extension remains available at any future monitor summary on more data (recompute + announcement, pre-registration preserved).
+Policy: product-domain cycles of external project clones stay outside the window by default; their standing form is a SHADOW line plus the program-summary class ledger, and coverage-gap is the standing procedural observation carrying their escalations. Same-corpus continuations of existing window lineages remain in-window. Extension remains available at any future monitor summary on more data (recompute + announcement, pre-registration preserved).
 
 
 ## Closed set M1–M8 (formulas; grep carriers)
@@ -16,20 +16,18 @@ Policy (author decision at the galaxy-macrostates program boundary, 2026-09-18):
 | M1 | rounds | round inventory per directory: table + EXIT line + prose numbers; fallback — the final table row (micro/grep closures without EXIT) | round-ledger.md per directory |
 | M2 | severity profile | shares of bl/mj/mi by the findings headers of the last round + the r1 aggregate | findings.md headers |
 | M3 | MAJOR-share | MAJOR cycles / cycles of the window | findings.md headers |
-| M4 | recurrent classes | classes with ≥2 instances across cycles; identification — REG-C13 (see below) | the `class:|класс:` label in findings/process + the ledger retro list |
+| M4 | recurrent classes | classes with ≥2 instances across cycles; identification — REG-C13 (see below) | the `class:` label in findings/process + the ledger retro list |
 | M5 | disposition outcomes | fix-now/defer/grep-closure per MINOR | round-ledger Dispositions |
-| M6 | registry live hits | the marker `FIRED` in the context of the trigger-matching sections of charters (glossary `trigger-matching point`); exception: pattern mentions (spec/meta-artifacts — in backticks or as prose about the pattern, not in the context of an actual reconciliation) | `FIRED|СРАБОТАЛ` over the window |
-| M7 | remediation regressions | events per finding-id (a fix introduces a new error in the fix zone); a lexical counter is unreliable | the `regression|регресс` annotation in findings round N+1 ↔ round N |
+| M6 | registry live hits | the marker `FIRED` in the context of the trigger-matching sections of charters (glossary `trigger-matching point`); exception: pattern mentions (spec/meta-artifacts — in backticks or as prose about the pattern, not in the context of an actual reconciliation) | `FIRED` over the window |
+| M7 | remediation regressions | events per finding-id (a fix introduces a new error in the fix zone); a lexical counter is unreliable | the `regression` annotation in findings round N+1 ↔ round N |
 | M8 | SENSOR lines | line-anchored (the marker at line start); exception: a placeholder in inline templates | `SENSOR \| kind=` over the window |
-
-Carrier transition (W3 latinization): window sources authored before the migration — frozen archives, pre-migration registry and ledger rows — carry the legacy RU marker forms; the dual-form carriers above count both the EN and the legacy form, so both eras remain non-degenerate window sources (a false `registry-idle` over the old window is the failure mode the dual form prevents).
 
 ## Identification of M4 instances (REG-C13)
 
-- **Forward convention:** authoring of findings/process records marks class membership with the `class: <name>` label upon first recognition of sameness (rows authored before the W3 latinization carry the legacy label form — counted by the dual-form carrier above).
-- **Retro list:** instances of the double-loop class «посылка о состоянии артефакта не сверена» — in the metrics-ledger with window sources as provenance (absorbed by the forward convention as they accumulate).
+- **Forward convention:** authoring of findings/process records marks class membership with the `class: <name>` label upon first recognition of sameness.
+- **Retro list:** instances of the double-loop class named in the ledger schema — in the metrics-ledger with window sources as provenance (absorbed by the forward convention as they accumulate).
 
-## Signal rules (forms; constants — calibration §⑨)
+## Signal rules (forms; constants pre-registered in the calibration)
 
 - **Run rules (discrete, small n — Nelson 1984):** a run of ≥N same-type values, a trend. M1: rounds > the upper norm bound 2 rounds in a row. M3: MAJOR-share > baseline+δ. M7: ≥2 regressions in a row. M4: ≥2 instances of a class across cycles.
 - **CUSUM (cumulative shares — Page 1954):** for M3/M5 at ≥10 accumulated observations.
@@ -44,7 +42,7 @@ Carrier transition (W3 latinization): window sources authored before the migrati
 
 `date | program | cycle | window-sources | M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 | signals | sufficiency | disposition`
 
-Rows authored before the W3 latinization carry legacy RU field names and values; they remain valid historical records (the ledger is append-only; recomputability unchanged).
+Legacy-form rows resolve per the carrier's declared schema.
 
 - Sufficiency (the R8 predicate): `sufficient` / `insufficient — <3 observations per GQM question`.
 - Disposition of a signal: candidate → the deferred-options registry / a process finding → reconcile / accepted-for-tracking.
