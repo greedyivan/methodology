@@ -922,3 +922,54 @@ run, record per delta — was not carried.
 
 materialized into: skills/realize-change/assets/realizer-charter.md,
 the volatile-state reads clause (Rules).
+
+## 49. Self-referential count — a filter that does not cover its own transcription
+
+The case: a spec's fix-pass twins block carried count lines whose
+printed pipelines reproduced neither their before- nor after-values —
+a `grep -c … | grep -cv <marker>` filter under-selected the record's
+own transcription lines (four self-referential sites against the
+declared zero), and one count line declared a value no run could
+produce (four against the honest three; the claimed fourth site
+carried different bytes than the literal). The freeze caught both at
+freeze time by paste-executing every line as printed — the catching
+mechanism (the strict freeze-form clause over the twins block) worked;
+the defect lived in the authored form, not in the standard. The cure,
+executed in the same cycle under the orchestrator ruling: each line
+re-printed in the form that actually reproduces its pinned values,
+every line re-run as printed immediately after the edit, values
+unchanged; the rule the case fixes — a mechanical claim about a
+record's own text carries a domain exclusion proven to cover the
+record's own transcription lines, and a count no run produces is not
+FINAL (the birth-check's "a divergence is not FINAL").
+
+materialized into: skills/audit-change/assets/verifier-charter.md —
+the freeze-form-over-the-twins-block strict-lines clause (the standing
+catching mechanism; no new clause minted — the case closes under the
+existing canon); skills/specify-change/assets/specifier-charter.md —
+the birth-check finalization rule (the not-FINAL leg).
+
+## 50. A run-ground that fails as printed grounds nothing
+
+The case: a disposition record claimed an audit citation did not
+resolve on the live tree, grounding the claim on an annex command that
+failed as printed (a malformed grep invocation, exit 128 — no output
+was read as a negative). The audit round re-ran the resolution with a
+working form, found the second locus live on the tree (the same
+sentence in a casing variant), and inverted the record; the fix-pass
+re-resolved it, restored the dropped leg into its fix domain, and
+re-pinned the ground with the working command and its fresh output.
+The record's claim was a run-claim like any other — and the canon
+already demanded exactly this: a check formulated without a run that
+executes as printed is a false-security form (the D4 run-pin rule),
+every count born by a same-session run pasted beside the command (the
+birth-check), and a diverging re-derivation is a finding, not an edit.
+The case adds the disposition-scale statement: an unverified negative
+("does not resolve") silently narrows a fix domain — the vector leaves
+the object only when the run domain is proven case-complete by a
+command that runs.
+
+materialized into: skills/specify-change/assets/specifier-charter.md —
+the D4 instrumental-check run-pin rule and the birth-check FINAL rule
+(the standing catching mechanism; no new clause minted — the case
+closes under the existing canon).
