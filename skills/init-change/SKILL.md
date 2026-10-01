@@ -7,15 +7,11 @@ description: Elicitation of the project's calibration (the external framework fo
 
 Elicitation of the **calibration** — the third layer (the project parameters the process runs on). Terminology — [`../../reference/glossary.md`](../../reference/glossary.md) (the chain-stage term — `audit-cycle exit contract` — is a glossary key of its carrier skill). Launched ONCE (adoption); afterwards `scope-change` reads the calibration (does not re-derive it).
 
-## Why Q&A, not auto-scan (academic grounding)
+## Q&A elicitation, not auto-scan
 
 Calibration = a mix of the **explicit** (auto-scannable: tools, files) and the **tacit/contextual** (only by elicitation: what is core, what is a seam, what a policy means, stakeholder context).
-- **Knowledge Elicitation** (Cooke 1994, *Varieties of KE*) — the knowledge lives in a human; elicit it, do not extract it.
-- **Tacit→explicit** (Polanyi; APQC) — via processes that prompt expression.
-- **Elicitation ≠ collection** (Wiegers) — active inquiry, not passive gathering.
-- **Contextual Inquiry** (Holtzblatt-Beyer) — context is critical; decontextualized questions miss.
 
-→ init = **interactive Q&A elicitation**; auto-scan (knip/grep) — merely a supplement for the explicit part.
+→ init = **interactive Q&A elicitation**; auto-scan (grep) — merely a supplement for the explicit part.
 
 ## Canonical dimensions (grounded, not invented)
 
@@ -46,3 +42,10 @@ Calibration = a mix of the **explicit** (auto-scannable: tools, files) and the *
 ## Protocol
 
 Per-dimension questions — [`assets/interview-protocol.md`](assets/interview-protocol.md).
+
+## Attributions (single-source)
+
+- **Knowledge Elicitation** (Cooke 1994, *Varieties of KE*) — the knowledge lives in a human; elicit it, do not extract it.
+- **Tacit→explicit** (Polanyi; APQC) — via processes that prompt expression.
+- **Elicitation ≠ collection** (Wiegers) — active inquiry, not passive gathering.
+- **Contextual Inquiry** (Holtzblatt-Beyer) — context is critical; decontextualized questions miss.

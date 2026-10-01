@@ -27,7 +27,7 @@ The deliverable — the compiled calibration + the surfaced divergences; the lau
 
 ## 5. Seams/contracts + tooling (ISO 4.4 + ABC tech-env)
 - Which contracts / seams **must not be broken** (interface owners — OpenAPI, public API, event-schemas)? Where do they live?
-- Which automatic gates exist (lint, typecheck, test, doc-links, dead-code/knip, security, traceability)? Which are **authoritative** (blocking), which **advisory**?
+- Which automatic gates exist (lint, typecheck, test, doc-links, dead-code, security, traceability)? Which are **authoritative** (blocking), which **advisory**?
 - Tooling conventions (docker-only? make? host-curl/jq banned? language?)
 
 ## 6. Dev process + commit/deploy (ISO 4.4)

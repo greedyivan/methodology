@@ -29,7 +29,7 @@ The first skill of the chain and the re-decomposition point. Terminology — [`.
 
 ## Multi-surface DSM (invariant)
 
-A DSM over the code surface **alone misses coupling** on doc/test/config surfaces. Changes can be independent on code and coupled on docs → a doc-rewrite becomes a coupled block, resolved together. **The DSM is always across all touched surfaces.** (Found in real decomposition runs: code-disjoint, doc-coupled.)
+A DSM over the code surface **alone misses coupling** on doc/test/config surfaces. Changes can be independent on code and coupled on docs → a doc-rewrite becomes a coupled block, resolved together. **The DSM is always across all touched surfaces.**
 
 ## Authoring point (pressure-sensitive)
 
@@ -37,8 +37,8 @@ Re-decomposition shapes the structure of the work (what as one change, what as a
 
 ## Cycle
 
-1. File exchange: `.claude/tmp/scope-change-<slug>/`.
-2. The orchestrator is a pure coordinator (passes paths, reads the charter header) and maintains the role roster (glossary: `role roster`): creates `.claude/tmp/<slug>/roster.md` at the first dispatch and updates a row's state at every state change; at each return point it applies the role's output-contract parse rule (glossary: `output contract`) and marks the row.
+1. File exchange: the cycle workspace.
+2. The orchestrator is a pure coordinator (passes paths, reads the charter header) and maintains the role roster (glossary: `role roster`): creates the roster file in the `cycle workspace` at the first dispatch and updates a row's state at every state change; at each return point it applies the role's output-contract parse rule (glossary: `output contract`) and marks the row.
 3. **Profiler** — a fresh subagent (not the change-request author). Mandate — [`assets/decomposer-charter.md`](assets/decomposer-charter.md). Profiles + builds the multi-surface DSM + issues the verdict + options. Dispatch/return — the two-branch completion rule (glossary: `dispatch-completion`; canon — [`../../norms/dispatch-completion.md`](../../norms/dispatch-completion.md)): a charter that parses into the Profiler's output contract completes the launch (never re-entered); a launch ending without one is completed by the same agent within the same frame.
 4. Verdict + options → authoring point (the user) → the recorded decision → charter.
 

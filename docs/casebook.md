@@ -1075,3 +1075,19 @@ Born artifacts carried positional anchors into a tree that then received two ins
 ## 57. The freeze that shipped without closing its own twins
 
 Four consecutive checklist freezes (r8→r12) shipped without paste-executing the spec's current twins block; the closure was performed each time by the round's Verifier as a courtesy — the baseline the freeze existed to pin was verified by nobody at freeze time. The cure is a freeze-time duty: paste-execute every twins line (before against the sha-pinned pre-round copy, after against the live tree) and record the closure in the freeze body. Found in gbon-0.3-conformance (Outside the standard, r8/r10/r12); materialized into: audit-change/assets/verifier-charter.md, derivation canon P-0.
+
+## 58. Manifest/leg-map omission — the audit×legs walk at FINAL
+
+The case: an audit finding's live legs on the cycle surface escaped the spec's manifest (the finding→unit map, the header counters, the coverage claims) while the named unit accepted them — the manifest's completeness was verified ad hoc by negative probes introduced per fix, never as a standing finalize duty; the class fired in three consecutive cycles of one program (a finding's second locus dropped; another finding's glossary legs plus a leg-map row dropped; the legs of a dispositioned finding whose own unit header named them dropped).
+
+The cure: at FINAL the mechanical walk „every audit finding × its cycle-surface legs × manifest membership“ runs born-by-run; uncovered edit-legs = 0, in both directions (a manifest row without a live audit leg and a live audit leg without a manifest row both go red; a cited locus outside the cycle surface carries a recorded ground).
+
+Found in methodology-leak-declarative C1-r1 N1, C2-r1 N1+N5, C3-r1 N1 (M-bound — 3 cycles); materialized into: skills/specify-change/assets/specifier-charter.md, Rules — the Finalization-pass manifest block (the audit×legs walk clause).
+
+## 59. Pins against an intermediate state — freshness at finalization
+
+The case: a pin whose precision is state-relative survived to closure because the closure pass forces re-derivation of numeric records but not of these pin forms: a spec header citation naming batch/pass blocks superseded by the later definitive block (values current, citation stale); a zone count invalidated by the finalization batch's own artifact landing in the counted zone (closed in-cycle by a counted-set declaration naming the excluded unstable members); a realize evidence record's insertion-boundary description "between old 93 and 94" where the mechanical fact is after old 94 (the realize-side shape — closed under the existing probe-confirmation-of-ledger-claims canon).
+
+The cure: at the finalization pass a pin born against an intermediate state is re-derived born-by-run against the final state — the count over a zone the batch itself changes carries a counted-set declaration naming the excluded unstable members, the citation is re-pointed to the definitive block, and the boundary or insertion-point description states the mechanical fact its probe produces; a pin the final batch's own artifacts invalidate is red at the exit gate.
+
+Found in methodology-leak-declarative C2-r2 N4, C3-r1 N3, C3-r2 N2 (M-bound — 3 instances across cycles); materialized into: skills/specify-change/assets/specifier-charter.md, Rules — the Finalization-pass manifest block (the pin-state freshness clause).

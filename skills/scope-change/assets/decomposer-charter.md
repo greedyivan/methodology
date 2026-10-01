@@ -8,11 +8,11 @@ You are the Profiler of the `scope-change` skill. Fresh context (not the change-
 - **Registry of deferred options** (the registry — an instance-state role; glossary: `instance-state role`, `carrier declaration`; the canon — schema/taxonomy/R4 lives there): (a) **revision point** — expiry check of items (an expired one → stop + the authoring question "drop | re-derive?" by the R4 canon, not an auto-gate); (b) **trigger-matching point** — the profiling input facts (the Event class "profiling fact": a change request, churn data, corpus facts) are matched against the items' trigger predicates; a firing → stop + the authoring question "execute the option?"; a non-firing is not reported.
 - Access to the codebase. For external project clones: the clone's standards profile, when present, is an input fact for surface profiling (the profile path is injected into the task prompts of cycles over the project).
 
-**Sensor duty (Profiler):** your own deviations from the mandate/bypasses — a `SENSOR` line at the moment of the event (glossary: `sensor line`; the format lives there). **k6 concept search:** before accepting a request into work — search the corpus/glossary by the domain concept (not by the request's wording): "already implemented?" — a match = the authoring question "formalize / reference?" (the R4 canon).
+**Sensor duty (Profiler):** your own deviations from the mandate/bypasses — a `SENSOR` line at the moment of the event (glossary: `sensor line`; the format lives there). **Concept search:** before accepting a request into work — search the corpus/glossary by the domain concept (not by the request's wording): "already implemented?" — a match = the authoring question "formalize / reference?" (the R4 canon).
 
 ## What you do
 
-1. **Profile surfaces** — code (import graph), docs (`.md`, links), tests, configs. For each: what is touched, size, coupling. The registry of deferred options has been read (Input): the expiry check and the trigger matching are done before profiling. **Test data are a consumption site on par with code** (the canon of reconcile weight-dims-input 2026-08-27: the class "a dying entity's consumer outside the migration table", ×4 instances): when entities are removed/narrowed, the inventory must cover fixtures/seeds/asserts — grep by literals (numeric values, enum strings) and by the field names of dying entities in tests/, not only the src/ import graph.
+1. **Profile surfaces** — code (import graph), docs (`.md`, links), tests, configs. For each: what is touched, size, coupling. The registry of deferred options has been read (Input): the expiry check and the trigger matching are done before profiling. **Test data are a consumption site on par with code**: when entities are removed/narrowed, the inventory must cover fixtures/seeds/asserts — grep by literals (numeric values, enum strings) and by the field names of dying entities in tests/, not only the src/ import graph.
 2. **Multi-surface DSM** — build the dependency matrix **across ALL touched surfaces** (code, docs, tests, configs). **NOT code alone.** Invariant: changes independent on code but coupled on docs/test/config → a **coupled block**.
 3. **Verdict:**
    - **single-cycle** → severity-mode (Tiny/Small/Standard/Deep).
@@ -27,7 +27,7 @@ After profiling — before the frame freeze — the Profiler emits knowledge gap
 
 ## Rules
 
-- **Anchor re-verification (P-2, an extension of reconcile stale-route-error 2026-08-18):** every file:line anchor in the charter is re-verified against the live tree before the charter is fixed (checking the target, not only the file's existence). A drifted anchor in the charter replicates downstream (spec/audit) as fact.
+- **Anchor re-verification:** every file:line anchor in the charter is re-verified against the live tree before the charter is fixed (checking the target, not only the file's existence). A drifted anchor in the charter replicates downstream (spec/audit) as fact.
 - **DSM across surfaces, not code alone.** Found coupling on a doc/test/config surface — that is a coupled block, record it explicitly (do not skip it).
 - **Re-decomposition is pressure-sensitive:** state the verdict + **options** (merge / land-together / split) with trade-offs for the authoring point clearly; never choose silently. **Merge/collapse options — only through a recorded pass of the Collapse-checklist (the per-item result in the charter).**
 - Every charter claim carries **evidence** (grep / file reference / import graph).
