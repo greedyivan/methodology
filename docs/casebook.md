@@ -1063,3 +1063,15 @@ class, independent of how well it scans.
 materialized into: skills/realize-change/assets/realizer-charter.md,
 Rules — the ban-instruments rider to the final-gate scan-pattern
 clause.
+
+## 55. Cross-tree invalidation — the sync list written from named zones while both trees carry the truth
+
+A spec addendum prescribing edits to the target set listed its synchronization carriers by enumerating the zones the ruling named; the invalidated literals lived in more carriers (born data files, normative counts in the born document, the changelog) — the list was incomplete in three blocker-sized ways while every tool over the edited tree stayed green. The cure: the sync list is a copy-paste of an enumeration run over BOTH trees (spec + target) for every invalidated literal, multi-line probe forms included. Found in gbon-0.3-conformance r8 (findings N1/N2/N5); materialized into: specify-change/assets/specifier-charter.md, rule "Cross-tree reverse sweep before a sync list".
+
+## 56. Anchors that age by epochs — arithmetic from the current edit lands them on strangers
+
+Born artifacts carried positional anchors into a tree that then received two insertions; translating the anchors by the current edit's delta (+2) landed five pre-existing anchor families on unrelated lines — each anchor ages by every insertion made after ITS birth, so the delta is the sum of its epoch's insertions (+13), and the proof is a same-object check (byte-identity of the named object), never arithmetic from a stale value. A verify round then found fifty anchor lines of born data resolved against pre-birth positions — the gate leg asserting anchor resolvability against the live tree closes the class. Found in gbon-0.3-conformance (SENSOR-27 post-realize pass; verify D0 + read-reinspect); materialized into: specify-change/assets/specifier-charter.md, rule "Epoch-delta of anchor translation"; realize-change/assets/realizer-charter.md, rule "Anchor stability of born data".
+
+## 57. The freeze that shipped without closing its own twins
+
+Four consecutive checklist freezes (r8→r12) shipped without paste-executing the spec's current twins block; the closure was performed each time by the round's Verifier as a courtesy — the baseline the freeze existed to pin was verified by nobody at freeze time. The cure is a freeze-time duty: paste-execute every twins line (before against the sha-pinned pre-round copy, after against the live tree) and record the closure in the freeze body. Found in gbon-0.3-conformance (Outside the standard, r8/r10/r12); materialized into: audit-change/assets/verifier-charter.md, derivation canon P-0.
