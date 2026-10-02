@@ -1,0 +1,314 @@
+#!/usr/bin/env python3
+"""Waiver-ledger scanner (glossary: `waiver`, `waiver-ledger`; the C4 record form).
+
+Usage: check-waivers <ledger-path> [--today YYYY-MM-DD]
+
+The closed record form (column 0, one record per line, the separator is
+exactly ' | '):
+
+    W-<n> | clause-target | class | rationale | expiry | outcome | escalation
+    W-<n>-ESC | <date> | limit-fired|expiry-fired | <outcome-state>
+
+Dictionaries: class in {violated, unverifiable, not-checked} (the would-be
+blocking disposition — the `disposition dictionary` subset); outcome and
+ESC outcome-state in {open, remediation, conversion} (open — the
+pre-maturation state of the record form); escalation in {-, forced}; the
+ESC date is an ISO calendar date YYYY-MM-DD (year 0001-9999, month 01-12,
+day 01-31, true calendar validity — refuse-loudly, no normalization). The
+expiry composite is `milestone: <id> (OR <id>)*; backstop: YYYY-MM-DD`
+(milestone ids form an open identifier domain: non-empty, free of the
+field/segment separators; the backstop date is calendar-validated when
+expiry is computed).
+
+Red classes:
+  (i)   expired-open   an expired record whose outcome is still open —
+        expiry = the earlier of the milestone event (a paired expiry-fired
+        ESC line: the scanner does not read external events) and the
+        date-backstop (unconditional: a backstop on or before --today is
+        expired even without an ESC)
+  (ii)  malformed      a record outside the closed form: arity outside 7
+        fields (W) / 4 fields (ESC), a field outside its dictionary, a
+        date outside the calendar form, an expiry composite outside the
+        grammar, a duplicate W-id, a duplicate same-type ESC, a dangling
+        ESC, a one-sided forced<->limit-fired pairing, a paired ESC whose
+        outcome-state diverges from the W outcome, a CRLF tail or
+        trailing whitespace in a record line, or an empty ledger (the
+        vacuous pass: green on zero checked entities over an enumerable
+        domain is red)
+  (iii) limit-exhausted  >= RECURRENCE_LIMIT same-class waiver events
+        with no escalation record in that class group
+
+Engagement evidence (the gate's own canon): the output always carries the
+count of checked entities. --today pins the evaluation date for the
+backstop comparison (known-answer fixtures pass a pinned date; the live
+run uses the real date — the default). Exit 0 = clean, 1 = findings,
+2 = invocation error.
+"""
+
+import datetime
+import re
+import sys
+
+CLASSES = ("violated", "unverifiable", "not-checked")
+OUTCOMES = ("open", "remediation", "conversion")
+ESCALATIONS = ("-", "forced")
+ESC_TYPES = ("limit-fired", "expiry-fired")
+RECURRENCE_LIMIT = 2
+
+W_CANDIDATE = re.compile(r"^W-[0-9]+($| |)")
+ESC_CANDIDATE = re.compile(r"^W-[0-9]+-ESC($| |)")
+DATE_RE = re.compile(r"^([0-9]{4})-([0-9]{2})-([0-9]{2})$")
+EXPIRY_RE = re.compile(
+    r"^milestone: (?P<ids>[^;|]+); backstop: (?P<backstop>[0-9]{4}-[0-9]{2}-[0-9]{2})$"
+)
+
+
+def valid_date(text):
+    m = DATE_RE.match(text)
+    if not m:
+        return None
+    year, month, day = (int(g) for g in m.groups())
+    if not 1 <= year <= 9999 or not 1 <= month <= 12 or not 1 <= day <= 31:
+        return None
+    try:
+        return datetime.date(year, month, day)
+    except ValueError:
+        return None
+
+
+def parse_expiry(field, lineno, defects):
+    m = EXPIRY_RE.match(field)
+    if m is None:
+        defects.append(
+            f"malformed: line {lineno}: expiry composite outside the "
+            f"milestone/backstop grammar: {field!r}"
+        )
+        return None
+    ids = [i.strip() for i in m.group("ids").split(" OR ")]
+    if not ids or any(not i or "|" in i or ";" in i for i in ids):
+        defects.append(
+            f"malformed: line {lineno}: milestone id outside the "
+            f"identifier domain: {field!r}"
+        )
+        return None
+    backstop = valid_date(m.group("backstop"))
+    if backstop is None:
+        defects.append(
+            f"malformed: line {lineno}: backstop date outside the ISO "
+            f"calendar form: {m.group('backstop')!r}"
+        )
+        return None
+    return backstop
+
+
+def scan(text, today):
+    defects = []
+    records = {}
+    order = []
+    escs = {}
+    # Record lines are single LF lines: split on '\n' only, so a CRLF tail
+    # stays visible in the last field.
+    for lineno, line in enumerate(text.split("\n"), start=1):
+        if not (W_CANDIDATE.match(line) or ESC_CANDIDATE.match(line)):
+            continue
+        if "\r" in line:
+            defects.append(
+                f"malformed: line {lineno}: record line carries a CRLF tail"
+            )
+            line = line.rstrip("\r")
+        fields = line.split(" | ")
+        if any(f != f.strip() for f in fields):
+            defects.append(
+                f"malformed: line {lineno}: record line carries "
+                f"trailing/leading whitespace in a field"
+            )
+        if ESC_CANDIDATE.match(line):
+            if len(fields) != 4 or not fields[0].endswith("-ESC"):
+                defects.append(
+                    f"malformed: line {lineno}: ESC line outside the closed "
+                    f"4-field form ({len(fields)} fields)"
+                )
+                continue
+            wid, date_s, esc_type, state = fields
+            base = wid[: -len("-ESC")]
+            esc_defect = False
+            if re.fullmatch(r"W-[0-9]+", base) is None:
+                defects.append(
+                    f"malformed: line {lineno}: ESC id {wid!r} outside the "
+                    f"closed W-<n>-ESC id form"
+                )
+                esc_defect = True
+            if valid_date(date_s) is None:
+                defects.append(
+                    f"malformed: line {lineno}: ESC date outside the ISO "
+                    f"calendar form: {date_s!r}"
+                )
+                esc_defect = True
+            if esc_type not in ESC_TYPES:
+                defects.append(
+                    f"malformed: line {lineno}: ESC type {esc_type!r} "
+                    f"outside {{{', '.join(ESC_TYPES)}}}"
+                )
+                esc_defect = True
+            if state not in OUTCOMES:
+                defects.append(
+                    f"malformed: line {lineno}: ESC outcome-state {state!r} "
+                    f"outside {{{', '.join(OUTCOMES)}}}"
+                )
+                esc_defect = True
+            # An ESC line outside the closed form is a malformed record: it
+            # does not enter the semantic layer (no pairing, no expiry
+            # witnessing) — the closed-form gate admits in-form records only.
+            if esc_defect:
+                continue
+            key = (base, esc_type)
+            if key in escs:
+                defects.append(
+                    f"malformed: line {lineno}: duplicate {esc_type} ESC "
+                    f"for {base}"
+                )
+            escs[key] = (state, lineno)
+            continue
+        if len(fields) != 7:
+            defects.append(
+                f"malformed: line {lineno}: W-line outside the closed 7-field "
+                f"form ({len(fields)} fields)"
+            )
+            continue
+        wid, _clause, rclass, _rationale, expiry_s, outcome, escalation = fields
+        if re.fullmatch(r"W-[0-9]+", wid) is None:
+            defects.append(
+                f"malformed: line {lineno}: W-id {wid!r} outside the closed "
+                f"W-<n> id form"
+            )
+            continue
+        if rclass not in CLASSES:
+            defects.append(
+                f"malformed: line {lineno}: class {rclass!r} outside "
+                f"{{{', '.join(CLASSES)}}} (the would-be blocking disposition)"
+            )
+        if outcome not in OUTCOMES:
+            defects.append(
+                f"malformed: line {lineno}: outcome {outcome!r} outside "
+                f"{{{', '.join(OUTCOMES)}}}"
+            )
+        if escalation not in ESCALATIONS:
+            defects.append(
+                f"malformed: line {lineno}: escalation {escalation!r} outside "
+                f"{{{', '.join(ESCALATIONS)}}}"
+            )
+        backstop = parse_expiry(expiry_s, lineno, defects)
+        if wid in records:
+            defects.append(
+                f"malformed: line {lineno}: duplicate W-id {wid}"
+            )
+            continue
+        records[wid] = {
+            "class": rclass,
+            "outcome": outcome,
+            "escalation": escalation,
+            "backstop": backstop,
+            "lineno": lineno,
+        }
+        order.append(wid)
+
+    for (base, esc_type), (state, lineno) in escs.items():
+        if base not in records:
+            defects.append(
+                f"malformed: line {lineno}: dangling ESC — no record {base}"
+            )
+
+    for wid, rec in records.items():
+        limit_esc = escs.get((wid, "limit-fired"))
+        expiry_esc = escs.get((wid, "expiry-fired"))
+        if rec["escalation"] == "forced" and limit_esc is None:
+            defects.append(
+                f"malformed: {wid} (line {rec['lineno']}): escalation "
+                f"'forced' without a paired limit-fired ESC"
+            )
+        if rec["escalation"] != "forced" and limit_esc is not None:
+            defects.append(
+                f"malformed: line {limit_esc[1]}: limit-fired ESC for {wid} "
+                f"whose escalation is '-'"
+            )
+        for esc_type, esc in (("limit-fired", limit_esc), ("expiry-fired", expiry_esc)):
+            if esc is not None and esc[0] != rec["outcome"]:
+                defects.append(
+                    f"malformed: line {esc[1]}: paired {esc_type} ESC "
+                    f"outcome-state {esc[0]!r} diverges from {wid} outcome "
+                    f"{rec['outcome']!r}"
+                )
+        expired = expiry_esc is not None or (
+            rec["backstop"] is not None and rec["backstop"] <= today
+        )
+        if expired and rec["outcome"] == "open":
+            why = (
+                "paired expiry-fired ESC"
+                if expiry_esc is not None
+                else f"backstop {rec['backstop']} reached"
+            )
+            defects.append(
+                f"expired-open: {wid} (line {rec['lineno']}): expired "
+                f"({why}) with outcome 'open'"
+            )
+
+    groups = {}
+    for wid in order:
+        groups.setdefault(records[wid]["class"], []).append(wid)
+    for rclass, wids in groups.items():
+        if len(wids) >= RECURRENCE_LIMIT and not any(
+            records[w]["escalation"] == "forced" for w in wids
+        ):
+            defects.append(
+                f"limit-exhausted: class {rclass!r} reached "
+                f"{len(wids)} waiver events (limit {RECURRENCE_LIMIT}) "
+                f"without an escalation record"
+            )
+
+    if not records:
+        defects.append(
+            "malformed: no W-records checked — green on zero checked "
+            "entities over an enumerable domain is red (the vacuous pass)"
+        )
+    return records, escs, defects
+
+
+def main():
+    args = sys.argv[1:]
+    today = datetime.date.today()
+    if not args or args[0].startswith("--"):
+        print(
+            "usage: check-waivers <ledger-path> [--today YYYY-MM-DD]",
+            file=sys.stderr,
+        )
+        return 2
+    path = args[0]
+    if "--today" in args:
+        i = args.index("--today")
+        if i + 1 >= len(args) or valid_date(args[i + 1]) is None:
+            print("check-waivers: --today expects YYYY-MM-DD", file=sys.stderr)
+            return 2
+        today = valid_date(args[i + 1])
+    try:
+        # newline='' keeps CRLF tails visible (record lines are single LF
+        # lines; a CRLF tail is an EOL-policy defect, not normalized away).
+        text = open(path, encoding="utf-8", newline="").read()
+    except OSError as exc:
+        print(f"check-waivers: cannot read ledger: {exc}", file=sys.stderr)
+        return 2
+
+    records, escs, defects = scan(text, today)
+    print(
+        f"engagement: W-records={len(records)} ESC-lines={len(escs)} "
+        f"classes-checked={len({r['class'] for r in records.values()})} "
+        f"findings={len(defects)}"
+    )
+    if defects:
+        for line in defects:
+            print(f"DEFECT {line}")
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

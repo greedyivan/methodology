@@ -33,6 +33,7 @@ REFERENCED_ROLES = (
     "cycle archive",
     "surface inventory",
     "project profile",
+    "waiver-ledger",
 )
 BASES = ("instance-root", "workspace-repo")
 HEADER = ("role", "path", "base")

@@ -29,6 +29,36 @@ jobs:
             echo "FAIL: events validator accepted a bad fixture"; exit 1
           fi
 
+      - name: waiver scan over ci-fixtures (positive + negative)
+        run: |
+          python3 tools/check-waivers tools/ci-fixtures/waiver-positive.md --today 2026-10-02
+          python3 tools/check-waivers tools/ci-fixtures/waiver-escalation-green.md --today 2026-10-02
+          python3 tools/check-waivers tools/ci-fixtures/waiver-expiry-matured-green.md --today 2026-10-02
+          for f in \
+            waiver-expired-open.md \
+            waiver-malformed.md \
+            waiver-limit-exhausted.md \
+            waiver-milestone-fired.md \
+            waiver-red-arity8.md \
+            waiver-red-arity5.md \
+            waiver-red-esc-date-range.md \
+            waiver-red-esc-date-format.md \
+            waiver-red-esc-state-vocab.md \
+            waiver-red-escalation-vocab.md \
+            waiver-red-outcome-vocab.md \
+            waiver-red-forced-no-esc.md \
+            waiver-red-limit-esc-no-forced.md \
+            waiver-red-outcome-divergence.md \
+            waiver-red-dup-wid.md \
+            waiver-red-dangling-esc.md \
+            waiver-red-dup-esc.md \
+            waiver-red-eol-space.md \
+            waiver-red-wid-form.md; do
+            if python3 tools/check-waivers "tools/ci-fixtures/$f" --today 2026-10-02; then
+              echo "FAIL: waiver scan accepted a bad fixture: $f"; exit 1
+            fi
+          done
+
       - name: purity pin (private markers vs allowlist)
         env:
           LC_ALL: C.UTF-8

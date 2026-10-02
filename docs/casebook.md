@@ -1263,3 +1263,51 @@ record): this section carries one record per editing cycle.
   deferred registry item registry-walk-form by absorption (its
   build-path named this charter zone; the closing adjudication lives in
   the operational registry, provenance: the C3 round ledger).
+
+## 65. The green gate that checked nothing — engagement evidence and the recorded toleration
+
+The case: the chain's mechanical gates were consumed as trust objects on
+the strength of their exit codes alone. A checker wired to an empty
+domain, a pattern matching nothing, a validator over the wrong input —
+each still exits zero and each pass reads as verification performed, so
+the vacuous green and the working green are indistinguishable in the
+artifact; and a quiet failure of such a gate masks the defects it was
+trusted to catch unless a probe has demonstrated the catch. In step with
+it, the tolerated deviation had semantics (expiry, outcome, recurrence)
+but no record carrier of its own: a toleration admitted at a disposition
+point lived in prose, an unrecorded waiver held as well as a recorded
+one, and recurrence by class was counted nowhere.
+
+The cure: gates and tolerations become qualified, recorded artifacts. A
+gate earns its green by engagement evidence — the output carries the
+count of checked entities, and a green on zero over an enumerable domain
+is red; where a gate's quiet failure can mask defects, its qualification
+carries a mutation probe on a throwaway copy or a second channel whose
+independence is certified by a demonstrated divergence on a seeded input
+(a common engine or pattern source is not certification). A tolerated
+deviation admitted with expiry semantics is minted as a waiver record
+into a dedicated instance-state role (the waiver-ledger): a closed
+W-line form over the would-be blocking disposition as the recurrence
+class, outcomes maturing to remediation or conversion, milestone and
+date-backstop expiry, forced escalation at the recurrence limit, and a
+corpus-shipped scanner gate that goes red on the expired-without-outcome,
+the outside-the-closed-form and the limit-exhausted-without-escalation
+record.
+
+Found in this corpus's verification-adequacy change program, cycle C4
+(rules 3–4 of the program intent — gate qualification and the waiver
+regime; the first live waiver is the tolerance of the R3-T purity-pin
+divergence, expiry inside the program window); materialized into:
+skills/audit-change/assets/verifier-charter.md (the gate-qualification
+standing dimension and its attributions);
+skills/verify-change/assets/verifier-charter.md (the axis-1a
+cross-reference); skills/reconcile-change/SKILL.md (the waiver-mint
+disposition outcome naming the record form and the gate);
+reference/glossary.md (the terms `waiver-ledger` and the amended
+`waiver` placement, membership 9→10); tools/check-carriers (the checker
+constants); tools/check-waivers with tools/ci-fixtures/waiver-*.md and
+the ci.yml waiver-scan step (the mechanical gate and its known-answer
+family). Eval-first duty of the directive legs: the representative-task
+run before/after the edit — artifacts at the cycle's realize workspace
+(eval/, the realize ledger); the standing fresh-context consumer probe —
+the program's closing exercise (C6).
