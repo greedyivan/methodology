@@ -113,11 +113,12 @@ generalize to any spec carrying derived fixtures and numeric pins.
 materialized into: skills/audit-change/assets/verifier-charter.md, P-4
 counter-declarations + the Mechanical freeze form riders (the freeze-execution
 escalation of this entry's pre-audit-run form; case domain of the escalation:
-notes-method-cm-c1 r1 — a freeze carrying "T2 rows — per spec §3.6" while the
-independent recount agreed at 24; notes-method-cm-c2 r1 — the freeze pinned
-"3 tracked files / 48" from the C1-era note while the live git ls-files showed
-4 files / 486 lines; anchors/shas born by the freeze's own run and the
-freeze-form over the twins block — gbon-formalization C2/C3/C4)
+a documentation-canon program's first cycle r1 — a freeze carrying
+"T2 rows — per spec §3.6" while the independent recount agreed at 24; the
+same program's second cycle r1 — the freeze pinned "3 tracked files / 48"
+from the C1-era note while the live git ls-files showed 4 files / 486 lines;
+anchors/shas born by the freeze's own run and the freeze-form over the twins
+block — a formalization program's C2/C3/C4)
 
 12. **An explanation of a run-fact is itself a run-fact** (the "unrun-RCA"
      class, 2 instances in one cycle: a pinned exit-code literal transcribed
@@ -141,7 +142,7 @@ artifact; a count "9" with the fact 14)
 Class: anchor-precision — a file:line/bibliographic anchor enters an artifact
 from adjacent reading or memory instead of copy-paste from a run's output at
 the moment of insertion. Case domain: specifier charter (2 instances — an
-anchor :57 with the fact at :56; the path value.go without the internal/wire
+anchor :57 with the fact at :56; a leaf-file path without the parent-package
 component; the bib-verify class ×2 — an audit citation from memory, a verify
 citation from a research artifact, the "Bohner" narrowing refuted by the
 edition by_statement — Arnold); audit charter (the anchor-precision RCA ×3
@@ -161,14 +162,14 @@ skills/audit-change/assets/verifier-charter.md, Rules (finding-anchor bullet)
 Class: record-born-by-run — a numeric/probe/closure claim in a process
 artifact transcribed, anticipated, or self-witnessed instead of being
 born by an executed run at the moment of writing. Five verified
-instances in one program (carrier-regime c1: a probe artifact cited
+instances in one program (c1: a probe artifact cited
 before it existed; an unpinned close-run filter form; self-witnessed
 exit-table counters. c2: a closure annotation mapping a glossary term
 that greps 0 pre-land; an unpinned count inside a remediation fix line),
 plus adjacent orchestrator-side events (an eval arm dispatched against
 an unverified environment claim; control re-runs guessing marker
 patterns instead of paste-executing exit-record commands). The M-bound
-fired (≥2 same-class across cycles) → RCA 2026-09-21.
+fired (≥2 same-class across cycles) → the RCA amendment.
 
 Root cause: record integrity bound only at verification points
 (audit/final gates); nothing bound at generation time — every record
@@ -185,8 +186,8 @@ anticipated runs are red at the FINAL gate, enumerated both directions.
 materialized into: skills/specify-change/assets/specifier-charter.md, Rules
 (Birth-check clause + the through numeric re-run — the M-boundary class, 3rd
 instance; re-runbatch twin-enumeration + value-level closure + twins block +
-twins-line strict form — gbon-formalization C2/C3/C4, the before-count
-off-by-ones r1-N4/r3-N1 and the $W/{L8} placeholder escapes);
+twins-line strict form — a formalization program's C2/C3/C4, the before-count
+off-by-ones across rounds and the $W/{L8} placeholder escapes);
 skills/audit-change/assets/verifier-charter.md (D7 baseline-artifact carrier,
 D9 run-pin by the output's literal form, instrumental-claims run-pin — a pin
 "catches R-n of" refuted by the next specifier round, checklist-baseline-by-
@@ -196,13 +197,13 @@ charter.md (inventory numeric claims by a run — a charter/profile claiming
 control re-run of the spec's own counters);
 skills/realize-change/assets/realizer-charter.md (probe-confirmation of
 ledger claims — the P-6 claim "es==0 verified" with a live 0/0 panic; the
-RL-9 claim "skeleton distinguishability" with a byte tie)
+a ledger record's "skeleton distinguishability" claim with a byte tie)
 
 ## 15. Birth-enumeration — the mechanical carrier
 
 Class: record-born-by-run, extending entry 14's series (the Birth-check
-clause's first live exercise failed). Case domain: carrier-regime c3,
-spec audit round 1 (2026-09-21, author-mandated RCA-amendment). The
+clause's first live exercise failed). Case domain: a conformance program's third cycle,
+spec audit round 1 (author-mandated RCA-amendment). The
 spec's twins line for a rider literal declared before=10, transcribed
 from the allowlist's rider count — a number whose domain includes a
 file outside the twins command's own declared domain — while the
@@ -241,12 +242,12 @@ entering a spec without the author's run at entry, or a final-gate pattern
 transcribed from an example (partial alphabet, line-anchoring artifacts)
 instead of derived from the artifact's own id-inventory. Case domain: gates-
 run-pin 2 cross-cycle instances + a relapse chain; the r2 ACK "reformulated
-as executable" without runs of the C/Go branches; the gate pattern-shape
-chain — notes-method-cm-c2 RL-13 (canon absent from the gate), disposition-c4
-(the pattern-shape stamp), gm-c2 RL-10 (a line-anchored ^R-, G-*/@-*/ST-*
+as executable" without runs of both language branches; the gate pattern-shape
+chain — a documentation-canon cycle's ledger record (canon absent from the gate), a disposition round
+(the pattern-shape stamp), a gate-mechanics cycle's ledger record (a line-anchored ^R-, G-*/@-*/ST-*
 uncovered — 18 sites leaked to the staged product, caught only at the
 orchestrator's confirmation read); the gate-without-run-pin 2nd instance —
-c1 r1-N5 + c2 r1-N5; D2 enum-value quoting (foreign CSS tokens); D3/D4
+the same round finding in two consecutive cycles; D2 enum-value quoting (foreign style-sheet tokens); D3/D4
 (a declarative lint ban absent from the eslint config — BLOCKER r2; a literal
 grep over existing sites; the Encoder stream outside the pattern); a probe
 against non-canonical forms (case/spelling/morphology) as the gate-authoring
@@ -268,8 +269,8 @@ Class: gate-execution-point — gates and their artifacts taken at the wrong
 point: an intermediate log instead of the final state; the final gate run on
 a tree whose surface files are not in the git index. Case domain: the "gate
 log not of the final state" class, 2 instances (an intermediate matrix log; a
-wire table without an artifact); a CI finding post-land (codec_ptr2iface_
-depth_test.go — 3 local gate runs green, CI on land RED: doc band 2 long
+wire table without an artifact); a CI finding post-land (a depth-test
+file — 3 local gate runs green, CI on land RED: doc band 2 long
 blocks vs baseline 0; the consequence — a rewrite of the landed history and
 moving the tag); D8 log-zone intermediate pins (M-boundary gate pairs).
 Directive state: realizer Rules (gate artifact of the final state; final gate
@@ -291,10 +292,10 @@ cycle — L1 at verify); the family reaching 3 instances (the matrix, README, a
 docstring); verify L1 ×5 despite the claims-map norm (an impl-ledger record
 declaring full re-derivation executed as spot updates — stale, mis-derived,
 miscounted numbers survived; the pairing table closed the class with a
-0-divergence re-inspection); gm-c1 close-out refresh (verify L1 ×4 + 2
+0-divergence re-inspection); a gate-mechanics cycle's close-out refresh (verify L1 ×4 + 2
 read-reinspect residuals: a stale claims-map pair, a stale witness block, a
 stale PBT counter, a prose failure-mode list claiming a mode absent from the
-run-derived log); gm-c5 mechanism-phrase drift (a calibration-criterion
+run-derived log); a later cycle's mechanism-phrase drift (a calibration-criterion
 docstring + procedure pin naming a criterion the code does not use; a
 manifest origin cell naming an abandoned parse method; the remediation form:
 "byte-position" 0 hits, "within the read rtol" 0 hits). Directive state:
@@ -313,11 +314,11 @@ doc factual-truth (I-DOC-semantic)
 Class: verification-mechanics — the integrity mechanics of probes and pins: a
 probe revert destroying unstaged work; rigid section indexing; mirror-pair
 divergence; hand-transcribed byte pins; cache blindness; unrun reading
-discipline. Case domain: gbon-canonical-grain 2026-09-16 (git checkout --
-over a dirty tree destroyed the realization — dangling-blob recovery; RL-19 —
+discipline. Case domain: a canonical-grain conformance cycle (git checkout --
+over a dirty tree destroyed the realization — dangling-blob recovery; a ledger record —
 a re-glue losing a segment of the pin); the "rigid section indexing" RCA
-class ×3 (benchstat-like parsers); the mirror pair (routeSignature g1–g4;
-filterSearch — the AND-mutation of the PHP side caught only by an external
+class ×3 (benchstat-like parsers); the mirror pair (a routing probe g1–g4;
+its filter twin — the AND-mutation of the query side caught only by an external
 cross-check); both cache defects living in the unclosed orders; the class
 "reading contract inputs >300 in full" ×2 across cycles. Directive state:
 verify charter 1a (copies/mirrors), the stateful-gate pattern, Rules (read
@@ -332,8 +333,8 @@ Rules (byte-pin re-glues); skills/audit-change/assets/verifier-charter.md, D6
 
 Class: volatile-pins — numeric pins of live catalogs/trees taken without the
 run's date/HEAD, and volatile baseline pins not re-run each round. Case
-domain: a process finding (the base norm); gm-c1 intra-cycle staleness r2 —
-the registry drifted 89→90 sections between the r1 and r2 freezes, per-round
+domain: a process finding (the base norm); a gate-mechanics cycle's intra-cycle staleness r2 —
+the registry drifted between the r1 and r2 freezes, per-round
 re-freeze from r3 resolved it. Directive state: audit charter P-2 (both
 riders); verify charter Rules (pins with date/HEAD).
 
@@ -349,9 +350,9 @@ and derived test carriers because they were enumerated, not run-derived. Case
 domain: a frame "exactly 2 edits" with a second dict-count pin in a sibling
 test file; a 2nd cross-cycle instance — MAY-regions missed by the frame;
 consequence-edits of byte pins outside the enumerated carriers (a 3rd
-cross-cycle "frame vs pin-carrier" instance); tri-lang-rework c2-c4 — the D4
+cross-cycle "frame vs pin-carrier" instance); a three-language rework cycle's passes — the D4
 checker-blindness RCA-v2, instances ×7 audit-branch + 2 clean applications;
-gbon-defcells-c2 2026-09-19 — the render-contract×pinned-guards fork (2
+a definition-cells cycle — the render-contract×pinned-guards fork (2
 author-resolved realize halts on one surface); the "frame incomplete over
 derived test carriers" RCA class, 3 intra-cycle instances. Directive state:
 decomposer Rules (carriers of numeric-fact pins by a run; byte pins by a
@@ -367,17 +368,17 @@ test carriers)
 
 Class: claim-before-fact — completeness/coverage declared while the declared
 members have no authored content; scenario/wiring declarations without
-carriers. Case domain: gm-c1 r1-N1 ("per-class tests frozen @ CP1" with zero
-authored test content) and r2-N2 (a per-class route registry emitted complete
-while a CR-declared transition class had no row); gm-c3 (the zslice class
-admitted with a 7-row expectation table carrying no zslice row — narrated as
+carriers. Case domain: a gate-mechanics cycle's round finding ("per-class tests frozen @ CP1" with zero
+authored test content) and a second round's (a per-class route registry emitted complete
+while a CR-declared transition class had no row); a third cycle (the slice class
+admitted with a 7-row expectation table carrying no slice row — narrated as
 "registered open"; the ordering gate checks ordering, not per-class
 coverage); an S1 invariant without a "Check:" line (E1); a declared
-test-scenario without a real test (D1); gbon-defcells-c1 2026-09-18 (the
-declared-check-not-wired class — 3 intra-cycle instances r1-N1/r1-N4/r2-N1)
-and c2 2026-09-19 (selector form: wrap/omission-blindness, 6 intra-cycle
-instances); the spec-letters-non-executable-shapes class, 5 instances
-(RL-6/RL-9/RL-18). Directive state: audit charter cat-4 (P-2/D1 riders, the
+test-scenario without a real test (D1); a definition-cells cycle's first pass (the
+declared-check-not-wired class — 3 intra-cycle round findings)
+and its second pass (selector form: wrap/omission-blindness, 6 intra-cycle
+instances); the spec-letters-non-executable-shapes class, 5 instances across three
+ledger records. Directive state: audit charter cat-4 (P-2/D1 riders, the
 declared-frozen ↔ authored clause); specifier Rules (pre-registration
 coverage per admitted class; scenario wiring two-point pin + selector form;
 post-fix letters of defect scenarios).
@@ -396,12 +397,12 @@ external audit/verify stage); the probe-loss-on-carrier-move RCA (2 instances
 in one cycle); the M7 regression-burst (fix regressions 3 times in a row); a
 relapse after the fix-sweep norm (the M-signal "a fix without a cross-section
 sweep", 3 instances; S2-1 not synchronized with the fixed INV-1); a stale
-reserved list SA-ID docs/schema-artifact.md:14-19 (2 touches of the c2→c3
+a stale reserved list SA-ID of a schema doc (2 touches of the cycle-boundary
 tail); the M-boundary "fragile instrumental boundaries/anchors"; FINAL-sweep
 residue (8 procedural APPEND markers in a FINAL carrier; a mangled sentence
-from a fix batch — notes-method-cm-c1); the self-claim/evidence-integrity
+from a fix batch — a documentation-canon program's first cycle); the self-claim/evidence-integrity
 class (2 intra-cycle instances — "2 occurrences (:269-270)" with the fact 3);
-the carrier-canon cases N7–N12 of audit r2–r6. Directive state: specifier
+the carrier-canon cases of the audit rounds. Directive state: specifier
 charter (CP synchronization; carrier-move; the Rules sweep family; FINAL-
 sweep; self-referential evidence-records; carrier canon; pinning positive
 columns).
@@ -412,10 +413,10 @@ synchronization + Carrier-move + the Rules sweep-family bullets
 ## 25. Registry trigger-matching integrity
 
 Class: registry-matching — mis-read item status and incomplete matching over
-the deferred-options registry. Case domain: notes-method-cm-c1 r1 retracted
-r2 (a firing read the provenance-block expiry line "live" inside a
-[DROP]-marked section); gbon-formalization C3 2026-09-17 (the 45-vs-46 mirror
-divergence — a mechanical walk counted gm-rate-taxonomy dead by its
+the deferred-options registry. Case domain: a documentation-canon cycle's r1 retracted
+at r2 (a firing read the provenance-block expiry line "live" inside a
+[DROP]-marked section); a formalization program's C3 (the mirror-count
+divergence — a mechanical walk counted a rate-taxonomy item dead by its
 registration tag) and C2 (matching completeness). Directive state: audit
 charter, the trigger-matching point (status by section-header marker only;
 marker gloss; matching completeness by mechanical walk).
@@ -426,9 +427,9 @@ trigger-matching point (item-status + marker-gloss + matching-completeness)
 ## 26. Letter-completeness of remediation and implementation
 
 Class: letter-completeness — remediation or implementation truncated to a
-subset of the declared letter. Case domain: relapse A5 (a retry block without
+subset of the declared letter. Case domain: a relapse case (a retry block without
 a final assert after an explicit instruction); the invariant-letter RCA
-hypothesis ("a cache by the record id" — the code cached by view.ID); a
+hypothesis ("a cache by the record id" — the code cached by the record's identity field); a
 verify finding (the SB declared a render oracle, the execution truncated the
 chain to encode→decode→re-encode). Directive state: realizer Rules (P-6
 post-remediation re-check; INV letter↔code re-check; per-SB W→T chain
@@ -443,10 +444,10 @@ Class: edit-discipline — content-class stripping against MUST-preserve,
 doc-line deletion without a behavior probe, no-op scripted replacements,
 process markers into target code. Case domain: the impl-pressure verify
 finding ("stripping content classes with a runtime string", 224 removals; the
-twin incident executed the HALT correctly); a sweep cutting the kindBadRef
-contract of MapAt as a "duplicate" — the contract was lost; the descWalk
+twin incident executed the HALT correctly); a sweep cutting the reference-validation
+contract of a map-access routine as a "duplicate" — the contract was lost; the
 map-key hook quietly not applying, exposed only by the added L1 test; the
-marker_re-conflict class ×2 across cycles (the repo marker gate catching it
+marker-pattern-conflict class ×2 across cycles (the repo marker gate catching it
 — the cost, a red iteration). Directive state: realizer Rules (vocabulary
 ban × MUST-preserve; doc-line deletion under behavior-absence probe;
 scripted-replacement count assert; process markers stay out of target code).
@@ -474,7 +475,7 @@ materialized into: skills/realize-change/assets/realizer-charter.md, Rules
 ## 29. Spike timing
 
 Class: spike-timing — research executed at the wrong point of the unit. Case
-domain: vite-middleware — the research was executed at the wrong point.
+domain: a middleware-integration cycle — the research was executed at the wrong point.
 Directive state: realizer-charter, Spike-before-edit (R4) — the spike precedes
 the edit.
 
@@ -485,7 +486,7 @@ Spike-before-edit (R4)
 
 Class: execution-boundary — which execution the Docker-only canon covers.
 Case domain: the instance's incident series behind the term (host-side parsing
-of ready artifacts vs target-project/lab code execution). Directive state:
+of ready artifacts vs target-project code execution). Directive state:
 glossary, "Docker boundary of execution" (gate-integrity section).
 
 materialized into: reference/glossary.md, the Docker-boundary term
@@ -499,7 +500,7 @@ Merge model (merge, not rebase).
 
 materialized into: norms/integration-canon.md, Merge model (merge, not rebase)
 
-## 17. Awk over an empty stdin — probes that hang on missing input
+## 60. Awk over an empty stdin — probes that hang on missing input
 
 Class: probe-mechanics — a mechanical check piped a command whose input
 artifact was absent at run time, leaving the probe to hang or return
@@ -523,9 +524,9 @@ sha sums, pattern-dependent counts) asserted without a run at writing
 time; the self-referential sub-class (counts invalidated by the very
 act of recording them) is structurally unhonest-able: agents tried
 "fair" pins with out-of-count caveats and reproduced the defect.
-Instance: audit gbon-slotpop-canonical, RCA-1 «pin-счётчик» ×3,
-RCA-2 «pin-точность» ×4 (line-anchored RCAs in the audit
-round-ledger), RCA-3 — the recurrence after discipline RCAs exposed a
+Instance: a slot-population census audit — a pin-counter RCA class ×3,
+a pin-precision RCA class ×4 (line-anchored RCA records in the audit
+round-ledger), a recurrence RCA — the recurrence after discipline RCAs exposed a
 design defect of the enumeration itself (raw uniq catches any new
 "@-token"); fixed by whitelist-filtering the enumeration command
 (design-level, not vigilance). In-cycle remediation: every numeric
@@ -536,20 +537,20 @@ lint (entry 33) as the durable exit.
 
 materialized into: skills/specify-change/assets/specifier-charter.md,
 anchor discipline (rides the canon's next editorial touch; recorded
-here as the case domain per entry 17's form)
+here as the case domain per entry 60's form)
 
 ## 33. Manual anchor re-pinning at scale — mechanize the lint
 
 Class: spec maintenance — hand re-pinning anchors across a large
 living spec errs always (850-line spec, six-round drift streak);
 discipline RCAs raise the writing bar but do not survive scale.
-Instance: audit gbon-slotpop-canonical, RCA-5 «pin-класс» ×6;
-remediation applied in-cycle: mechanized anchor-lint.sh
+Instance: a slot-population census audit — a pin-class RCA ×6;
+remediation applied in-cycle: a mechanized anchor lint
 (DEAD(eof)/MOVED(span)/SUSPECT(non-func identifiers)) — the lint run
 is a mandatory exit-self-check pre-condition of the FINAL status;
 SUSPECT types are hand-verified, only the removed-function class is
 blocking. The durable directive: any cycle carrying named anchors
-against a moving tree ships its anchor-lint as a gate, not a habit.
+against a moving tree ships its anchor lint as a gate, not a habit.
 
 materialized into: skills/specify-change/assets/specifier-charter.md
 + skills/verify-change/assets/verifier-charter.md, anchor/lint canon
@@ -562,9 +563,9 @@ Class: basis discipline — amendments pin their anchors against a
 moving WIP tree between realize waves; basis layers accumulate and
 the spec becomes multi-basis without declaration (line-count and
 MAY-anchor verifications die silently).
-Instance: audit gbon-slotpop-canonical, RCA-4 «базис-дрейф» ×2
-(N1-r4, N1r7 BLOCKER, amplitude-M); remediation applied in-cycle
-(charter Доп.5/RCA-4): ONE active WIP basis — every amendment takes a
+Instance: a slot-population census audit — a basis-drift RCA ×2
+(two findings incl. a BLOCKER, amplitude-M); remediation applied in-cycle
+(a charter annex ruling): ONE active WIP basis — every amendment takes a
 fresh snapshot (git diff HEAD, both index and worktree states) and
 re-pins ALL WIP anchors against it; the previous snapshot retires to
 history; the basis declaration (sha256 + wc pins) lives in the spec
@@ -581,7 +582,7 @@ chain governed by no stated contract: a completed launch re-entered on a
 rework command; a crashed launch's task silently re-dispatched fresh (or
 lost); completion judged by no parseable rule; freshness constraints scoped
 to named counterparts instead of the whole launch set.
-Case domain: the dispatch-session-modes program (cycle A, corpus): the
+Case domain: the corpus's own dispatch-completion canon program (cycle A, corpus): the
 provider-empty-return incident class (12+ instances recorded in the
 deferred-options registry's fate blocks; the change card's explicit
 request), the relayed-numeric-claims class, and this program's own
@@ -624,17 +625,17 @@ build-path copied into a different (live) item's section; a status read by
 the narrative instead of the section-header marker then mislabels the live
 item as dead (the header-only status rule caught the divergence: the mirror
 bijection counted the item live while the fate block claimed drop-executed).
-Case domain: the dispatch-session-modes program (cycle A reconcile): the
+Case domain: the corpus's own dispatch-completion canon program (cycle A reconcile): the
 provider-empty-return section carried the closure record of
-gbon-cyclic-narrowing-cells (the decode-fix build-path narrative) and was
+a narrowing-cells closure cycle (the decode-fix build-path narrative) and was
 read as drop-executed by the profiling stage's trigger-matching walk.
 Derivation: the disposition restored the section to its own fields
 (id/essence/anchors/trigger/build-path/expiry/provenance), added no death
-marker (the item is live — expiry 2027-03-20), and pinned the correction in
+marker (the item is live — a future expiry), and pinned the correction in
 the provenance line; the class joins the header-only status canon rather
 than weakening it.
 
-materialized into: operational/registry/deferred-options.md, the
+materialized into: the deferred-options registry (an instance-state role), the
 provider-empty-return section (provenance line)
 
 ## 37. Stale embedded triggers — charter text pointing at a dead registry item
@@ -644,9 +645,9 @@ live pointer to a registry item's checkpoint branch; when the item dies, the
 pointer rots and every future edit of the artifact re-arms a question whose
 referent no longer exists (the spike inventory caught it as a live
 self-referential trigger; the spec carried it as an author-decision row).
-Case domain: the dispatch-session-modes program (cycle A reconcile): the
+Case domain: the corpus's own dispatch-completion canon program (cycle A reconcile): the
 realizer charter's sentence activating the checkpoint branch of
-sweep-mechanical-carrier ([DROP 2026-09-17 absorption], verified by a
+a mechanical-sweep carrier item ([DROP-marked absorption], verified by a
 registry probe before the deletion — the behavior-absence probe of the
 doc-line rule).
 Derivation: the sentence removed outright (the item is dead; no replacement
@@ -664,7 +665,7 @@ Class: findings-header-arithmetic — a findings artifact's header counters
 findings list (a minor counted twice through a re-label); the round-ledger
 inherits the header numbers and propagates the defect into dispositions and
 monitor rows.
-Case domain: the dispatch-session-modes program (cycle A audit round 1): the
+Case domain: the corpus's own dispatch-completion canon program (cycle A audit round 1): the
 header printed minors: 6 over a list carrying five MINOR rows (1+1+6 ≠ 7);
 caught by the next round's process observations; the ledger corrected to the
 list's ground truth with a provenance note.
@@ -683,7 +684,7 @@ witness's blind spot coincides with the pattern's; the fence records a
 run over a class the check cannot miss by construction, while the
 realistic leak class (a differently-shaped spelling of the same token)
 stays green.
-Case domain: the gbon-0.3-constitution cycle (audit round 1): a
+Case domain: a constitution cycle (audit round 1): a
 version-token ban `\b0\.[12]\b` was born green over the bare form
 "0.2" while the repository family's tags are all v-prefixed (v0.2.1);
 a neutrality seed word-bounded and singular-only was born green while
@@ -711,7 +712,7 @@ surviving findings sit on the boundary of the fixed class list itself
 mention suffixes, prefix casing), not on the classes the sweep
 enumerated; each is either one more leg, one more bound, or a
 declared noise-floor edge.
-Case domain: the gbon-0.3-constitution cycle (audit rounds 3-4): all
+Case domain: a constitution cycle (audit rounds 3-4): all
 legged claims of the closure table held under independent crafts; the
 residuals were an unclosed-fence suppression in the shared prose
 stripper, a mention token still forgiving 4-letter suffixes, a
@@ -736,7 +737,7 @@ does not name (heading level, list membership, whitespace skeleton,
 column-value domain, role association, extraction orthography), so
 every projection of closure (leg↔Check, tag↔unit, counter↔run,
 twin↔pin) stays green while the acceptance domains disagree.
-Case domain: the gbon-0.3-grammar cycle (audit round 1: six MAJOR of
+Case domain: a grammar cycle (audit round 1: six MAJOR of
 one family — fence-blind banned scan, unpinned refusal-list
 composition, unpinned frozen-table rows, level-blind id scan, global
 equality instead of per-article walk, MUST-preserve without a leg)
@@ -765,7 +766,7 @@ the open tail of an "exhaustive" definition (a probe satisfying every
 literal predicate while violating the definition's intent), and
 interpretational ambiguity where two readings of the same articles
 both stand (an L0 with no provable contradiction).
-Case domain: the gbon-0.3-grammar cycle (verify: the two-root stream
+Case domain: a grammar cycle (verify: the two-root stream
 probe passing the letter of CONF-1 — closed by an L1 one-line
 requirement plus a refusal-class phrase; the intern-space view
 identity question — tolerated with an authoring fork recorded for
@@ -788,7 +789,7 @@ defect lives in a part (one conjunct of a composite predicate, the
 pattern's carrier form, a transcribed literal); every projection of
 closure stays green because the unit of witnessing is coarser than the
 unit of failure.
-Case domain: the gbon-0.3-binding-parameters cycle (audit round 1: six
+Case domain: a binding-parameters cycle (audit round 1: six
 findings of the standing declaration-instrument family despite the canon
 landed by the predecessor cycle — a vacuous phrase subcheck blind to the
 target's own line wrap, a line-count where an occurrence-count was
@@ -825,7 +826,7 @@ instrument and the class re-entered through it; incremental,
 finding-local closing moved it one carrier at a time. The cure was
 exhaustive, not incremental: a one-pass enumeration of every
 carrier shape an assertion could ride (fields, zones, tails,
-mentions, bodies, bindings — K1..K25) closed as a material matrix,
+mentions, bodies, bindings — the full carrier inventory) closed as a material matrix,
 cell by cell, both directions; the next round's hunt for a 26th
 shape came up empty (~20 candidates, every one caught or grounded),
 and the class did not return. Three author rulings carried the
@@ -906,9 +907,9 @@ side).
 The case: a migration cycle whose spec's operative record pinned a
 live census of the carriers the units edit (task-list line map,
 mirror size, store event counts, note count). Between the spec's
-birth and realize, sibling sessions moved the live state (the list
-grew 322→478 lines, the mirror 46→54 cards, the stores 68→80
-events); the spec's numbers were honest at birth and stale at
+birth and realize, sibling sessions moved the live state (the list,
+the mirror and the store counts all drifted upward between the two
+censuses); the spec's numbers were honest at birth and stale at
 realize. The realizer pinned the birth state by run before the first
 edit (file witnesses + sha256 pins + repository HEAD pins),
 re-derived every consumed census value by run at the moment of use,
@@ -1066,15 +1067,15 @@ clause.
 
 ## 55. Cross-tree invalidation — the sync list written from named zones while both trees carry the truth
 
-A spec addendum prescribing edits to the target set listed its synchronization carriers by enumerating the zones the ruling named; the invalidated literals lived in more carriers (born data files, normative counts in the born document, the changelog) — the list was incomplete in three blocker-sized ways while every tool over the edited tree stayed green. The cure: the sync list is a copy-paste of an enumeration run over BOTH trees (spec + target) for every invalidated literal, multi-line probe forms included. Found in gbon-0.3-conformance r8 (findings N1/N2/N5); materialized into: specify-change/assets/specifier-charter.md, rule "Cross-tree reverse sweep before a sync list".
+A spec addendum prescribing edits to the target set listed its synchronization carriers by enumerating the zones the ruling named; the invalidated literals lived in more carriers (born data files, normative counts in the born document, the changelog) — the list was incomplete in three blocker-sized ways while every tool over the edited tree stayed green. The cure: the sync list is a copy-paste of an enumeration run over BOTH trees (spec + target) for every invalidated literal, multi-line probe forms included. Found in a conformance cycle r8 (three same-family findings); materialized into: specify-change/assets/specifier-charter.md, rule "Cross-tree reverse sweep before a sync list".
 
 ## 56. Anchors that age by epochs — arithmetic from the current edit lands them on strangers
 
-Born artifacts carried positional anchors into a tree that then received two insertions; translating the anchors by the current edit's delta (+2) landed five pre-existing anchor families on unrelated lines — each anchor ages by every insertion made after ITS birth, so the delta is the sum of its epoch's insertions (+13), and the proof is a same-object check (byte-identity of the named object), never arithmetic from a stale value. A verify round then found fifty anchor lines of born data resolved against pre-birth positions — the gate leg asserting anchor resolvability against the live tree closes the class. Found in gbon-0.3-conformance (SENSOR-27 post-realize pass; verify D0 + read-reinspect); materialized into: specify-change/assets/specifier-charter.md, rule "Epoch-delta of anchor translation"; realize-change/assets/realizer-charter.md, rule "Anchor stability of born data".
+Born artifacts carried positional anchors into a tree that then received two insertions; translating the anchors by the current edit's delta (+2) landed five pre-existing anchor families on unrelated lines — each anchor ages by every insertion made after ITS birth, so the delta is the sum of its epoch's insertions (+13), and the proof is a same-object check (byte-identity of the named object), never arithmetic from a stale value. A verify round then found fifty anchor lines of born data resolved against pre-birth positions — the gate leg asserting anchor resolvability against the live tree closes the class. Found in a conformance cycle (a post-realize sensor pass; verify D0 + read-reinspect); materialized into: specify-change/assets/specifier-charter.md, rule "Epoch-delta of anchor translation"; realize-change/assets/realizer-charter.md, rule "Anchor stability of born data".
 
 ## 57. The freeze that shipped without closing its own twins
 
-Four consecutive checklist freezes (r8→r12) shipped without paste-executing the spec's current twins block; the closure was performed each time by the round's Verifier as a courtesy — the baseline the freeze existed to pin was verified by nobody at freeze time. The cure is a freeze-time duty: paste-execute every twins line (before against the sha-pinned pre-round copy, after against the live tree) and record the closure in the freeze body. Found in gbon-0.3-conformance (Outside the standard, r8/r10/r12); materialized into: audit-change/assets/verifier-charter.md, derivation canon P-0.
+Four consecutive checklist freezes (r8→r12) shipped without paste-executing the spec's current twins block; the closure was performed each time by the round's Verifier as a courtesy — the baseline the freeze existed to pin was verified by nobody at freeze time. The cure is a freeze-time duty: paste-execute every twins line (before against the sha-pinned pre-round copy, after against the live tree) and record the closure in the freeze body. Found in a conformance cycle (Outside the standard, r8/r10/r12); materialized into: audit-change/assets/verifier-charter.md, derivation canon P-0.
 
 ## 58. Manifest/leg-map omission — the audit×legs walk at FINAL
 
@@ -1082,7 +1083,7 @@ The case: an audit finding's live legs on the cycle surface escaped the spec's m
 
 The cure: at FINAL the mechanical walk „every audit finding × its cycle-surface legs × manifest membership“ runs born-by-run; uncovered edit-legs = 0, in both directions (a manifest row without a live audit leg and a live audit leg without a manifest row both go red; a cited locus outside the cycle surface carries a recorded ground).
 
-Found in methodology-leak-declarative C1-r1 N1, C2-r1 N1+N5, C3-r1 N1 (M-bound — 3 cycles); materialized into: skills/specify-change/assets/specifier-charter.md, Rules — the Finalization-pass manifest block (the audit×legs walk clause).
+Found in this corpus's leak-removal change program across consecutive cycles (M-bound — 3 cycles); materialized into: skills/specify-change/assets/specifier-charter.md, Rules — the Finalization-pass manifest block (the audit×legs walk clause).
 
 ## 59. Pins against an intermediate state — freshness at finalization
 
@@ -1090,4 +1091,44 @@ The case: a pin whose precision is state-relative survived to closure because th
 
 The cure: at the finalization pass a pin born against an intermediate state is re-derived born-by-run against the final state — the count over a zone the batch itself changes carries a counted-set declaration naming the excluded unstable members, the citation is re-pointed to the definitive block, and the boundary or insertion-point description states the mechanical fact its probe produces; a pin the final batch's own artifacts invalidate is red at the exit gate.
 
-Found in methodology-leak-declarative C2-r2 N4, C3-r1 N3, C3-r2 N2 (M-bound — 3 instances across cycles); materialized into: skills/specify-change/assets/specifier-charter.md, Rules — the Finalization-pass manifest block (the pin-state freshness clause).
+Found in this corpus's leak-removal change program across consecutive rounds (M-bound — 3 instances across cycles); materialized into: skills/specify-change/assets/specifier-charter.md, Rules — the Finalization-pass manifest block (the pin-state freshness clause).
+
+## 61. The record that outruns its run — a pin and its enforcers move together
+
+The case: one genus of record defects recurred across consecutive cycles and rounds of this corpus's leak-removal change program, in four shapes with one root — the recorded layer diverging from the executed layer it reports. An acceptance probe was born as text and never executed at insertion: a pattern typo made it match nothing (green on any tree), while a sibling probe was stronger than its own shall-clause (red on the very state the clause itself produces). A twins batch closed before the last edit of the block it covers: the recorded verdict described an intermediate state. A status line pinned a batch count no born run carried, and the checker row enforcing that literal tested its presence, not its truth — the enforcement row kept the stale record in place against its own cure. Declarations carried counters transcribed from expectation; the batch then closed with the corrected numbers living only in the verdict line.
+
+The cure: a record that pins an execution is re-derived born-by-run in the same edit that moves what it pins — a probe executes at insertion against the live state and a poisoned state, in both directions; a batch re-closes after the last edit of the block it covers; a prose pin and every checker row enforcing its literal move in one edit; a number enters a record only as the output of the run that produced it.
+
+Found in this corpus's leak-removal change program across consecutive cycles and rounds (M-bound — the mandatory class-history RCA duty at the program's reconcile stage; the instance enumeration lives in the cycle's registry record and the immutable audit, not here); materialized into: the reconcile execution record of the carried-class-history registry entry (the cycle's spec registry), and bound to the existing canons it references — the born-run/poison discipline of fix passes, the Finalization-pass manifest block of the specifier-charter (pin-state freshness, the audit×legs walk), and the twins-closure duties of entries 57 and 59.
+
+## Reconcile records
+
+Per the header rule (entries are never edited in place without a reconcile
+record): this section carries one record per editing cycle.
+
+- **Reconcile — the sweep cycle of this corpus's leak-removal change
+  program.** Edited in place, by entry number: 11, 13, 14, 15, 17, 18, 19,
+  20, 21, 22, 23, 24, 25, 26, 27, 29, 30, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+  41, 42, 43, 44, 48, 55, 56, 57, 58, 59 — 36 entries. Edit class:
+  identifier generalization of the case domains — program, project and
+  registry-item names, instance file paths, instance dates and instance
+  record identifiers replaced by domain-class forms; each entry's norm, case
+  mechanism, recurrence counts, round markers, corpus-internal pointers and
+  quoted evidence kept (behavior-preserving). Renumbering act: the duplicate
+  header "## 17." (the awk-empty-stdin entry, physically between entries 31
+  and 32) renumbered "## 60." — entry ids unique 1..60, physical position
+  unchanged. Reference sweep: the case-domain cross-reference citing the
+  renumbered entry's recording form re-pointed to the new number
+  ("per entry 60's form"); the remaining entry-number
+  cross-references verified untouched. This record's enumerated entry set
+  equals the diff-derived edited-entry set.
+
+- **Reconcile — the RCA record of this corpus's leak-removal change
+  program.** Appended, by entry number: 61 — one new case-law entry (the
+  record-versus-run genus: a pin and every checker row enforcing it move
+  together with what they pin; the mandatory class-history RCA materialized
+  as a norm). Edit class: case-law growth at the reconcile stage; no
+  in-place edits, no renumbering (entry ids remain unique 1..61), no
+  reference sweep required (no existing entry or cross-reference touched).
+  This record's enumerated entry set equals the diff-derived edited-entry
+  set.

@@ -32,11 +32,12 @@ history, it does not prescribe.
   resources (assets/, reference/, profile/), everything the stage needs lives
   inside the directory.
 - `reference/` — the glossary (`glossary.md`): the single carrier of terms.
-- `norms/` — four norms: skill authoring invariants, self-change legitimacy
-  invariants, the integration canon of the shared corpus, the Monitor
-  procedure.
-- `tools/` — five maintenance scripts (telemetry, validators, a container
-  runner).
+- `norms/` — five norms: the dispatch/completion canon (the two-branch
+  dispatch/completion rule), the LLM-consumed authoring invariants (No. 6 —
+  the class inventory + the resync rule), self-change legitimacy invariants,
+  the integration canon of the shared corpus, the Monitor procedure.
+- `tools/` — six maintenance scripts (a container runner, an XES converter,
+  events/sensor validators, a d′ meter, a carrier-declaration checker).
 - `docs/` — the casebook (`docs/casebook.md`: case-derived norms, an
   instructive asset) + descriptive prose (this file).
 
@@ -103,7 +104,7 @@ do not age silently, findings get an addressee.
 
 ## The tools/ scripts
 
-Five maintenance scripts; paths — from the repo root.
+Six maintenance scripts; paths — from the repo root.
 
 - `tools/run-in-docker.sh` — the container runner: any project tool executes in
   Docker only. A single point of foreign-code execution: the environment is
@@ -117,6 +118,8 @@ Five maintenance scripts; paths — from the repo root.
 - `tools/dprime_measure.py` — a d′ measure of the verification loop by
   hits/false-alarms (signal detection theory): the sensitivity of verification
   is separated from its noisiness.
+- `tools/check-carriers` — a carrier-declaration checker over the declared
+  roles and bases (glossary: `carrier declaration`).
 
 ## Glossary
 
@@ -136,10 +139,11 @@ The carrier map (pointers, not a retelling of content):
 
 - `skills/<name>/SKILL.md` — every stage's process: executors, steps, outputs,
   stopping points;
-- `norms/` — the corpus's rules: skill authoring invariants (including No. 6 —
-  the class of LLM-consumed surfaces and the resync rule), self-change
-  legitimacy invariants, the integration canon of the shared corpus, the
-  Monitor procedure;
+- `norms/` — the corpus's rules: the dispatch/completion canon, the
+  LLM-consumed authoring invariants (including No. 6 — the class of
+  LLM-consumed surfaces and the resync rule), self-change legitimacy
+  invariants, the integration canon of the shared corpus, the Monitor
+  procedure;
 - `reference/glossary.md` — terms;
 - `README.md` — the router: skill tables, the adoption entry point
   (Get started);
