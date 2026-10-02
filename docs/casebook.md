@@ -1128,6 +1128,40 @@ reference/glossary.md (the terms `disposition dictionary`, `clause ledger`,
 verdict form"); norms/monitor.md (section "Waiver-mode constants
 (pre-registration form)").
 
+## 63. The completion moment that trusted the body — the counted header at the return point
+
+The case: a verification launch's completion moment parsed a narrative
+verdict header (a level and a findings count) while the accounting it stood
+for lived in the artifact's body — the orchestrator's parse trusted what it
+did not count; a contract change landing while a launch was in flight had
+no pinned rule for which output contract judges the return; and the
+verifier's own discrimination (a probe that catches a seeded defect, a
+correct sample that stays green) was assumed by role rather than tested by
+a run.
+
+The cure: the counted header at the return point. The verdict header
+carries the per-disposition ledger counters and the calibration pointer;
+the completion parse is header-only — the blocking table applies by parse
+(zero clauses, or a blocking disposition under a clean verdict, is a parse
+failure, never a body trust); the two-way counted reconciliation of
+contract markers against ledger lines stays the verifier's own exit-check
+over the frozen marker protocol; a return is judged by the output contract
+pinned at the launch's dispatch (the pin lives in the dispatch brief or
+roster row — the canon carries no dated literals); and a two-legged
+known-answer calibration set (a seeded defect that must be caught; a
+correct sample that must stay green) is run by the verifier before
+judging — divergence on any leg disqualifies the run and escalates; the
+receipt pointer rides the header.
+
+Found in this corpus's verification-adequacy change program, cycle C2 (the
+consumer cycle of the C1 accounting substrate); materialized into:
+skills/verify-change/SKILL.md and skills/verify-change/assets/
+verifier-charter.md (the Output block in the counted-header form, the
+resolution-transcript duty, the calibration input line);
+norms/dispatch-completion.md (the Verifier's completion-moment substring —
+the header counter-parse and the dispatch-pinned contract clause);
+README.md (the resynced output line).
+
 ## Reconcile records
 
 Per the header rule (entries are never edited in place without a reconcile
@@ -1168,3 +1202,11 @@ record): this section carries one record per editing cycle.
   unique 1..62), no reference sweep required (no existing entry or
   cross-reference touched). This record's enumerated entry set equals the
   diff-derived edited-entry set.
+- **Reconcile — realize of this corpus's verification-adequacy change
+  program, cycle C2.** Appended, by entry number: 63 — one new case-law
+  entry (the completion moment that trusted the body; the derivation
+  history of the counted-header return contract). Edit class: case-law
+  growth at the reconcile stage; no in-place edits, no renumbering (entry
+  ids remain unique 1..63), no reference sweep required (no existing
+  entry or cross-reference touched). This record's enumerated entry set
+  equals the diff-derived edited-entry set.
