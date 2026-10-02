@@ -1162,6 +1162,50 @@ norms/dispatch-completion.md (the Verifier's completion-moment substring —
 the header counter-parse and the dispatch-pinned contract clause);
 README.md (the resynced output line).
 
+## 64. The checklist that judged others but was never itself checked — sufficiency records and the independence share
+
+The case: the chain's checking lists — a spec's criteria set, an audit's
+frozen checklist, the trigger-matching walk over the deferred registry —
+were consumed as verification instruments while carrying no evidence of
+their own adequacy. Under-restriction was invisible: a list too weak to
+catch a real defect still read as a list (the freeze of a prior cycle
+closed clean carrying zero sufficiency accounting — the class passed
+undetected under the old canon). And the criteria originated from the
+same author whose work they judged: a counted share of zero independent
+authorization was indistinguishable in the artifact from diligence.
+
+The cure: the checked set becomes itself a checked artifact. A
+sufficiency record — a seeded perturbation that the list misses before
+the fix and catches after, both legs run-born, authored by a seeder
+independent of the spec author, the auditor and the run verifier, in a
+closed six-field form; a record missing a leg does not count. An
+independence share — the spec header carries `criteria: total=N
+independent=M` with M ≥ 1, reconciled both directions against the live
+invariant lines and the authorization records (a fresh roster-distinct
+authorizer reading the spec through declared consumer perspectives —
+the perspective-based reading transfer), born before the FINAL flip so
+the count never certifies itself. The audit freeze carries its
+sufficiency accounting as a standing dimension with a stop-gate (no
+record — the round does not start), and the registry walk — a list the
+chain itself consumes — is canonized section-scoped, under a closed
+status-marker literal, reconciled by membership rather than count (the
+absorbed registry-walk-form deferred item: a same-line walk that agreed
+in cardinality while disagreeing in members had passed as agreement).
+
+Found in this corpus's verification-adequacy change program, cycle C3
+(rule 2 of the program intent; the consumer cycle of the C1 accounting
+substrate and the C2 counted header); materialized into:
+skills/specify-change/SKILL.md and skills/specify-change/assets/
+specifier-charter.md (the audit-dispatch sufficiency gate, the criteria
+counter in the orchestrator's header checks, the six-field CRIT record
+form, the authorizer protocol with consumer perspectives);
+skills/audit-change/SKILL.md and skills/audit-change/assets/
+verifier-charter.md (the freeze gate-clause, the sufficiency-accounting
+standing dimension with the seeding procedure in the derivation zone,
+the section-scoped walk-form canon); reference/glossary.md (the
+"independence share" article, landed in the same changeset as the
+consuming mechanics).
+
 ## Reconcile records
 
 Per the header rule (entries are never edited in place without a reconcile
@@ -1210,3 +1254,12 @@ record): this section carries one record per editing cycle.
   ids remain unique 1..63), no reference sweep required (no existing
   entry or cross-reference touched). This record's enumerated entry set
   equals the diff-derived edited-entry set.
+- **Reconcile — the verification-adequacy change program, cycle C3.**
+  Appended entry 64 (the checklist judged others but was never itself
+  checked — sufficiency records, the independence share, the absorbed
+  registry-walk-form); entry ids unique 1..64; no in-place edits, no
+  renumbering, no reference sweep required (no existing entry or
+  cross-reference touched). The cycle's reconcile also closes the
+  deferred registry item registry-walk-form by absorption (its
+  build-path named this charter zone; the closing adjudication lives in
+  the operational registry, provenance: the C3 round ledger).
