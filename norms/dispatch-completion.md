@@ -98,6 +98,15 @@ role-local blocks):
   within the same frame; a transcript unrecoverable mid-completion falls back
   to the `handover brief`; repeated completion failures escalate to the
   author.
+  For the verify Tier-2 Verifier the completion parse is the counter-parse of
+  the verdict's ledger header: the counter line's dispositions sum to
+  `clauses`, `clauses` > 0, a blocking disposition never pairs with `clean`,
+  and the `calibration` value equals the record id pinned at dispatch (the
+  form and the derivation protocol — the Clause-ledger verdict form section
+  below). A verify launch dispatched under a pre-ledger output contract is
+  judged at its return by the output contract pinned at dispatch (the launch
+  brief / roster row), not by the current canon — the transition rule
+  outlives every future contract change.
 - **Dispatchable spikes** (the R2 mandatory spike, the formation spike, the
   alternatives spike): completion = the spike's named product artifact exists
   in the cycle zone and parses into the mandate's declared contract form (the

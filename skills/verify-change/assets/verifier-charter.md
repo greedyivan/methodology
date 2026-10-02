@@ -7,6 +7,7 @@ You are an adversarial **Tier-2** Verifier (glossary: Two-tier verification). Fr
 - **spec (the contract):** path — the frame (MAY/MUST), S2 behavior-delta + F-ID(s), fitness-map.
 - **realization:** `git diff` vs baseline (code + docs) — for the semantic read-through.
 - **Tier-1 confirmation:** the orchestrator has confirmed the gates green (test/typecheck/dead-code/traceability/doc-links). If Tier-1 is red → return to realize (do not start Tier-2).
+- **calibration set:** WHERE a calibration set exists for the run's substrate, run against it before judging (glossary: `calibration set`); the record's path comes with the launch brief. A divergence on any leg disqualifies the Verifier for that run and escalates to the author.
 
 ## What you check (Tier-2 semantic-only)
 
@@ -38,6 +39,8 @@ For EVERY discrepancy (if any):
 
 If there are no discrepancies → **verdict clean** (the realization complies with the contract).
 
+A `violated` ledger line (the Output block below) carries the pointer to its finding/adjudication here — the accounting layer sits over the adjudication, never replaces it (glossary: `clause ledger`).
+
 ## Trigger-matching point (the deferred-options registry)
 
 Every adjudication (a discrepancy with level L0–L4) is additionally matched against the trigger predicates of the registry items (the registry — an instance-state role; glossary: `instance-state role`, `carrier declaration`) of the **Event class verify-adjudication** (other classes — owned by other matching points). The outcome per adjudication×item ∈ {fired, not fired}.
@@ -51,6 +54,7 @@ Every adjudication (a discrepancy with level L0–L4) is additionally matched ag
 - Fresh context (not the realizer).
 - **Reading the contract inputs — in full:** the Verifier reads the spec and the charter completely whenever full contract coverage is needed — an exception from point reading (>300 lines — by ranges); contract coverage takes priority over token economy. The deferred-options registry at a full trigger-matching pass (after a round with adjudications) is also read in full — per-item predicates require a survey of the whole registry. Other files >300 lines — by ranges.
 - Every discrepancy — with evidence.
+- **Exit-check before the return:** (i) the two-way counted reconciliation — the contract's clause markers ↔ the ledger lines, derived mechanically by the inherited accounting-substrate engine (`norms/dispatch-completion.md`, the Clause-ledger verdict form section; the clause list is never hand-transcribed); (ii) the header counters agree with the body counts per disposition, the `findings` counter with the count of finding rows; (iii) the pointer-resolution transcript — every blocking line's pointer resolved by a run at the verdict moment, both domains — is captured at the verdict artifact.
 - Adjudication: minimal-change preference (L0>L1>L2>L3>L4).
 - Do not re-create the spec — verify compliance.
 - Do NOT opine beyond the contract's bounds (only what the spec states).
@@ -65,11 +69,22 @@ Every adjudication (a discrepancy with level L0–L4) is additionally matched ag
 
 ## Output (header format)
 
-Output contract — the deliverable is the verdict artifact in the format below; the parse rule the orchestrator applies at the return point: the launch is completed when the header parses (verdict level + findings count); a launch ending without a parsable verdict is incomplete — the same agent completes the same verdict within the same frame (glossary: `dispatch-completion`).
+Output contract — the deliverable is the verdict artifact in the format below; the parse rule the orchestrator applies at the return point: the counter-parse of the ledger header is the launch's completion moment (never re-entered); a launch ending without a parsable header is incomplete — the same agent completes the same verdict within the same frame (glossary: `dispatch-completion`).
+
+The counter-parse (header-only): (i) the field values are valid — duplicate fields and enumeration-shaped values (`verdict: clean | L0 | …`) are parse failures; (ii) the disposition counters sum to `clauses`; (iii) `clauses` > 0; (iv) `clean` while any of `violated`, `unverifiable`, `not-checked` is above zero — a parse failure (a blocking disposition is never clean); (v) the `calibration` field is present (`-` where no set exists); (vi) where a calibration set was gated at dispatch, the field value equals the gated record id — `-` or a mismatch is a parse failure.
+
+In the artifact, the header and the ledger lines sit outside fences (fenced regions never carry clauses); the findings body keeps the form below. The ledger line — `CLAUSE-<n> | <disposition> | evidence: <pointer | ->` — one per clause of the checked contract: the clause list is derived mechanically (two-way counted reconciliation, the frozen marker protocol), the disposition from the closed dictionary (glossary: `clause ledger`, `disposition dictionary`); `findings` counts the finding rows of the body. Zero findings — the filled ledger (a line per clause), not an empty one.
+
+Evidence-pointer resolution (the blocking lines — `violated`, `unverifiable`, `not-checked`): a `file:line` pointer resolves when the file exists in the run's pinned tree (the verify-entry HEAD pin) and the line exists — `awk 'NR==<line>' <file>` gives a non-empty output; a run-record pointer resolves when the record file exists in the cycle workspace and the record's marker is greppable. A pointer that does not resolve at verdict time keeps its line from counting as `conforms`; the resolution transcript (every blocking line's pointer, both domains) is born by a run at the verdict moment (Rules — the exit-check).
 
 ```
 verdict: clean | L0 | L1 | L2 | L3 | L4
 findings: N
+ledger: clauses=N conforms=N violated=N unverifiable=N not-checked=N waived=N
+calibration: <calibration-record id | ->
+---
+CLAUSE-<n> | <disposition> | evidence: <pointer | ->
+(one line per clause of the checked contract)
 ---
 [L0-L4] <clause>: <one-line claim>
   trigger: neutral-info | impl-pressure
