@@ -148,6 +148,37 @@ names the abstract carrier categories only ("session subagents", "workflow
 runs", "launches", "dispatches"); a concrete harness, session mechanism, or
 product name does not enter canon text.
 
+## Clause-ledger verdict form (the accounting substrate; consumed from C2)
+
+The contract form of the accounting verdict — a per-clause ledger carried by
+a verification launch, layered over adjudication (the L0–L4 vocabulary of the
+`verdict` is unchanged; glossary: `clause ledger`, `disposition dictionary`).
+This block freezes the form and the derivation protocol; the completion
+moment consuming it is authored by its own change — every existing completion
+moment and parse rule above stays untouched.
+
+- **Clause marker (the contract side):** `CLAUSE-<n> | <requirement>` —
+  column 0, digits only, the separator ` | ` (space-pipe-space), one marker
+  occurrence per line (two on one line = a compound defect). Fenced regions
+  never carry clauses — the md fence forms (backtick, tilde `~~~`, indented
+  1–3 spaces; 4+ spaces = an indented code block, not a fence). Occurrences
+  off column 0 (inline code, tables, headers, prose) and bare-id
+  cross-references (without ` | `) are not markers.
+- **Ledger line (the accounting side):** `CLAUSE-<n> | <disposition> |
+  evidence: <pointer | ->`. The disposition comes from the closed
+  `disposition dictionary`; `violated`, `unverifiable` and `not-checked`
+  lines carry a run-born evidence pointer — a `file:line` in the pinned tree
+  or a run record in the cycle workspace; a pointer that does not resolve at
+  verdict time keeps the line from counting as `conforms`. Zero findings =
+  the filled ledger (a line per clause), not an empty one.
+- **Two-way counted reconciliation (the derivation rule):** the clause-marker
+  count of the contract ↔ the ledger-line count, derived mechanically in both
+  directions by the exit-check pattern (a grep-enumerated count, not the
+  contract author's discretion); anti-vacuum N > 0 on both sides; a mismatch
+  in either direction is red. The derivation itself is a checkable surface —
+  the canonical marker forms carry run evidence (eval-first, the norm
+  `llm-consumed-invariants.md`).
+
 ## Attributions (single-source)
 
 - **Two-branch rule** — Gray–Reuter 1993, *Transaction Processing: Concepts

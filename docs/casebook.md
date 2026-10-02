@@ -1101,6 +1101,33 @@ The cure: a record that pins an execution is re-derived born-by-run in the same 
 
 Found in this corpus's leak-removal change program across consecutive cycles and rounds (M-bound — the mandatory class-history RCA duty at the program's reconcile stage; the instance enumeration lives in the cycle's registry record and the immutable audit, not here); materialized into: the reconcile execution record of the carried-class-history registry entry (the cycle's spec registry), and bound to the existing canons it references — the born-run/poison discipline of fix passes, the Finalization-pass manifest block of the specifier-charter (pin-state freshness, the audit×legs walk), and the twins-closure duties of entries 57 and 59.
 
+## 62. The verdict that narrates without counting — per-clause accounting
+
+The case: verification verdicts of the chain narrated findings (a verdict
+line + a findings list) while the checked contract's clauses carried no
+per-clause coverage state — "zero findings" was indistinguishable from "the
+clauses were never enumerated", an unchecked clause could sit silently under
+a clean verdict, and a toleration had no frozen record semantics (expiry,
+outcome, recurrence). The gap surfaced in a cold audit of verification
+adequacy (2026-09-29): verdict narratives without per-clause accounting.
+
+The cure: the accounting substrate frozen at the canon layer — the clause
+ledger (one line per contract clause: disposition × evidence pointer, the
+clause list derived mechanically), the closed disposition dictionary with
+its blocking table (an unchecked or unresolved clause blocks a clean
+verdict; a waiver is clean-compatible only while live), and the
+pre-registration form of the waiver-mode constants. The layer sits over
+adjudication (L0–L4 unchanged) — a violated line points at its
+finding/adjudication, it does not re-adjudicate.
+
+Found in this corpus's verification-adequacy change program, cycle C1 (the
+substrate freeze before the consumer cycles branch); materialized into:
+reference/glossary.md (the terms `disposition dictionary`, `clause ledger`,
+`waiver`, `re-census`, `sufficiency record`, `anchor-status`,
+`calibration set`); norms/dispatch-completion.md (section "Clause-ledger
+verdict form"); norms/monitor.md (section "Waiver-mode constants
+(pre-registration form)").
+
 ## Reconcile records
 
 Per the header rule (entries are never edited in place without a reconcile
@@ -1132,3 +1159,12 @@ record): this section carries one record per editing cycle.
   reference sweep required (no existing entry or cross-reference touched).
   This record's enumerated entry set equals the diff-derived edited-entry
   set.
+
+- **Reconcile — realize of this corpus's verification-adequacy change
+  program, cycle C1.** Appended, by entry number: 62 — one new case-law
+  entry (the verdict that narrates without counting; the derivation history
+  of the per-clause accounting substrate). Edit class: case-law growth at
+  the realize stage; no in-place edits, no renumbering (entry ids remain
+  unique 1..62), no reference sweep required (no existing entry or
+  cross-reference touched). This record's enumerated entry set equals the
+  diff-derived edited-entry set.
