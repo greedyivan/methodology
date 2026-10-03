@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Validator of events.jsonl against the closed event catalog (inline below).
 
-Exit 0 — all events valid; 1 — invalid ones present. Report — stdout.
+Input resolution: explicit path arguments; otherwise the CYCLE_WORKSPACE environment
+variable names the cycle-workspace root, and every */events.jsonl one level below it is
+validated. With no arguments and no non-empty CYCLE_WORKSPACE the validator exits 2
+without scanning. Exit 0 — all events valid; 1 — invalid ones present. Report — stdout.
 """
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -93,7 +97,19 @@ def validate_line(path, i, rec):
 
 
 def main():
-    paths = [Path(a) for a in sys.argv[1:]] or sorted(Path(".claude/tmp").glob("*/events.jsonl"))
+    args = [Path(a) for a in sys.argv[1:]]
+    if args:
+        paths = args
+    else:
+        root = os.environ.get("CYCLE_WORKSPACE") or ""
+        if not root:
+            print(
+                "usage: validate_events.py [<events.jsonl> ...] | CYCLE_WORKSPACE=<cycle-workspace root>"
+                " (every */events.jsonl one level below the root)",
+                file=sys.stderr,
+            )
+            sys.exit(2)
+        paths = sorted(Path(root).glob("*/events.jsonl"))
     errors, total = [], 0
     for path in paths:
         for i, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):

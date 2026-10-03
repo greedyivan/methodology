@@ -2,8 +2,13 @@
 """Validator of SENSOR lines in cycle artifacts (glossary: sensor line).
 
 Format: `SENSOR | kind= | actor= | stage= | outcome= | point= | <ostensive> :: <performative>`
-Closed enumerations; the marker is line-anchored. Exit 0 — all lines valid; 1 — otherwise.
+Input resolution: explicit path arguments; otherwise the CYCLE_WORKSPACE environment
+variable names the cycle-workspace root, and every */*.md one level below it is scanned
+for sensor lines. With no arguments and no non-empty CYCLE_WORKSPACE the validator exits
+2 without scanning. Closed enumerations; the marker is line-anchored.
+Exit 0 — all lines valid; 1 — otherwise.
 """
+import os
 import re
 import sys
 from pathlib import Path
@@ -46,7 +51,15 @@ def validate_line(line):
 def main():
     paths = [Path(a) for a in sys.argv[1:]]
     if not paths:
-        paths = sorted(p for p in Path(".claude/tmp").glob("*/*.md") if p.is_file())
+        root = os.environ.get("CYCLE_WORKSPACE") or ""
+        if not root:
+            print(
+                "usage: validate_sensor.py [<file.md> ...] | CYCLE_WORKSPACE=<cycle-workspace root>"
+                " (every */*.md one level below the root)",
+                file=sys.stderr,
+            )
+            sys.exit(2)
+        paths = sorted(p for p in Path(root).glob("*/*.md") if p.is_file())
     errors, total = [], 0
     for path in paths:
         for i, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
