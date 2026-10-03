@@ -252,13 +252,13 @@ the same round finding in two consecutive cycles; D2 enum-value quoting (foreign
 grep over existing sites; the Encoder stream outside the pattern); a probe
 against non-canonical forms (case/spelling/morphology) as the gate-authoring
 edge-form. Directive state: specifier Rules (gate run-pin, remediation-ACK,
-5-element form, gate authoring); audit D2/D3/D4; specify SKILL exit self-check
+6-element form, gate authoring); audit D2/D3/D4; specify SKILL exit self-check
 mechanical gate; realizer Rules (final-gate bundle inherits scan canons;
 final-gate patterns derived by run from the spec's id-inventory; negative-
 path verification of self-written checkers).
 
 materialized into: skills/specify-change/assets/specifier-charter.md, Rules
-(gate run-pin + remediation-ACK + 5-element form + gate-authoring bullets);
+(gate run-pin + remediation-ACK + 6-element form + gate-authoring bullets);
 skills/audit-change/assets/verifier-charter.md, D2/D3/D4 riders;
 skills/specify-change/SKILL.md, exit self-check; skills/realize-change/
 assets/realizer-charter.md, Rules (final-gate canons + negative-path checkers)
@@ -701,7 +701,7 @@ cell legged or bounded) and the class collapsed from 4 MAJOR to 2
 zone MINORs in two rounds.
 
 materialized into: skills/specify-change/assets/specifier-charter.md,
-the 5-element-form canon (adversary-independence / per-escape-class
+the 6-element-form canon (adversary-independence / per-escape-class
 witnessing / degenerate-positive ban clauses)
 
 ## 40. Escape-class residuals — closure at the boundary of the enumerated list
@@ -1458,3 +1458,30 @@ row: the attribution venue fix on the sufficiency canon line
 realize workspace; the venue question on the mutation-coverage line
 (Hoskote–Kam–Ho–Zhao 1999) resolved by the checking run in favor of
 the canon line, byte kept.
+
+## 68. The gate-birth inventory — a declared check discriminates from its obligation, not from its neighbor text
+
+Class: audit-dual-oracle-gate — the class-D family "declaration vs realization" (a checker
+weaker or stronger than its declaration). Firing history over the
+parallel-sessions-finalization program, from the instance registry's adjudications of the
+audit-dual-oracle-gate item: psf-c1 — 6 firings in one cycle (r1 N2/N5, r2 N1, r3 N1, r4
+N1, plus the mirrored verify-Tier-2 pair); psf-c2 — r1 N1+N3, r2 N1, r3 N1; psf-c3 —
+class-D ×6 by the letter, the program record; psf-c4 — 5 L1-findings of one class-D family
+in realized code, the `|| true` guard regression caught by read-reinspect. RCA
+(rca-classD.md §5–§6): the discrimination obligations of a declared check were derived at
+authoring from a text adjacent to the author — the run transcript, the author's mental
+model, the remediation line — so each gate inherited exactly that source's blindness; the
+one fix that carried a per-shape inventory (c1 r1 N5, the per-escape-class paragraph with
+an adversarial control) held at r2, the one without it re-broke. The cure is structural:
+the standing gate-birth rider is absorbed into the 6-element form of the mechanical
+SB/F-line canon of the specifier charter — every declared check carries, beside it, its
+discrimination inventory, derived from the obligation's own edge structure at birth, every
+form with its leg, re-derived at every edit (a fix does not inherit a stale inventory); the
+audit mirror is D4 (a declared check without its inventory is the audit-side false-security
+finding); the directive-purity dimension D10 is corpus-scoped — the No.6 domain.
+
+materialized into: skills/specify-change/assets/specifier-charter.md, the 6-element-form
+canon (element (6); the set -e no-match guard conjunct in element (1); the fix-pass
+re-derivation cross-ref); skills/audit-change/assets/verifier-charter.md, D4 (the inventory
+conjunct) and D10 (corpus-scoped); norms/llm-consumed-invariants.md, No. 6 (the D10 domain
+binding); reference/glossary.md, the discrimination inventory article.

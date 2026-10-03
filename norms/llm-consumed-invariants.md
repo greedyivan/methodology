@@ -16,6 +16,7 @@ Authoring invariants: discrete check questions. Invariants 1–5 — SKILL.md di
       - casebook — docs/casebook.md (instructive case law);
       - methodology README — README.md;
       - out of class: docs/methodology.md (docs prose — read as description, not instruction).
+   The directive-purity dimension of verifier-charter D10 inherits this domain: the D10 dimension applies to changesets touching corpus No. 6 surfaces only, and workspace-norms surfaces stay outside the D10 gate.
    - Out of class: data registries (surface inventories, the deferred-options registry), docs prose (in this repo: docs/methodology.md), markup templates — read as data/descriptions; a borderline file is classified by a content run (is the file read by a session as an instruction?).
    - A behavioral change to a non-skill surface — the categorical criterion: instructive text = routing, task intake, gates, output formats, stopping conditions, glossary term rules; an edit to these categories in any file of the class → the changeset carries run evidence; prose (attributions, preambles, justifications) is free to change; a dispute is settled by a run.
    - Bootstrap: a changeset changing this very norm carries baseline-run evidence — a fresh-context verdict on whether the changeset must carry run evidence or is exempt, taken on the diff of a non-skill surface before and after the norm edit; the difference of outcomes — in the run artifact, the pointer — in the commit message.
