@@ -1263,6 +1263,45 @@ record): this section carries one record per editing cycle.
   deferred registry item registry-walk-form by absorption (its
   build-path named this charter zone; the closing adjudication lives in
   the operational registry, provenance: the C3 round ledger).
+- **Reconcile — the verification-adequacy change program, cycle C4.**
+  Appended entry 65 (the green gate that checked nothing — engagement
+  evidence, the mutation/second-channel qualification, the recorded
+  toleration and the waiver-ledger regime); entry ids unique 1..65; no
+  in-place edits, no renumbering, no reference sweep required (no
+  existing entry or cross-reference touched); edit class: case-law
+  growth riding the cycle's single land commit. Row restored at the
+  program close (cycle C6, R-C6-09): the C4 land commit 22dd893 carried
+  the entry and omitted this line — the gap was confirmed by the birth
+  run of the closing cycle's casebook check (5 program-book entries
+  against 3 program rows). This record's enumerated entry set equals
+  the diff-derived edited-entry set of commit 22dd893 (appended: 65;
+  deletions: 0).
+- **Reconcile — the verification-adequacy change program, cycle C5.**
+  Appended entry 66 (the consensus nobody re-counted — the computed
+  inventory verify entry, the two-legged re-census, the recorded
+  anchor); entry ids unique 1..66; no in-place edits, no renumbering,
+  no reference sweep required (no existing entry or cross-reference
+  touched); edit class: case-law growth riding the cycle's single land
+  commit. Row restored at the program close (cycle C6, R-C6-09): the
+  C5 land commit 40f4f86 carried the entry and omitted this line — the
+  same birth-run gap as C4. This record's enumerated entry set equals
+  the diff-derived edited-entry set of commit 40f4f86 (appended: 66;
+  deletions: 0).
+- **Reconcile — the verification-adequacy change program, cycle C6
+  (close).** Appended entry 67 (the verifier that was never the target
+  — the program's own closing exercise under its standing predicate);
+  restored this section's rows for cycles C4 and C5 (the lands'
+  omission closed at the program close, R-C6-09); entry ids unique
+  1..67; no in-place edits of existing entries, no renumbering, no
+  reference sweep required (no existing entry or cross-reference
+  touched — the restored rows live in this section, below their
+  program predecessors). The cycle's changeset also carries the
+  conditional fix registered in its close artifact: the attribution
+  venue correction on the sufficiency canon line (Chockler–Kupferman–
+  Vardi 2003, FMCAD → CHARME) — the only corpus edit outside this
+  file, registered under the fix registry with its eval-first run
+  pins. This record's enumerated entry set equals the diff-derived
+  edited-entry set (appended: 67; deletions: 0).
 
 ## 65. The green gate that checked nothing — engagement evidence and the recorded toleration
 
@@ -1362,3 +1401,60 @@ the directive legs: the representative-task run before/after the edit —
 artifacts at the cycle's realize workspace (the eval-first transcripts and
 the realize ledger); the standing fresh-context consumer probe — the
 program's closing exercise (C6).
+
+## 67. The verifier that was never the target — the program's own closing exercise
+
+The case: a verification program had built its checking machinery cycle
+over cycle — the per-clause ledger, the counted header, the sufficiency
+records, the qualified gates, the waiver regime, the census — and every
+cycle verified its changeset with it; but the machinery itself was
+qualified only by fixtures and known-answer copies, never by a real
+violation in the wild, so a predicate that had silently stopped catching
+read identically to one that never misses. And the program's own closure
+carried the same risk it had been built against: a waiver maturing by
+narrative rather than by a discriminator, rules 1–8 taken as satisfied
+because their canon text was present, a program-total delta reconciled
+per cycle against itself, and anchors landed without their status
+records — the gaps of a closing read as done.
+
+The cure: the closing cycle consumes the program's medicine live. A
+pre-registered number of hidden violations is planted by an independent
+seeder into the cycle's product artifacts only (never the corpus tree),
+each pinned by an expectation record whose run-pins precede the verify
+dispatch, and the real Tier-2 verdict under the standing predicate must
+carry at least one violated ledger line resolving to a planted seed — a
+clean verdict over a live seed is a predicate failure that blocks the
+completion; the miss-reconciliation is counted in both directions with
+escalation, never silence. The program's rules are re-audited cold
+against the mechanical artifacts — verdict ledgers, seed and
+authorization records, gate witnesses, the waiver record, the census
+and sweep rows — never by canon-text presence. The waiver outcome is
+derived by a live run of the strict form against the tolerant one, not
+chosen. The program-close census re-counts the full program delta
+against the dated baseline pin and archives it. Every bibliographic
+anchor whose first canon occurrence is a program land carries an
+anchor-status record born by a checking run, rejected citations stay
+behind the fence, and each conditional edit outside the static frame
+registers before it lands (finding → path → run) riding the same
+changeset as the record it answered.
+
+Found in this corpus's verification-adequacy change program, cycle C6 —
+the closing cycle (program completions: the live exercise under the
+predicate, the waiver outcome, the cold re-audit of rules 1–8, the
+anchor sweep, the close census and pin archival; entry 62's substrate,
+entry 63's counted header, entry 64's sufficiency and independence,
+entry 65's qualified gates and waivers, entry 66's re-census and
+recorded anchors — all consumed here as the exercise's instruments);
+materialized into: the cycle's workspace zones (the close artifact —
+the edit×run-record sync table over the program's seven commits and
+fifty-two file-events, the anchor sweep table, the fix registry, the
+W-1 outcome line; the anchor-status records closing the anchor gap; the
+census-close record against the dated pin) and the instance-side acts
+(the waiver-ledger outcome with its paired escalation line, the monitor
+land line, the instance-spec re-pin, the task card). The one corpus
+edit outside the casebook rode the same changeset under its registry
+row: the attribution venue fix on the sufficiency canon line
+(Chockler–Kupferman–Vardi 2003), eval-first legs pinned in the cycle's
+realize workspace; the venue question on the mutation-coverage line
+(Hoskote–Kam–Ho–Zhao 1999) resolved by the checking run in favor of
+the canon line, byte kept.
