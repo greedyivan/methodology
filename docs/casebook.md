@@ -1311,3 +1311,54 @@ family). Eval-first duty of the directive legs: the representative-task
 run before/after the edit — artifacts at the cycle's realize workspace
 (eval/, the realize ledger); the standing fresh-context consumer probe —
 the program's closing exercise (C6).
+
+## 66. The consensus nobody re-counted — the two-legged re-census and the recorded anchor
+
+The case: a verification launch was fed the surfaces it ought to check by
+declaration — a list assembled by whoever wrote the brief, so the check
+covered what the writer remembered, not what the changeset touched; and the
+corpus as a whole was re-derivation-free between programs, each cycle
+comparing itself to its own baseline while the accumulated drift of every
+other cycle went unobserved (comparing against the current state would
+measure the drift against itself). In step with it, a bibliographic anchor
+entered the canon on the strength of being written down: primary-verified
+and secondarily-confirmed citations were indistinguishable once landed, and
+a citation rejected during research had no fence keeping it out of the
+canon later.
+
+The cure: the consensus is re-counted by runs, on two legs. Per cycle, the
+verification brief carries the computed inventory of affected surfaces —
+run-derived from the cycle baseline diff (name-status walk plus a
+surface-class mapping), never a hand-declared list, and the verdict
+artifact carries the inventory section so each entry meets a coverage
+clause or an explicit out-of-contract finding. Per program, the reconcile
+of every cycle whose program holds an un-archived dated baseline pin runs
+the corpus re-census against that pin — never against the drifted current
+state — an inventory-level recomputation (tracked set, per-surface delta,
+attribution) recorded as a census record whose every number is born by a
+fenced run; each delta resolves per surface, an attributed drift recorded
+and an unattributed one a finding; the run is mandatory at the program's
+close. Anchors carry their verification status in a closed five-field
+record (target, class, status, evidence) with a closed status set —
+primary-verified or explicitly marked secondary at the point of citation —
+accrued in the cycle workspace at lands, and rejected citations stay
+behind the fence.
+
+Found in this corpus's verification-adequacy change program, cycle C5
+(rules 5–6 of the program intent; the cycle executed its own medicine as
+the live census: the program pin 71412f7 against the cycle baseline
+22dd893 — six commits, 45 file-events over 37 unique files, attribution
+37/37, unattributed 0; the census record and the three anchor-status
+records live in the cycle workspace, retention — archive); materialized
+into: skills/verify-change/SKILL.md (the Entry input and the Checkpoint
+inventory derivation); skills/verify-change/assets/verifier-charter.md
+(the Input pointer grounding coverage); skills/reconcile-change/SKILL.md
+(the corpus re-census periodic leg in item 6); reference/glossary.md (the
+amended articles `re-census` and `anchor-status` — the placeholder
+sentences replaced by the authored procedure, cadence and record form);
+skills/specify-change/assets/specifier-charter.md (the anchor-status
+record rule); README.md (the verify/reconcile rows). Eval-first duty of
+the directive legs: the representative-task run before/after the edit —
+artifacts at the cycle's realize workspace (the eval-first transcripts and
+the realize ledger); the standing fresh-context consumer probe — the
+program's closing exercise (C6).

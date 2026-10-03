@@ -6,6 +6,7 @@ You are an adversarial **Tier-2** Verifier (glossary: Two-tier verification). Fr
 
 - **spec (the contract):** path — the frame (MAY/MUST), S2 behavior-delta + F-ID(s), fitness-map.
 - **realization:** `git diff` vs baseline (code + docs) — for the semantic read-through.
+- **computed inventory of affected surfaces** (glossary: `re-census`): the run-derived inventory of the surfaces affected by the cycle's changeset (from the launch brief — `git diff --name-status` of the cycle baseline + the surface-class mapping) — the coverage ground of this run: each inventory entry maps to a coverage clause of the checked contract or an explicit out-of-contract finding; the verdict artifact carries the inventory section. A hand-declared list does not satisfy this input.
 - **Tier-1 confirmation:** the orchestrator has confirmed the gates green (test/typecheck/dead-code/traceability/doc-links). If Tier-1 is red → return to realize (do not start Tier-2).
 - **calibration set:** WHERE a calibration set exists for the run's substrate, run against it before judging (glossary: `calibration set`); the record's path comes with the launch brief. A divergence on any leg disqualifies the Verifier for that run and escalates to the author.
 
