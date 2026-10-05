@@ -66,6 +66,8 @@ Four genres over the No. 6 class, assigned per surface: **directive** (instructi
 
 A change of skill behavior ⇒ a same-changeset delta: the skill's row in README + glossary (if terms are affected). Antipattern — "a router that lies" (README describes behavior that no longer exists).
 
+A composition change of a counted inventory surface (the router's counted inventories: `skills/`, `norms/`, `tools/`) ⇒ a same-changeset delta of every counted inventory line the change alters, each count re-derived by run at edit time (wc/grep over the tree), never transcribed. The antipattern extends: a router that lies includes a router whose counters are stale.
+
 ## Attributions
 
 - **Invariants 1–5** — writing-for-agents patterns, grounded: Sweller, cognitive load theory (progressive disclosure = load management); ASD-STE100 (controlled language, positive formulations); the no-op test — a behavioral criterion (settled by a run, not interpretation).

@@ -1509,3 +1509,32 @@ audit touching the surface, not gate-covered states.
 materialized into: skills/scope-change/SKILL.md, the Pre-condition (green-baseline)
 bullet (the parenthetical "(materialized by executing a real deferred-options registry
 item)", removed)
+
+## 70. The counter that outlived the composition — the resync trigger covers the counted inventory
+
+Class: composition-desync — a composition change of a counted inventory surface landing
+while the router surfaces' counted inventory lines stay at their pre-change values. The
+corpus's sync duty keyed its trigger to a change of skill behavior, so a composition change
+adding a non-skill carrier sat outside the antecedent — no sync duty fired — while the same
+changeset grew the very tree the counters describe; the numbers themselves were transcribed
+at authoring with no re-derivation duty between edits, and no gate leg covered the form
+"router counters == tree". Two instances in this program: the C1 doc-conformance desync (a
+registry carrier moved out of the corpus into instance-state while the router prose still
+described it in place) and the C7 inventory-counter instance (a seventh maintenance tool
+landed by the C4 suite while both router inventories counted "six" — caught by the cycle's
+cold audit reading the tree, not by any gate).
+Case domain: this corpus's leak-removal change program (the class's RCA M-bound at cycle
+C7; disposition operator-approved 2026-10-05; the treatment bound by the program's
+standing reference-and-extend ruling — the existing canon is extended, no parallel
+mechanics minted).
+Derivation: the resync canon is the extended carrier — its trigger widens from "a change
+of skill behavior" to any composition change of a counted inventory surface (the router's
+counted inventories: `skills/`, `norms/`, `tools/`); every counted inventory line the
+change alters re-derives its number by run at edit time (wc/grep over the tree), never
+transcribed; the born-by-run duty covers composition additions and removals of non-skill
+carriers (new tools, fixtures, docs among the affected surfaces). The antipattern extends:
+a router that lies includes a router whose counters are stale. Executed at reconcile (the
+R-C3-13 route); the clause text credited by the cycle's realizing fix-pass.
+
+materialized into: norms/llm-consumed-invariants.md, the Resync rule (the composition
+extension paragraph).
