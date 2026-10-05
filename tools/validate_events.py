@@ -33,11 +33,11 @@ CATALOG = {
     "claim-added": {"claim:id": None, "confidence": None},
     "knowledge-gap-registered": {"gap:id": None, "prio": None, "blocker_potential:boolean": None},
     "monitor-signal": {"metric": {"M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8"}},
-    "route-decision": {"edit_class": None,  # wave 2
+    "route-decision": {"edit_class": None,
                        "rung": {"tool-executed", "tool-assisted", "tool-verified", "llm-planning"},
                        "floor": {"true", "false"},
                        "cache_hit": {"true", "false"}},
-    "approach-fork": {"topic": None,  # wave 2
+    "approach-fork": {"topic": None,
                       "decision": {"build", "ratify", "one-off", "tool-path"},
                       "scope": {"class", "case"}},
 }

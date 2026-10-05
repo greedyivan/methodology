@@ -12,7 +12,7 @@ The first skill of the chain and the re-decomposition point. Terminology — [`.
 `scope-change → specify-change → audit-change → realize → verify-change → reconcile-change`
 
 - **Entry:** a change request (input) **or** a re-decomposition trigger from `audit-change`/`reconcile-change` (coupling exposed mid-cycle).
-- **Pre-condition (green-baseline):** before profiling — verify that the gates pass (an explicit run). If red → **preliminary greening**: a prerequisite-change fixes the gate BEFORE this change; never start a change on a red gate (the exception — the prerequisite-change itself, which greens the gate). See glossary: green-baseline, gate-closing fast-track. A dirty tree of someone else's parallel work at start → the baseline runs in a worktree isolated from HEAD (the gate container gets a co-mount of the main `.git` by absolute path; the recipe lives in the project calibration); the charter carries `product-root` (materialized by executing a real deferred-options registry item).
+- **Pre-condition (green-baseline):** before profiling — verify that the gates pass (an explicit run). If red → **preliminary greening**: a prerequisite-change fixes the gate BEFORE this change; never start a change on a red gate (the exception — the prerequisite-change itself, which greens the gate). See glossary: green-baseline, gate-closing fast-track. A dirty tree of someone else's parallel work at start → the baseline runs in a worktree isolated from HEAD (the gate container gets a co-mount of the main `.git` by absolute path; the recipe lives in the project calibration); the charter carries `product-root`.
 - **Output:** charter (decomposition verdict + per-cycle profile + sequencing + land-together under surface-conflict).
 
 ## What it does

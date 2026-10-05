@@ -55,6 +55,7 @@ Honest declaration: u2b/u2c — a review channel, not an auto-gate.
 ## Escalation ladder (registry)
 
 Discipline → merge windows / per-project branches (a 2nd divergence under a live
-sync discipline) → the per-item registry (a 3rd instance of conflict intensity). Triggers —
-in the items `kernel-merge-window`, `kernel-registry-per-item`,
-`kernel-registry-project-field` (deferred-options.md).
+sync discipline) → the per-item registry (a 3rd instance of conflict intensity).
+Triggers — the escalation-ladder items of the registry (an instance-state role,
+resolved at launch from the instance's `carrier declaration`; glossary: `registry`,
+`instance-state role`, `carrier declaration`).

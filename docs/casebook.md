@@ -1485,3 +1485,27 @@ canon (element (6); the set -e no-match guard conjunct in element (1); the fix-p
 re-derivation cross-ref); skills/audit-change/assets/verifier-charter.md, D4 (the inventory
 conjunct) and D10 (corpus-scoped); norms/llm-consumed-invariants.md, No. 6 (the D10 domain
 binding); reference/glossary.md, the discrimination inventory article.
+
+## 69. The provenance parenthetical on a directive surface — birth history is not a rule
+
+Class: directive-surface-provenance — a directive surface's operative rule carrying a
+live provenance parenthetical (how the artifact it names came to be), not a rule; the
+phrase form is a near-miss of the marker set (it evades the marker gate while doing the
+narrative work the gate exists to stop), and the materialization form (history recorded
+as a casebook entry with a forward link) was unsatisfied in both directions — the
+history was neither absent from the surface nor recorded in the case-law genre.
+Case domain: the corpus's own leak-removal change program (cycle C7 re-audit r1,
+finding N5; dispositioned and operator-approved 2026-10-05): the scope-change skill's
+green-baseline pre-condition ended "the charter carries `product-root` (materialized by
+executing a real deferred-options registry item)" — the field's birth provenance,
+unresolvable for an external adopter and carrying no instruction. The parenthetical was
+removed outright (the rule stands declaratively: "the charter carries `product-root`");
+the removal is recorded by this entry.
+Derivation: removed outright (the rule is self-sufficient declaratively; where birth
+history carries value it enters this casebook with a forward link — this entry);
+provenance-phrase near-miss forms on directive surfaces are probe candidates at every
+audit touching the surface, not gate-covered states.
+
+materialized into: skills/scope-change/SKILL.md, the Pre-condition (green-baseline)
+bullet (the parenthetical "(materialized by executing a real deferred-options registry
+item)", removed)

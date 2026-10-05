@@ -36,8 +36,9 @@ history, it does not prescribe.
   dispatch/completion rule), the LLM-consumed authoring invariants (No. 6 —
   the class inventory + the resync rule), self-change legitimacy invariants,
   the integration canon of the shared corpus, the Monitor procedure.
-- `tools/` — six maintenance scripts (a container runner, an XES converter,
-  events/sensor validators, a d′ meter, a carrier-declaration checker).
+- `tools/` — seven maintenance scripts (a container runner, an XES converter,
+  events/sensor validators, a d′ meter, a carrier-declaration checker, a
+  waiver-ledger scanner).
 - `docs/` — the casebook (`docs/casebook.md`: case-derived norms, an
   instructive asset) + descriptive prose (this file).
 
@@ -104,7 +105,7 @@ do not age silently, findings get an addressee.
 
 ## The tools/ scripts
 
-Six maintenance scripts; paths — from the repo root.
+Seven maintenance scripts; paths — from the repo root.
 
 - `tools/run-in-docker.sh` — the container runner: any project tool executes in
   Docker only. A single point of foreign-code execution: the environment is
@@ -120,6 +121,8 @@ Six maintenance scripts; paths — from the repo root.
   is separated from its noisiness.
 - `tools/check-carriers` — a carrier-declaration checker over the declared
   roles and bases (glossary: `carrier declaration`).
+- `tools/check-waivers` — a waiver-ledger scanner: the W/ESC record form
+  against its closed dictionaries (glossary: `waiver`, `waiver-ledger`).
 
 ## Glossary
 

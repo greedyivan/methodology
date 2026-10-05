@@ -180,7 +180,7 @@ Problem class: several legitimate definers of one runtime contract in a type sys
 
 ## Instance-state (the typed-anchor convention)
 
-- **instance-state** — the class of a consumer's project artifacts living outside the corpus's portable content, at a carrier of an instance-state role (a typed anchor: the role resolves deterministically to one carrier per instance via the `carrier declaration`, without project context). Carrier instance: the metrics-ledger (the Monitor's window list). Contrast: the corpus's normative content is portable and replicated by cloning; instance-state artifacts belong to the consuming instance and do not enter the corpus. Basis: precedent 0601192c (doc-conformance-registry moved out of the corpus into instance-state); Brinch Hansen 1970 (mechanism/policy — the portable corpus as mechanism, instantiation as policy).
+- **instance-state** — the class of a consumer's project artifacts living outside the corpus's portable content, at a carrier of an instance-state role (a typed anchor: the role resolves deterministically to one carrier per instance via the `carrier declaration`, without project context). Carrier instance: the metrics-ledger (the Monitor's window list). Contrast: the corpus's normative content is portable and replicated by cloning; instance-state artifacts belong to the consuming instance and do not enter the corpus. Basis: Brinch Hansen 1970 (mechanism/policy — the portable corpus as mechanism, instantiation as policy).
 
 ## Instance-spec (the instance surfaces inventory)
 
