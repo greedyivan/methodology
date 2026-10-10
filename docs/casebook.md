@@ -1538,3 +1538,120 @@ R-C3-13 route); the clause text credited by the cycle's realizing fix-pass.
 
 materialized into: norms/llm-consumed-invariants.md, the Resync rule (the composition
 extension paragraph).
+
+## 71. The brief that recalled its numbers — dispatch-brief freshness for the chain coordinator
+
+Class: relayed-literal — the coordinator of a chain session relaying a count, hash, or pin
+into a between-stages dispatch brief from memory or from an earlier brief, instead of
+pasting it from a fresh run over the live carrier of the current state. The stage-skill
+canon (the orchestrator re-verifies relayed numeric claims by a run) is read by the stage
+executors, not by the chain coordinator at brief-compilation time, so the surface where the
+relay actually happens — the dispatch brief between stages — sat outside the canon.
+Case domain: the gbon-wgm11 backing-vocabulary cycle (C1-spec-vocab + the C1-B amendment,
+2026-10-10), two instances in one cycle: the checker pin in the preaudit-dispatch brief
+(relayed from the r5 epoch while the live tree carried a newer one) and a twins count
+relayed into the r10 brief from a defective batch line; both caught downstream by the
+seeder/verifier of the receiving stage, at the cost of extra rounds.
+Derivation: the numbers entering a between-stages brief are pasted, never recalled — a
+fresh run over the live carrier of the zone's current state, or a copy-paste from the
+authoritative artifact of that state; a relayed number is a red form caught by the
+receiving stage.
+
+materialized into: norms/sessions.md (the instance workspace repo), the Coordinator
+discipline section (the dispatch-brief freshness bullet)
+
+## 72. The twins line that did not round-trip — the printed command reproduces its own counts
+
+Class: twins-transcription — a twins line whose recorded numbers are correct for the
+intended literal while the printed command, replayed verbatim, does not reproduce them:
+a placeholder standing in a command argument, or a printed ranged form measuring a span
+other than the recorded one. The existing letter required "the command exactly as
+executed" but carried no mechanical round-trip criterion, so both instances were caught
+only by manual re-verification.
+Case domain: the gbon-wgm11 C1-spec-vocab cycle: PF-2 (twins commands carrying a
+placeholder file argument — closed by substitution at audit) and P-O1-r3 (the printed
+command measured its ranged form to 0 against the recorded after-count of 1; the numbers
+were correct for the intended literal).
+Derivation: the round-trip criterion — the printed command, replayed verbatim, reproduces
+the line's recorded after-count (and the before-count against the pinned pre-state copy);
+a printed form that does not round-trip its own numbers is a defect of the block whatever
+the intended literal, and a placeholder in a command argument is a defect of the
+specification, not an abbreviation.
+
+materialized into: skills/specify-change/assets/specifier-charter.md, the "Twins-line
+strict form — run transcripts, not bare numbers" clause (the round-trip sentence)
+
+## 73. Four ways to cite the same marker — canonical Event citation for new registry records
+
+Class: citation-fragmentation — one Event class cited across registry records in variant
+shapes (exact, list-form, prefix, carried-over), so independent walks of the same predicate
+family diverge in cardinality and reconcile only by superset membership, a standing source
+of walk noise over the live registry. The walk-form canon closed the status-marker set and
+the section scoping, not the citation shapes of Event classes inside item bodies.
+Case domain: the gbon-wgm11 C1-spec-vocab audit ladder: three rounds independently
+disclosed the same cardinality drift (walk counts of the audit-class markers at 13/10/13/23
+against the corpus's actual marker set; the divergence changed no outcome; the missing
+members were recovered by superset matching, disclosed in each round's count-pin).
+Derivation: a NEW registry record cites an Event class by the canonical single-token form
+of its class and names the item by its actual section header — a prefix or abbreviation of
+either in a new record is a walk defect; variant shapes in existing records are historical,
+and walks reconcile them by superset membership with the divergence disclosed in the
+round's count-pin.
+
+materialized into: skills/audit-change/assets/verifier-charter.md, the "Walk form
+(section-scoped)" bullet (the Event-citation sentence)
+
+## 74. The closure claim that outlived its sweep — closure lexicon and anchors that name their state
+
+Class: sweep-grammar gap with anchor mixing — a fix-sweep whose lexicon omitted the
+universality/closure claims, so editing one occurrence of a claim left its siblings; and
+sweep/anchor records mixing historical and live anchors (a historical count replayed
+against a live tree, a live count pinned to a frozen copy), with the record's own
+self-referential meta-lines drifting on replay. The existing canon had the parts
+(self-referential evidence-records, pin-state freshness) but did not bind them to sweep
+records.
+Case domain: the gbon-wgm11 C1-spec-vocab audit ladder, four observations across four
+rounds: P-O2-r5 (the sweep grammar did not cover closure claims — the lexicon was extended
+in-cycle in a witness and reused by r8/r9/r10), P-O1-r6 (replay drift of a
+self-referential sweep, 29→39, a meta-line delta), P-O1-r9 (historical and live anchors
+mixed in one sweep record), P-O2-r8 (a battery pinning an intermediate spec form — the
+citation-form instance).
+Derivation: the sweep lexicon includes the universality/closure claims (every, all,
+always, never, closed, complete, exclusive, sole, remaining, and their forms in the
+artifact's language): an edit touching such a claim sweeps all occurrences of the claim
+and the claim stands anchored by a run covering its domain; a sweep or anchor record cites
+the state it swept — historical with its dated pin, live against the current tree, one
+state per record — and on replay the record's meta-line counts re-derive, an absolute
+self-referential count carrying its exclusion.
+
+materialized into: skills/specify-change/assets/specifier-charter.md, the Rules sweep
+family (the "Sweep lexicon — closure claims; sweep records cite their state" clause)
+
+## 75. Declaration is not a fence — the check's domain comes from its own declaration
+
+Class: declaration-vs-fence, a subclass of the declaration-vs-realization family: a check
+declared inside a carrier whose document-level fencing was trusted to fence the check as
+well — the check's own verification domain was never derived from its own declaration, only
+inherited from the carrier document. The domain-fencing discipline (RCA-2, batch-closure:
+fencing at the birth or edit of a check line) acts prospectively and has a boundary: it
+checks the domain only at the moment of birth/edit — an edit that does not derive content
+from the declaration reproduces the class on a new surface, and checks born before the
+discipline carry no fence at all.
+Case domain: the gbon-wgm11 C1-spec-vocab cycle, six instances: r1-N2 (a MAY wider than
+the FROZEN fence), r1-N3 (a vacuous block-carrier conjunct), r2-N3 (must_preserve without
+the addition direction), r3-N1 (Check-10's domain taken by region instead of declaration),
+r5-N1 (a masked inclusion counter born from the r4 edit), r8-N1 (the ir content of
+unquoted ok-vectors — the new checks were born with inventories while the ir-content leg
+was not derived from domain fencing).
+Derivation: the norm — a check's verification domain derives from the check's own
+declaration, never inherited from the carrier document; the fencing duty applies at every
+birth and every edit of a check line, an edit being a birth for whatever content it does
+not re-derive. Diagnostic line pattern: a quantifier declared while the substantive side
+is not derived. Next-instance condition: the next instance of the class (any surface, any
+cycle of the program) triggers the full RCA-3 — deriving the content side from the
+declaration into the discipline. The superclass line continues in the registry items
+audit-verified-gate-extraction / audit-dual-oracle-gate.
+
+materialized into: the RCA witness of the specify zone (the cycle workspace of
+gbon-wgm11-c1-spec-vocab, witnesses/rca-declared-vs-fenced.md — the diagnostic line and
+the RCA-3 next-instance condition)
