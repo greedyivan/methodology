@@ -30,6 +30,8 @@ Unit → edit → gate → edit until green → the next unit. Gates are tool-ag
 
 **Negative-path verification of self-written gate checkers:** if the cycle creates its own gate script/checker (not a standard tool), a run on a green tree does not prove it works — a negative fixture is mandatory (a known violation → the expected reject) before the checker is considered green.
 
+**Listing gates assert the empty count:** a gate command whose finding output is a list (`gofmt -l`, `grep -l`, `git ls-files -m`, lint listing modes) is green only when the printed list is asserted empty — capture the list, count it, and check the count equals zero explicitly; the command's exit code does not carry the verdict (a listing command exits zero whether or not it lists), and a `&&`-chain built on that exit code passes with the findings printed in plain sight. A green-on-listing leg without the count assertion is not a gate leg.
+
 **Gate artifact of the final state :** every gate run that a report's/README's numbers refer to is captured by an artifact (log/dump) from the FINAL state of the tree; intermediate logs — explicitly marked "intermediate"; numbers from suppressed runs (>/dev/null) are not reported as gate facts.
 
 **The final gate — on the full surface of the index :** the final Tier-1 runs (baseline and the orchestrator's confirmation) are executed on a tree where all files of the change's surface are entered into the git index (`git add`) BEFORE the run. Checkers scanning `git ls-files` (the index, not the working tree — ratchets, reference-lints) are blind to untracked new files: local green on an untracked file — false. A new surface file not added to the index before the final gate — an execution defect. 

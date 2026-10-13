@@ -1655,3 +1655,30 @@ audit-verified-gate-extraction / audit-dual-oracle-gate.
 materialized into: the RCA witness of the specify zone (the cycle workspace of
 gbon-wgm11-c1-spec-vocab, witnesses/rca-declared-vs-fenced.md — the diagnostic line and
 the RCA-3 next-instance condition)
+
+## 76. The gate that printed its own failure — listing commands exit zero either way
+
+Class: exit-code blindness of listing gates, a sibling of the run-form verification
+family: a gate command whose finding output is a printed list (`gofmt -l`) was chained
+with `&&`, and the chain went green while the two unformatted file names stood printed
+in the gate's own transcript — the listing command exits zero whether or not it lists,
+so the exit code carried no verdict. An earlier remediation leg of the same cycle had
+run `gofmt -w` inside a container copy whose result never returned to the working tree,
+so the final gate was the only line of defense, and it was structurally unable to fail.
+Caught by the orchestrator's Tier-1 confirmation re-running the gate with a count
+assertion (two diffs — RED), remediated by a format-only fix plus the asserting leg form
+(`u=$(gofmt -l … | wc -l); [ "$u" -eq 0 ]`), with a negative mutation leg proving the
+new form goes red on a seeded unformatted file.
+Derivation: the norm — a listing gate is green only on an asserted-empty count of its
+printed findings, never on its exit code; the identical blindness appears whenever a
+command's success channel and its findings channel are separate (grep -l, ls-files -m,
+lint listing modes), and the generalizing rule is: whichever channel carries the
+findings is the channel the gate must check. Diagnostic line pattern: a gate transcript
+that lists artifacts while reporting green.
+Case domain: the gbon-wgm11-backing-vocabulary-divergence C2-go-align cycle, realize
+final gate (gofmt over the tracked Go set after a 16-file change); the SENSOR-1
+run-form family of the same program's charter is the sibling class (an exit-0 container
+over an unrun command set; a pipe-to-tail swallowing an exit).
+
+materialized into: skills/realize-change/assets/realizer-charter.md, "Tier-1 continuous
+loop" — the directive "Listing gates assert the empty count"
