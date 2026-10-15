@@ -1682,3 +1682,40 @@ over an unrun command set; a pipe-to-tail swallowing an exit).
 
 materialized into: skills/realize-change/assets/realizer-charter.md, "Tier-1 continuous
 loop" — the directive "Listing gates assert the empty count"
+
+77. Verifiers minting spec revisions from closure QUALITY — a verify/audit cycle
+kept generating spec fix-passes because findings criticized how the spec closed
+identified problems (alternative formulations, criterion strength/structure,
+sufficiency elegance, instrument completeness: "the test could also cover X",
+"the config could be broader") instead of adjudicating THAT the problems are
+closed (each declared item: closed / not closed by its declared instrument). The
+operator ruled the split as jurisdiction: instrument quality is outside the
+verifier's jurisdiction; a spec-revision demand is legitimate only on shown
+non-closure; quality-only observations are process findings. N-bound as the
+structural exit: the same finding class recurring after a class-treatment RCA
+stops the round and re-decomposes the instrument class, not the spec.
+Case domain: the orm-12580 GromNaN-review response cycle (audit r1–r5: three
+instances of "name-bound gate blind to name-perturbation" — rename, suffix-
+extension, @see-compensation — closed by switching the instrument class to
+execution-anchored verdicts; verify F-1..F-4 were closure-fact findings and
+closed without spec edits).
+materialized into: skills/verify-change/assets/verifier-charter.md, Rules —
+"Closure-fact jurisdiction"; skills/audit-change/assets/verifier-charter.md,
+Rules — "Closure-fact jurisdiction"; skills/audit-change/SKILL.md, item 4 —
+the quality-of-closure sentence in the process-finding clause.
+
+78. Name/count preservation checks have an open perturbation space — the
+execution-anchored canon. Preservation obligations (existing pins/oracles that
+must keep holding) verified by name-mention or count greps regenerate escapes:
+a rename, a suffix-extension, a compensating reference, a skip-weakening each
+pass the form while the obligation dies. The canonical form: the declared tests
+must RUN in the canonical environment, the verdict read from execution counters
+(executed-test count; per-test assertion counts — a skipped/weakened test yields
+assertions="0"); a name/count mention is an integrity/inventory role with
+honestly stated semantics, never the preservation verdict.
+Case domain: the same cycle's CHK-11 evolution — count-pins (r1) → anchored
+name-composition (r2) → extension-negatives (r3, N-bound) → the 30-pin battery
+read from junit counters (r4: rename/@see 29≠30, skip caught by assertion
+counters, all six mutation probes killed by their target carriers).
+materialized into: skills/specify-change/assets/specifier-charter.md, S2 —
+"Preservation-obligation check form (execution-anchored)".
