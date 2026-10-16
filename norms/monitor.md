@@ -70,7 +70,7 @@ waiver-mode change, not by this norm.
 Legacy-form rows resolve per the carrier's declared schema.
 
 - Sufficiency (the R8 predicate): `sufficient` / `insufficient — <3 observations per GQM question`.
-- Disposition of a signal: candidate → the deferred-options registry / a process finding → reconcile / accepted-for-tracking.
+- Disposition of a signal: candidate → the deferred-options registry (the item file by the 7-field schema on the live surface + a re-mint of the live index by `tools/registry-index.sh`; the matching reads the class block of the live index plus the out-of-class block — item files on firing/revision, the archive outside the matching scope) / a process finding → reconcile / accepted-for-tracking.
 - Recomputability (INV-M11): the ledger is append-only; on loss — recomputed from round-ledgers by the formulas.
 
 ## Signal-firing canon

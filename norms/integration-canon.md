@@ -22,20 +22,24 @@ The canon is the Ostrom minimum: boundaries, discipline, a resolution mechanism,
   recorded in the session artifact (the repair-time registry — a health
   metric of the corpus).
 
-## Merge-integrity checks (run by the integrator on the merged tree; u2c runs from the corpus repo root; the u2a/u2b subject is the registry — an instance-state role — resolved at launch from the instance's `carrier declaration`, not from the corpus repo root; glossary `instance`, `instance-state`, `carrier declaration`)
+## Merge-integrity checks (run by the integrator on the merged tree; u2c runs from the corpus repo root; the u2a/u2b subject is the registry — an instance-state role — resolved at launch from the instance's `carrier declaration`, not from the corpus repo root; the checks read the live surface — matching points read the class block of the live index, the u2a/u2b greps cover the live item files with `--exclude-dir=archive`, the archive outside the matching scope; glossary `instance`, `instance-state`, `carrier declaration`)
 
 ```bash
-# u2a/u2b shared input: reg = the registry path, resolved at launch from
-# the instance's carrier declaration (glossary `carrier declaration`)
+# u2a/u2b shared input: reg = the registry DIRECTORY (the per-item form:
+# item files + the minted live index + archive/), resolved at launch from
+# the instance's carrier declaration (glossary `carrier declaration`);
+# `grep -rh` over the directory covers the item files (the archive's frozen
+# history is outside the integrity checks)
 reg='<resolved from the carrier declaration>'
 
-# u2a — registry item id uniqueness (empty output = clean)
-grep -rh '^- \*\*id:\*\*' "$reg" \
+# u2a — registry item id uniqueness over the live surface (empty output = clean;
+# --exclude-dir=archive: the archive's frozen history is outside merge-integrity)
+grep -rh --exclude-dir=archive '^- \*\*id:\*\*' "$reg" \
   | sed 's/^- \*\*id:\*\* //' | sort | uniq -d
 
-# u2b — shared item anchors (output = the integrator's review list;
-# full automation impossible: an anchor match ≠ a trigger collision)
-grep -rhE '^- \*\*anchor set:\*\*' "$reg" \
+# u2b — shared item anchors over the live surface (output = the integrator's
+# review list; full automation impossible: an anchor match ≠ a trigger collision)
+grep -rhE --exclude-dir=archive '^- \*\*anchor set:\*\*' "$reg" \
   | grep -oE '[A-Za-z0-9_.-]+\.(md|go|ts|tsx|php)|[A-Z][A-Za-z-]+ (19|20)[0-9]{2}' \
   | sort | uniq -c | awk '$1>1'
 
@@ -55,7 +59,10 @@ Honest declaration: u2b/u2c — a review channel, not an auto-gate.
 ## Escalation ladder (registry)
 
 Discipline → merge windows / per-project branches (a 2nd divergence under a live
-sync discipline) → the per-item registry (a 3rd instance of conflict intensity).
+sync discipline) → the per-item registry (a 3rd instance of conflict intensity;
+realized: the registry carrier is the per-item directory form — item files +
+the minted live index, resolved at launch from the instance's `carrier
+declaration`).
 Triggers — the escalation-ladder items of the registry (an instance-state role,
 resolved at launch from the instance's `carrier declaration`; glossary: `registry`,
 `instance-state role`, `carrier declaration`).

@@ -168,9 +168,9 @@ Problem class: several legitimate definers of one runtime contract in a type sys
 
 ## Registry of deferred options
 
-- **deferred-option** — an option deferred by the necessity filter: a real mechanic with an operational trigger predicate, a full anchor set and a build path; lives in the registry (an instance-state role, resolved via the instance's `carrier declaration`); DROP records do not enter the registry.
+- **deferred-option** — an option deferred by the necessity filter: a real mechanic with an operational trigger predicate, a full anchor set and a build path; lives in the registry (an instance-state role, resolved via the instance's `carrier declaration`) as a per-item file on the live surface, represented in the minted live index (a row per class membership); closed carriers move to the registry's archive at the revision; DROP records do not enter the registry.
 - **trigger predicate** — the operational firing condition of a deferred option: an Event class (checkpoint question / audit finding / verify adjudication / profiling fact) + a decidable predicate over an observation of that class; the matching yields an outcome from {fired, not fired}, no third outcome.
-- **trigger-matching point** — a chain-skill step matching run observations against the trigger predicates of the deferred-options registry (an ECA hook: event → condition → action per the firing canon — stop + an authoring question, not an auto-gate).
+- **trigger-matching point** — a chain-skill step matching run observations against the trigger predicates of the deferred-options registry (an ECA hook: event → condition → action per the firing canon — stop + an authoring question, not an auto-gate); the mandatory reading is class-filtered — the item's class block plus the out-of-class block of the live index, item files on firing/revision, the archive outside the matching scope.
 - **expiry** — the obsolescence condition of a deferred option; at the registry's revision point (`reconcile-change`) expired items are dropped or re-derived; the registry does not grow without revision.
 
 ## Instance-state roles (the Layer-1 carriers contract)
