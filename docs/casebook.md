@@ -1719,3 +1719,24 @@ read from junit counters (r4: rename/@see 29≠30, skip caught by assertion
 counters, all six mutation probes killed by their target carriers).
 materialized into: skills/specify-change/assets/specifier-charter.md, S2 —
 "Preservation-obligation check form (execution-anchored)".
+
+79. Command bytes inside table cells lose verbatim replayability — a cycle carrier's
+printed command form (a grep, a curl, a psql or shell one-liner) set as a table cell
+goes through table escaping (pipes, backslashes), so the printed form no longer
+round-trips: replaying it verbatim fails against the live carrier, and a manifest
+claiming to cover the form covers bytes that were never executable. Three N-bound
+instances in one audit round (a spec check line, a re-pin cell, a twins-table cell)
+traced to one root — the table-escaping reflex of transcription; the domain rule
+that closed the class: command bytes are printed outside tables — in a code span or
+a fenced block, or the table cell carries the claim plus a pointer to a born
+transcript; tables carry claims, not bytes — and the spec's verbatim manifest
+enumerates EVERY printed command form mechanically over the spec's code spans, not
+only the numbered checks (the closing cycle's manifest: 28 forms / 27 executed /
+zero divergent).
+Case domain: the medteh-stage1-program p8-1 cycle (CMS-driven home page) — audit
+r4-N1/r6-N1 over the spec's check lines and the twins carrier, RCA
+rca-serialization.md §1–5; the same cycle's erratum party re-ran the manifest form
+over all 28 printed forms of the final spec.
+materialized into: skills/specify-change/assets/specifier-charter.md, S2 discipline —
+"Command bytes outside table cells"; skills/verify-change/assets/verifier-charter.md,
+Rules — "Command-form carriers in reconciliation".

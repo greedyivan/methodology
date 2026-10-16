@@ -141,6 +141,15 @@ checkpoints:
   corrupts the copy-paste) or by enumerating the space of forms; a prose number without pinning —
   a self-claim defect. The aggregation semantics (union vs per-file) is fixed in words; the spec
   references, does not transcribe.
+- **Command bytes outside table cells :** a printed command form (a grep, a curl, a psql or shell
+  one-liner) never sits in a table cell of any cycle carrier (spec, checkpoint records, exit
+  records, transcripts, registries) — table escaping corrupts the bytes, and the verbatim-replay
+  property of the printed form dies in the cell. The command lives in a code span or fenced block
+  outside the table, or the cell carries the claim with a pointer to a born transcript; tables
+  carry claims, not bytes. The spec's verbatim manifest covers EVERY printed command form — a
+  mechanical enumeration over the spec's code spans, not only the numbered checks — and the
+  manifest's own forms stay code-span-carried: a printed command form outside the manifest is a
+  form finalization cannot replay.
 - **Gate authoring — a live self-test + an adversarial edge-form probe:** every declared grep pattern is run at the
   moment of authoring (the pattern is written by a run, not "by meaning"); a self-test over
   canonical forms is insufficient — a probe against non-canonical forms is mandatory (case,
