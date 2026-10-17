@@ -1740,3 +1740,26 @@ over all 28 printed forms of the final spec.
 materialized into: skills/specify-change/assets/specifier-charter.md, S2 discipline —
 "Command bytes outside table cells"; skills/verify-change/assets/verifier-charter.md,
 Rules — "Command-form carriers in reconciliation".
+
+80. A count/join/validation form whose post-expectation is a number over a live
+population carrier (role models and their auto-rows, validator branches, closed-line
+populations) is undiscriminating without a born positive control on a populated
+mirror: green on the do-state is its natural state, so a correct implementation can
+false-FAIL while the spec's check stays green — the spec read structural zeros as
+"precision" and the realization halted on a mechanism that could never match. The
+closing discipline: the form carries (1) a born positive control on a live populated
+sibling subject, run at authoring time (the recorded number sits in the cycle
+witnesses), (2) an explicit enumeration of the population sources the form measures,
+(3) an explicit do/post semantics; the realization's probe record and the Tier-2
+guard check mirror the positive-control leg.
+Case domain: the medteh-stage1-program p8-4 cycle (manufacturer pages) — PC-5
+controls misread (attribute-filter zeros were structural: Mercur translates
+attributes-filters into variant-option filters; brand is not a variant axis),
+realize HALT RL-8, re-spec under the storefront-projection ruling; the p8-13 cycle
+minted the class (4 instances: SA auto-rows, phantom wildcard, isDraft branch,
+term-miss) and this cycle's CP1 FORK-7 ruled the materialization.
+materialized into: skills/specify-change/assets/specifier-charter.md, S2 —
+"Population-pinned forms (born positive control)"; skills/realize-change/assets/
+realizer-charter.md, gate-step canon — "Population-form accept legs";
+skills/verify-change/assets/verifier-charter.md, Assertion-guards — "Population-form
+positive control".

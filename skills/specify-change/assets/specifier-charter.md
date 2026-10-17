@@ -141,6 +141,15 @@ checkpoints:
   corrupts the copy-paste) or by enumerating the space of forms; a prose number without pinning —
   a self-claim defect. The aggregation semantics (union vs per-file) is fixed in words; the spec
   references, does not transcribe.
+- **Population-pinned forms (born positive control):** a count/join/validation form whose
+  post-expectation is a number or composition over a live population carrier (role models and
+  their auto-rows, validator branches, populations of closed lines) carries, at S2 authoring:
+  (1) a born positive control on a live populated mirror — the same form over an
+  already-populated sibling subject, run at authoring time, yielding the recorded number in the
+  cycle witnesses; (2) an explicit enumeration of the population sources the form measures (who
+  else writes rows into that carrier); (3) an explicit do/post semantics. A form green on the
+  do-state without a born positive control on a populated mirror does not discriminate a
+  false-FAIL of a correct implementation — the main miss-shape of the class.
 - **Command bytes outside table cells :** a printed command form (a grep, a curl, a psql or shell
   one-liner) never sits in a table cell of any cycle carrier (spec, checkpoint records, exit
   records, transcripts, registries) — table escaping corrupts the bytes, and the verbatim-replay
