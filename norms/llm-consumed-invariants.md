@@ -60,7 +60,71 @@ Four genres over the No. 6 class, assigned per surface: **directive** (instructi
 - **Marker set (the directive-purity backstop).** The canonical derivation-history marker phrases: `materialized by reconcile`, `from a real incident series`, `precedent —`. A site names them in backticked pattern-mention form only; a live occurrence in a directive-genre surface is narrative regeneration. Gate forms over this set, and the exclusions the case-law genre requires, derive from this canon when the gate extends.
 - **Prose boundary.** Chain roles enter prose surfaces by an explicit pointer to the instructive surface defining them; prose carries description, and instructions to executors are emitted on directive surfaces.
 - **Reference genre.** A reference-genre entry carries its definition and a `Basis:` one-liner (academic anchors); incident narrative stays in the case-law genre.
+- **read-scope genre law.** The carriers of the program perimeter (the
+  subject and the line schema — the `Read-scope line` section)
+  carry one read-scope declaration line in their header zone, and a reader
+  binds its reads to the declared scope. A carrier without the declaration
+  after its own stamping change, and a read beyond the declared scope — a
+  genre defect of the carrier, closed by the mechanical checking predicates
+  of the carrier's own checking cycle or, where grep does not reach
+  (charter self-sufficiency, reading-formulation sync), by the verify pass
+  of the carrier's own cycle. The subject is perimeter-bound, not
+  class-bound: this bullet does not extend the No. 6 class inventory, and
+  carriers outside the subject stay outside the law's application until
+  their own separate authoring decision.
 - **Authoring language.** The canonical authoring language of directive-genre surfaces is EN: a directive surface states its rules in the canonical language. Legacy-form rows of instance-state carriers resolve per the carrier's declared schema (glossary: `carrier declaration`, `instance-state role`) — instance-state carriers carry their own schemas, and canon text does not quote carrier literals. This bullet extends the genre assignment (the table above) and the `Directive purity` and `Marker set` bullets; gate forms over the language rule derive from this canon when the gate extends.
+## Read-scope line — the frozen contract
+
+The perimeter carriers of the deferred-reading program carry one
+machine-readable line in their header zone — the read-scope declaration
+(reader/moment, growth character, history path). The line, its closed enums
+and its header-zone bound are frozen here; a consumer cycle stamps the line
+onto its own carriers and binds its mechanical predicates to this contract.
+Line grammar (pinned tokens):
+
+    read-scope: readers=<READERS> growth=<GROWTH> history=<HISTORY>
+
+- `<READERS>` — comma-separated `reader#moment` items over two closed sets:
+  reader ∈ {monitor | reconcile | orchestrator | tails | session | stage},
+  moment ∈ {window | take | close | delta | run}; a `stage` reader expands
+  to `stage:<skill-slug>`; the closed sets extend only by a canon edit of
+  this section.
+- `<GROWTH>` — one of {rows | blocks | cards | static}: rows — dated append
+  rows; blocks — appended sections/blocks; cards — per-card lines; static —
+  edited-in-place text.
+- `<HISTORY>` — comma-separated items over {git | journal:<role> | note |
+  archive}: `git` — corpus surfaces (the corpus history serves as the
+  journal); `journal:<role>` — an instance-state journal carrier resolved
+  via the `carrier declaration`; `note` / `archive` — per the instance's
+  task norms, history lives in the companion note / archive carriers
+  (glossary: `carrier declaration`).
+
+Subject upper bound (nothing wider is valid): the perimeter carriers of the
+program — the metrics-ledger carrier (role `metrics-ledger`), the instance's
+surface inventory carrier (role `surface inventory`), the task lists carrier
+(role `task lists`) with its companion task-note carriers, and the seven
+stage SKILL files (No. 6 inventory). The canon quotes no instance-state
+carrier literals; concrete paths resolve at the consuming instance via its
+`carrier declaration`.
+
+The header-zone bound: the declaration line sits within the carrier's header
+zone — the first 16 lines of the carrier (SKILL.md: after the frontmatter;
+data carriers: in the title band). Grep-check contract — the forms the
+program's mechanical predicates bind to:
+
+- in place: `grep -m1 -nE '^read-scope: readers=' CARRIER`
+  resolves at a line number <= 16;
+- single: the line-start prefix occurs exactly once in the header zone;
+- conformance: field values over the closed sets only; a value outside a
+  closed set is a schema-conformance defect (fix the stamp or the canon
+  set, never per-carrier free text).
+
+Application phasing: the genre law over this subject takes operative effect
+for a carrier at that carrier's own declaration-stamping change; before that
+moment the carrier is within the program's migration scope, not in
+genre-defect state. This contract freezes the form; the stamping and the
+data edits belong to the carriers' own program cycles — the freeze cycle
+edits no carrier data.
 
 ## Resync rule
 
