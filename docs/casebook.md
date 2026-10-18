@@ -1763,3 +1763,55 @@ materialized into: skills/specify-change/assets/specifier-charter.md, S2 —
 realizer-charter.md, gate-step canon — "Population-form accept legs";
 skills/verify-change/assets/verifier-charter.md, Assertion-guards — "Population-form
 positive control".
+
+81. A sweep class declared as a prose list of forms is closed only by a
+mechanical declared↔executed reconciliation: the fix-pass listed the removed
+formula's forms (spaced, hyphenated, inflected, number-word) and executed a
+grep subset of them — the inflected singular escaped the plural twins literal
+(r2), then the spaced form declared in the list was never run at all (r3).
+The cure that closed the class: the round-trip instrument gained a
+reconciliation leg — every form declared in the sweep list must appear in a
+run transcript and every run must trace to a declared form (both directions
+RED on violation), with a do-state leg proving the pre-fix state fails. A
+declared-but-unrun form is indistinguishable from a swept one until the
+reconciliation runs.
+Case domain: the gbon-wgm11 C4-rust-align cycle — audit r2-N1/r3-N1, M-RCA-1;
+the instrument legs live in the cycle archive (specify zone witnesses,
+twins-verify.py reconciliation mode).
+materialized into: the C4 cycle archive instrument (declared↔executed
+reconciliation + do-state leg); this entry is the class carrier.
+
+82. Anchor positions in fix-pass records are asserted by runs, never by
+arithmetic: the record translated pre-pin anchor positions by summing
+insertion deltas between pins — off by one at the epoch boundary (r4), then
+a cumulative "+12+10" miscomputed because a later pass's walk-line insertion
+sat below the translated anchors (r5). The cure that closed the class: the
+record's anchor positions moved into a grep-born register verified by an
+instrument leg (pattern → exactly one live line == the recorded one, both
+directions RED), and the arithmetic was demoted to explicitly non-operative
+annotation. A position computed is a position suspected; a position grepped
+is a position held.
+Case domain: the gbon-wgm11 C4-rust-align cycle — audit r4-N1/r5-N1, M-RCA-2;
+the anchor register and its legs live in the cycle archive (specify zone).
+materialized into: the C4 cycle archive instrument (anchor-position legs,
+non-operative marking sweep); this entry is the class carrier.
+
+83. A fix-pass's own inserted record is an auditable artifact: each cure
+added record prose whose fresh claims (a wider class than the guarded one,
+a mutation verdict contradicting its own transcript, a referent staled by
+the insertion's own line growth) became the next round's findings — three
+consecutive rounds of the genre after the operative layers had been stable.
+The two cures that ended it: insertion-completeness (every block a pass
+edits is mechanically checked — named sites covered by the anchor register
+or pin/epoch qualifiers, numeric claims fenced with same-session runs,
+closure statements verbatim from the guarded class, edits outside declared
+blocks RED) and the claim-free record form (a final pass writes only fenced
+runs, register lines, and dates — zero new prose claims, verified by scan).
+Records that assert nothing cannot be wrong; instruments that reconcile
+everything declared cannot be silently incomplete.
+Case domain: the gbon-wgm11 C4-rust-align cycle — audit r6/r7, M-RCA-3, the
+N-bound stop and the claim-free fix-pass-7; the legs live in the cycle
+archive (specify zone, twins-verify.py insertion-completeness + prose-claim
+scan).
+materialized into: the C4 cycle archive instrument (insertion-completeness,
+prose-claim scan); this entry is the class carrier.
