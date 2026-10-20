@@ -4,7 +4,7 @@ An orchestrator procedure (MAPE-K Monitor+Analyze; counters, not interpretation)
 
 ## Window
 
-The window list — in the metrics-ledger (an instance-state role, resolved via the instance's `carrier declaration`; the first line = the provenance base). Criterion: round-ledger cycles; the M6/M8 canon sources are outside the criterion — covered by the list. Verdict-only directories without a round-ledger and product cycles — outside the window; when inventoried → a coverage-gap observation (not an error). Extending the list — an explicit authoring decision at the monitor summary (a new summary announces the extended window and recomputes the norms; pre-registration is preserved); between summaries, new self-change cycles carry a SHADOW line against the norms of the active window and do not enter the list.
+The window list — in the metrics-ledger (an instance-state role, resolved via the instance's `carrier declaration`; the first line = the provenance base); closed-program row history — in the journal carrier (an instance-state role, resolved via the same `carrier declaration`; the migration pin — the read-scope stamp on the ledger's history field). Criterion: round-ledger cycles; the M6/M8 canon sources are outside the criterion — covered by the list. Verdict-only directories without a round-ledger and product cycles — outside the window; when inventoried → a coverage-gap observation (not an error). Extending the list — an explicit authoring decision at the monitor summary (a new summary announces the extended window and recomputes the norms; pre-registration is preserved); between summaries, new self-change cycles carry a SHADOW line against the norms of the active window and do not enter the list.
 
 Policy: product-domain cycles of external project clones stay outside the window by default; their standing form is a SHADOW line plus the program-summary class ledger, and coverage-gap is the standing procedural observation carrying their escalations. Same-corpus continuations of existing window lineages remain in-window. Extension remains available at any future monitor summary on more data (recompute + announcement, pre-registration preserved).
 
@@ -67,11 +67,11 @@ waiver-mode change, not by this norm.
 
 `date | program | cycle | window-sources | M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 | signals | sufficiency | disposition`
 
-Legacy-form rows resolve per the carrier's declared schema.
+Closed-program rows — date-led rows of completed programs, `SHADOW`-lines, `Monitor summary`-lines — are carried by the journal carrier (an instance-state role, resolved via the instance's `carrier declaration`); the live band keeps the active programs' rows. Legacy-form rows resolve per the carrier's declared schema.
 
 - Sufficiency (the R8 predicate): `sufficient` / `insufficient — <3 observations per GQM question`.
 - Disposition of a signal: candidate → the deferred-options registry (the item file by the 7-field schema on the live surface + a re-mint of the live index by `tools/registry-index.sh`; the matching reads the class block of the live index plus the out-of-class block — item files on firing/revision, the archive outside the matching scope) / a process finding → reconcile / accepted-for-tracking.
-- Recomputability (INV-M11): the ledger is append-only; on loss — recomputed from round-ledgers by the formulas.
+- Recomputability (INV-M11): the metric ledger is two-layer append-only — the live band appends, the journal carrier appends independently (each band append-only; INV-M11 holds per band); on loss — recomputed from round-ledgers by the formulas.
 
 ## Signal-firing canon
 

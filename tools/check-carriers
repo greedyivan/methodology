@@ -26,6 +26,7 @@ from pathlib import Path
 REFERENCED_ROLES = (
     "registry",
     "metrics-ledger",
+    "metrics-journal",
     "telemetry store",
     "task lists",
     "session memory",
