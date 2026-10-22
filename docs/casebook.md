@@ -1815,3 +1815,29 @@ archive (specify zone, twins-verify.py insertion-completeness + prose-claim
 scan).
 materialized into: the C4 cycle archive instrument (insertion-completeness,
 prose-claim scan); this entry is the class carrier.
+
+84. A behavioral obligation (an INV line, a property, an inventory row
+carrying a behavioral letter) without a red-painting leg is invisible to
+its own verification: the spec authors the obligations and the mechanical
+check-set in different passes, and the connection between them is
+legitimized by presence — the INV is mentioned in the CHK zone, the
+seeder covers INV↔CHK in both directions — not by detectability; the
+absence of a leg that runs red when the obligation is violated paints
+nothing by itself. The seeder catches the class only on its own seed
+classes and the audit instance-by-instance: one cycle accumulated four
+instances (a MAJOR seeder finding, a BLOCKER, two MINORs on properties
+without catching legs), every cure a per-instance fix-pass — the
+checklist canon carried no class-level treatment. The cure that closes
+the root: every behavioral obligation carries either a named mechanical
+leg that runs red on violation on the live carrier, or an explicit
+design-note demarcation stating what is not checked and why; a mention
+in the check zone counts as neither, and each audit round reconciles
+every obligation against one of the two forms — an obligation without
+both is a scope-completeness finding regardless of the INV↔CHK presence
+sweep.
+Case domain: the medteh-stage1-program p8-6a cycle — seeder FINDING-M1,
+audit r1 N1/N2, r2 N5; the M-bound RCA record and the per-instance
+fix-passes live in the cycle workspace (specify zone).
+materialized into: skills/specify-change/assets/specifier-charter.md,
+Rules, clause «Красящая нога поведенческого обязательства
+(scope-completeness)».
