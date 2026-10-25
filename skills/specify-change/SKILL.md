@@ -9,14 +9,14 @@ Generative skill: produces the spec from the charter. Terminology — [`../../re
 
 ## Role in the chain
 
-`scope-change → specify-change → audit-change → realize → verify-change → reconcile-change`
+`scope-change → specify-change → audit-change → realize-change → verify-change → reconcile-change`
 
 - **Entry:** charter (from `scope-change`).
 - **Output:** spec (5 strata + frame + registry + fitness map).
 
 ## Spec depth (two-tier)
 
-The spec depth is calibrated by `Process-mode: accumulate-then-verify` / `Two-tier verification` (glossary):
+The spec depth is calibrated by the process mode — `accumulate-then-verify (tool-authoritative changes)` or `describe-then-apply (heavy specify/audit) — reserved` (glossary):
 - **Tool-authoritative** (dead code, types→typecheck, behavior→tests): spec = **light/emergent** — intent + frame + triangle-key(s) + fitness tools; details surface in research edits (the Tier-1 continuous loop). NOT a line-level realization-design-set.
 - **Non-tool-authority** (design fork, contract change, high risk): spec = **full 5-strata** (contract: invariants/examples/registry) — research edits are insufficient, an upfront contract is needed (→ `audit-change` pre-realize).
 
@@ -24,7 +24,7 @@ The spec depth is calibrated by `Process-mode: accumulate-then-verify` / `Two-ti
 
 0. **Intent** — goal / outcome / success signal, scope in/out, contextual stops.
 1. **Contract + frame** — invariants / postconditions / preconditions + **frame** (MAY modify / MUST preserve); on seams and domain invariants, not on methods. **The stable core.**
-2. **Examples / properties** — G/W-T scenarios (each to a Rule of the contract), edge cases, PBT properties. **Behavior-adding/modifying: close the traceability triangle (glossary) — traceability-key(s) → test scenarios (executable examples) → doc surfaces. Behavior-preserving: the existing key tests stay green.** Behavior requirement lines of S1/S2 — EARS format (glossary: `EARS`): full 5-strata (non-tool-authority) — mandatory; light/emergent (tool-authoritative) — optional (at the executor's discretion). The declared check-set is itself checked: a sufficiency record (glossary) backs it, each declared check carries its discrimination inventory (element (6)), and the header carries the independence-share counter (glossary `independence share`) with authorization records by an independent authorizer.
+2. **Examples / properties** — G/W-T scenarios (each to a Rule of the contract), edge cases, PBT properties. **Behavior-adding/modifying: close the traceability triangle (glossary) — traceability-key(s) → test scenarios (executable examples) → doc surfaces. Behavior-preserving: the existing key tests stay green.** Behavior requirement lines of S1/S2 — EARS format (glossary: `EARS`): full 5-strata (non-tool-authority) — mandatory; light/emergent (tool-authoritative) — optional (at the executor's discretion). The declared check-set is itself checked: a sufficiency record (glossary) backs it, each declared check carries its discrimination inventory (element (6)), and the header carries the independence-share counter (glossary `independence share`) with authorization records by an independent authorizer. **Gate-caliber checks introduced by the spec** (blocking-level checks absent from the project's `green-baseline.sh`) — a signal in the registry routed to `reconcile-change`: the gate set changes.
 3. **Registry** — every fork / question / assumption / decision with a classification (pressure-sensitive: *reversibility × info-value*) + revision-condition.
 4. **Realization-design-set** — implementation-units at the level of capabilities/modules as a **set of admissible designs** (glossary: `SBCE`): ≥2 polarized designs, fixed comparison axes, a mandatory recommendation. The checklist — in the Specifier's mandate ([`assets/specifier-charter.md`](assets/specifier-charter.md), "Stratum-4 checklist"). NOT line-level (that is realize).
 

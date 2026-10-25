@@ -73,9 +73,9 @@ The canon defines exactly one parseable completion moment per dispatchable
 role (the contract form — §Output contracts; the role charters carry the
 role-local blocks):
 
-- **Profiler** (`scope-change`): the charter + `options_for_authoring`; the
-  post-decision authoring-record enters the charter verbatim (the
-  orchestrator's transcription); a re-profile = a fresh Profiler.
+- **Profiler** (`scope-change`): the charter — its `gate_decision` records a
+  post-gate decision when the launch runs on one; a re-profile = a fresh
+  Profiler.
 - **Specifier** (`specify-change`): the spec at FINAL (the exit self-check).
   Work continuing after a checkpoint resolution or a frontier answer
   continues in the same Specifier launch (a halt is a wait); a post-FINAL
@@ -110,7 +110,7 @@ role-local blocks):
 - **Dispatchable spikes** (the R2 mandatory spike, the formation spike, the
   alternatives spike): completion = the spike's named product artifact exists
   in the cycle zone and parses into the mandate's declared contract form (the
-  claim-list canonical line `CL-<n> | statement | anchor | confidence`; the
+  claim-list canonical line `CL-<n> | claim | anchor | confidence`; the
   formation brief), integrated by artifacts, not shared context; a spike
   return without its named product is incomplete (the identity branch). The
   R4 spike-before-edit is NOT a dispatch — the realizer executes it themself

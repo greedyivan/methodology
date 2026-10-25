@@ -9,7 +9,7 @@ The execution stage of a change. Terminology — [`../../reference/glossary.md`]
 
 ## Role in the chain
 
-`scope-change → specify-change → audit-change → realize → verify-change → reconcile-change`
+`scope-change → specify-change → audit-change → realize-change → verify-change → reconcile-change`
 
 - **Entry:** the spec is finalized (checkpoints resolved) + an audit verdict of `clean` (non-tool-authority), or a light-frame spec (tool-authoritative).
 - **Output:** the executed S4 units + the cycle's impl-ledger; **Tier-1 green, confirmed by the orchestrator** (executor ≠ authority).

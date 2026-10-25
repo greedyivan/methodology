@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# check-calibration — the calibration step of the scope-change pre-condition:
+# has the project's calibration been completed (init-change's adoption flag).
+# The caller runs the script and reads the status only; the flag's presence
+# is the whole answer.
+# Usage: check-calibration <operational-profile-dir>
+# Output: STATUS=PRESENT | STATUS=ABSENT:<flag-path>
+# Exit:   0 adoption flag present (calibration completed);
+#         2 adoption flag absent (init-change first);
+#         1 usage error.
+set -euo pipefail
+profile="${1:?usage: check-calibration <operational-profile-dir>}"
+flag="$profile/calibration.flag"
+if [ -f "$flag" ]; then
+  echo "STATUS=PRESENT"
+  exit 0
+fi
+echo "STATUS=ABSENT:$flag"
+exit 2
