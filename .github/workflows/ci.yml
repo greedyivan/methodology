@@ -6,18 +6,33 @@ on:
   pull_request:
     branches: [main]
 
+# Every leg answers the operator's why-canon — per check: what defect class it
+# catches / what it checks (carrier + engagement) / what failure mode stays
+# unclosed without it. The full records live in the change spec's CI-leg
+# justification table. Every leg runs locally verbatim (R-9).
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: shell syntax
-        run: bash -n tools/run-in-docker.sh tools/registry-index.sh
+      # WHY: shell syntax defects must surface at push, not at invocation
+      # (a chain step invoking a broken tool mid-cycle is a late, costly
+      # discovery). Checks: the full shell inventory parses under bash.
+      # Skipped: a broken tool reds only when first used.
+      - name: shell syntax (full shell inventory)
+        run: bash -n tools/run-in-docker.sh tools/registry-index.sh tools/baseline-tree.sh tools/anchor-verify tools/check-calibration
 
-      - name: python compile
-        run: python3 -m py_compile tools/validate_events.py tools/validate_sensor.py tools/collect_xes.py tools/dprime_measure.py
+      # WHY: same defect class for python tools, compile-time. Checks: the
+      # full python inventory compiles. Skipped: a broken tool reds at first
+      # use (check-carriers would break the instance selfcheck mid-cycle).
+      - name: python compile (full python inventory)
+        run: python3 -m py_compile tools/validate_events.py tools/validate_sensor.py tools/collect_xes.py tools/dprime_measure.py tools/dsm-partition.py tools/check-carriers
 
+      # WHY: validator anti-vacuity — a validator degraded into accepting
+      # anything is a silently lost gate. Checks: accept-path on valid
+      # fixtures; the negative fixtures prove the validators still red.
+      # Skipped: invalid carriers pass into the store unnoticed.
       - name: validators over ci-fixtures (positive + negative)
         run: |
           python3 tools/validate_sensor.py tools/ci-fixtures/sensor.txt
@@ -29,6 +44,11 @@ jobs:
             echo "FAIL: events validator accepted a bad fixture"; exit 1
           fi
 
+      # WHY: waiver-gate anti-vacuity — each negative fixture is one red
+      # class (expiry, arity, escalation vocabulary, ...); the battery is the
+      # gate's executable discrimination inventory. Checks: 3 green waivers
+      # accepted, 19 red classes refused. Skipped: a date-parse or schema
+      # regression flips whole red classes to green silently.
       - name: waiver scan over ci-fixtures (positive + negative)
         run: |
           python3 tools/check-waivers tools/ci-fixtures/waiver-positive.md --today 2026-10-02
@@ -59,13 +79,144 @@ jobs:
             fi
           done
 
+      # WHY: registry-index.sh is the chain's registry gate (check/expiry/scope
+      # at every launch start) — until this battery it had syntax-only CI
+      # coverage; a row-extraction or classification regression would surface
+      # only mid-launch against the live registry. Checks: the mint/check/
+      # expiry/scope semantics on a deterministic fixture registry, plus the
+      # anti-vacuity negatives (stale index reds; expired row reds). Skipped:
+      # an extraction drift (the RU awk is load-bearing) reds or mis-classifies
+      # the live gates mid-launch.
+      - name: registry interface over the mini-registry fixture (positive + negative)
+        run: |
+          set -euo pipefail
+          tools/registry-index.sh check --target tools/ci-fixtures/registry-mini | grep -qF 'freshness GREEN: derived == committed (3 rows)'
+          tools/registry-index.sh mint --target tools/ci-fixtures/registry-mini > /dev/null
+          git diff --exit-code -- tools/ci-fixtures/registry-mini/index.md
+          out=$(tools/registry-index.sh expiry --target tools/ci-fixtures/registry-mini)
+          grep -qF '(none)' <<<"$out"
+          out=$(tools/registry-index.sh scope --class audit --target tools/ci-fixtures/registry-mini)
+          grep -qF '=== item: mini-audit-sample' <<<"$out"
+          grep -qF '=== item: mini-out-class-sample' <<<"$out"
+          grep -qF 'scope: 2 item(s) in the matching scope; 0 excluded' <<<"$out"
+          grep -qF 'live: 3 unique ids' <<<"$out"
+          if grep -qF '=== item: mini-profiling-sample' <<<"$out"; then
+            echo "FAIL: profiling item leaked into the audit scope"; exit 1
+          fi
+          t=$(mktemp -d); cp -r tools/ci-fixtures/registry-mini/. "$t/"
+          sed -i 's/2999-01-01/2998-01-01/' "$t/index.md"
+          if tools/registry-index.sh check --target "$t" > /dev/null 2>&1; then
+            echo "FAIL: stale index accepted by the freshness gate"; exit 1
+          fi
+          rm -rf "$t"
+          if tools/registry-index.sh expiry --target tools/ci-fixtures/registry-mini/expired > /dev/null 2>&1; then
+            echo "FAIL: expired row not classified by the expiry guard"; exit 1
+          fi
+
+      # WHY: dsm-partition.py is the DSM partitioning step (the decomposition
+      # verdict's mechanical core) — a partitioning regression (a missed cycle,
+      # a dropped edge) splits work units that must be solved jointly, silently.
+      # Checks: a known partition (coupled pair + sequential part) and the
+      # refusal contract (unknown/duplicate part, malformed edge → exit 2).
+      # Skipped: a wrong block structure becomes a wrong work plan.
+      - name: dsm-partition over fixtures (positive + negative)
+        run: |
+          set -euo pipefail
+          out=$(python3 tools/dsm-partition.py --parts tools/ci-fixtures/dsm-parts.txt --edges tools/ci-fixtures/dsm-edges.txt)
+          grep -qF 'BLOCK 1: alpha, beta' <<<"$out"
+          grep -qF 'region: COUPLED' <<<"$out"
+          grep -qF 'BLOCK 2: gamma' <<<"$out"
+          grep -qF 'region: ONE-AT-A-TIME' <<<"$out"
+          grep -qF 'partitioned: 2 block(s) in determination order; 1 coupled' <<<"$out"
+          if python3 tools/dsm-partition.py --parts tools/ci-fixtures/dsm-parts.txt --edges tools/ci-fixtures/dsm-edges-unknown.txt > /dev/null 2>&1; then
+            echo "FAIL: unknown part accepted"; exit 1
+          fi
+          if python3 tools/dsm-partition.py --parts tools/ci-fixtures/dsm-parts-dup.txt --edges tools/ci-fixtures/dsm-edges.txt > /dev/null 2>&1; then
+            echo "FAIL: duplicate part accepted"; exit 1
+          fi
+          if python3 tools/dsm-partition.py --parts tools/ci-fixtures/dsm-parts.txt --edges tools/ci-fixtures/dsm-edges-malformed.txt > /dev/null 2>&1; then
+            echo "FAIL: malformed edge accepted"; exit 1
+          fi
+
+      # WHY: anchor-verify is the machine leg of the charter's anchor
+      # verification (the corpus's path:line citation discipline). Checks: a
+      # resolved fixture charter → exit 0; out-of-range + missing-file anchors
+      # → exit 1. Skipped: a range-semantics regression passes defective
+      # charters (an off-by-one anchor resolves as valid).
+      - name: anchor-verify over fixture charters (positive + negative)
+        run: |
+          set -euo pipefail
+          tools/anchor-verify tools/ci-fixtures/anchors-charter.md . | grep -qF 'anchors: 2; resolved 2; unresolved 0'
+          if tools/anchor-verify tools/ci-fixtures/anchors-charter-neg.md . > /dev/null 2>&1; then
+            echo "FAIL: out-of-range/missing anchors resolved"; exit 1
+          fi
+
+      # WHY: baseline-tree.sh resolves the change's baseline per the launch
+      # directive — a mis-resolution lands and verifies a change against the
+      # wrong tree. Checks: the clean-checkout default, the directive forms
+      # (worktree/branch:/commit:/as-is), the dirty+SETUP case, and the
+      # unknown-directive refusal on a deterministic scratch repo.
+      # Skipped: a directive-parsing regression resolves launches wrongly.
+      - name: baseline-tree over the checkout and a scratch repo (positive + negative)
+        run: |
+          set -euo pipefail
+          [ "$(tools/baseline-tree.sh .)" = "BASELINE=HEAD" ]
+          d=$(mktemp -d)
+          git -C "$d" init -q -b main
+          git -C "$d" -c user.email=ci@fixture.invalid -c user.name=fixture -c commit.gpgsign=false commit --allow-empty -q -m ci-fixture
+          [ "$(tools/baseline-tree.sh "$d")" = "BASELINE=HEAD" ]
+          [ "$(tools/baseline-tree.sh "$d" branch:main)" = "BASELINE=BRANCH:main" ]
+          tools/baseline-tree.sh "$d" worktree | grep -qFx 'BASELINE=WORKTREE'
+          [ "$(tools/baseline-tree.sh "$d" as-is)" = "BASELINE=ASIS:$d" ]
+          sha=$(git -C "$d" rev-parse HEAD)
+          [ "$(tools/baseline-tree.sh "$d" "commit:$sha")" = "BASELINE=COMMIT:$sha" ]
+          touch "$d/untracked.txt"
+          tools/baseline-tree.sh "$d" | grep -qFx 'BASELINE=DIRTY'
+          tools/baseline-tree.sh "$d" | grep -qF 'SETUP=git worktree add'
+          if tools/baseline-tree.sh "$d" nonsense 2> /dev/null; then
+            echo "FAIL: unknown directive accepted"; exit 1
+          fi
+          rm -rf "$d"
+
+      # WHY: check-calibration is init-change's adoption gate (the calibration
+      # pre-condition of the scope-change chain). Checks: the flag-presence
+      # contract in both directions (PRESENT exit 0 / ABSENT exit 2) and the
+      # usage refusal. Skipped: a status/exit-contract regression lets the
+      # chain skip or loop the calibration step.
+      - name: check-calibration over fixture profiles (positive + negative)
+        run: |
+          set -euo pipefail
+          p=$(mktemp -d); touch "$p/calibration.flag"
+          [ "$(tools/check-calibration "$p")" = "STATUS=PRESENT" ]
+          q=$(mktemp -d)
+          if tools/check-calibration "$q" 2> /dev/null; then
+            echo "FAIL: absent flag accepted"; exit 1
+          fi
+          if tools/check-calibration 2> /dev/null; then
+            echo "FAIL: usage error not refused"; exit 1
+          fi
+          rm -rf "$p" "$q"
+
+      # WHY: the purity gate (ruling 2's mechanism) — instance-private context
+      # (RU registry vocabulary, derivation-history markers) must not leak into
+      # LLM-consumed directive surfaces unpinned; allowlist := the gate's own
+      # run output. --exclude-dir=registry-mini: the fixture quotes the live RU
+      # registry schema (the load-bearing parse contract) — a quoted-carrier
+      # fixture, not a directive surface (recorded in the spec's registry).
+      # Skipped: unrecorded markers enter directive surfaces, or recorded
+      # lines vanish, silently.
       - name: purity pin (private markers vs allowlist)
         env:
           LC_ALL: C.UTF-8
         run: |
           MARKERS="$(cat tools/ci-fixtures/purity-markers.txt)"
-          grep -rniP "$MARKERS" . --exclude-dir=.git --exclude=purity-allowlist.txt --exclude=purity-markers.txt --exclude=casebook.md | sed -E 's#^\./([^:]+):[0-9]+:#\1:#' | sort | diff tools/ci-fixtures/purity-allowlist.txt -
+          grep -rniP "$MARKERS" . --exclude-dir=.git --exclude-dir=registry-mini --exclude=purity-allowlist.txt --exclude=purity-markers.txt --exclude=casebook.md | sed -E 's#^\./([^:]+):[0-9]+:#\1:#' | sort | diff tools/ci-fixtures/purity-allowlist.txt -
 
+      # WHY: agents consume relative links at use time — a broken link breaks
+      # the chain mid-dispatch (the mandate/pointer pattern is the corpus's
+      # navigation mechanism). Checks: every markdown link target in every
+      # tracked .md resolves. Skipped: a moved/renamed surface orphans its
+      # pointers silently.
       - name: md links resolve
         run: |
           python3 - <<'EOF'
@@ -83,3 +234,19 @@ jobs:
           print('\n'.join(f'BROKEN {b}' for b in bad) or 'md links: 0 broken')
           sys.exit(1 if bad else 0)
           EOF
+
+      # WHY: closes the born defect class of this rework (the branch landed
+      # tools unlisted — the CI-coverage join drifted). Checks: every tracked
+      # tool under tools/ (minus ci-fixtures) is named in a run line of this
+      # workflow. A future tool that legitimately carries no CI leg must land
+      # a recorded bound AND a named exemption case here — an explicit edit,
+      # never silent. Skipped: a tool lands with no leg and no bound; its
+      # defect classes surface only at use.
+      - name: tool inventory sync (every tool carries a CI leg)
+        run: |
+          set -euo pipefail
+          rc=0
+          for t in $(git ls-files 'tools/' | grep -v '^tools/ci-fixtures/'); do
+            grep -qF "$t" <(sed 's/#.*//' .github/workflows/ci.yml) || { echo "UNCOVERED (no CI leg): $t"; rc=1; }
+          done
+          exit $rc

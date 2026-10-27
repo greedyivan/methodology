@@ -36,11 +36,13 @@ history, it does not prescribe.
   dispatch/completion rule), the LLM-consumed authoring invariants (No. 6 —
   the class inventory + the resync rule), self-change legitimacy invariants,
   the integration canon of the shared corpus, the Monitor procedure.
-- `tools/` — eight maintenance scripts (a container runner, an XES converter,
+- `tools/` — twelve maintenance scripts (a container runner, an XES converter,
   events/sensor validators, a d′ meter, a carrier-declaration checker, a
-  waiver-ledger scanner, a deferred-options index minter).
+  waiver-ledger scanner, a deferred-options index minter, an anchor verifier, a
+  baseline-tree resolver, a calibration adoption checker, a DSM partitioner).
 - `docs/` — the casebook (`docs/casebook.md`: case-derived norms, an
-  instructive asset) + descriptive prose (this file).
+  instructive asset) + descriptive prose (this file); the scope-change rework
+  rationale — [`docs/scope-change/explanation.md`](scope-change/explanation.md).
 
 The corpus version is the repo's commit hash. Consumption is a direct
 clone: the adopting operator clones the repository and connects it to a
@@ -105,7 +107,7 @@ do not age silently, findings get an addressee.
 
 ## The tools/ scripts
 
-Eight maintenance scripts; paths — from the repo root.
+Twelve maintenance scripts; paths — from the repo root.
 
 - `tools/run-in-docker.sh` — the container runner: any project tool executes in
   Docker only. A single point of foreign-code execution: the environment is
@@ -123,6 +125,18 @@ Eight maintenance scripts; paths — from the repo root.
   roles and bases (glossary: `carrier declaration`).
 - `tools/check-waivers` — a waiver-ledger scanner: the W/ESC record form
   against its closed dictionaries (glossary: `waiver`, `waiver-ledger`).
+- `tools/anchor-verify` — the machine leg of anchor verification: resolves
+  backticked `path:line` anchors against the product tree and reports each as
+  resolved or unresolved with the reason.
+- `tools/baseline-tree.sh` — resolves the change's baseline tree per the launch
+  directive (or the chain default) and emits the resolution; does not mutate
+  the repository.
+- `tools/check-calibration` — the calibration step of the scope-change
+  pre-condition: reads a project's calibration adoption flag; the flag's
+  presence is the whole answer.
+- `tools/dsm-partition.py` — partitions a decomposition into work units by
+  design-structure-matrix coupling: block/coupled/one-at-a-time verdicts per
+  surface class.
 - `tools/registry-index.sh` — the deferred-options index minter and freshness
   gate: mints `index.md` from the live item files (a row = id | title |
   expiry | trigger-predicate) and checks that the committed index matches a
