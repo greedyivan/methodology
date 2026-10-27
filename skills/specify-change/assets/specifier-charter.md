@@ -48,7 +48,7 @@ Term — glossary: `SBCE`. Stratum-4 must:
 2. **Fixed comparison axes** — declared before the comparison, the same for all poles.
 3. **A mandatory recommendation or hybrid** — "not a menu, but a strong reading"; alternatives are not listed without a position.
 4. **The anti-menu rule** and **a degeneration counterexample** — "N variations of the first" (design fixation) is named as a failure mode of the mechanics.
-5. **Feeding SBCE from the claim-list (R3)** — a shortfall of ≥2 polarized designs from reading → the frontier question "a spike of alternatives?" with a recommendation, not speculative generation; the "alternatives" facet of the claim-list (the canonical line `CL-<n> | statement | anchor | confidence`) — an input of Stratum-4. (Sobek–Ward–Liker 1999: set-based — the design commitment is deferred until a set has accumulated.)
+5. **Feeding SBCE from the claim-list (R3)** — a shortfall of ≥2 polarized designs from reading → the frontier question "a spike of alternatives?" with a recommendation, not speculative generation; the "alternatives" facet of the claim-list (the canonical line `CL-<n> | claim | anchor | confidence`) — an input of Stratum-4. (Sobek–Ward–Liker 1999: set-based — the design commitment is deferred until a set has accumulated.)
 
 ## Registry lifecycle in realize
 

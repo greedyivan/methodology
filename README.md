@@ -59,9 +59,9 @@ exposed to the agent) for the project you adopt the methodology in.
   proof obligation), `integration-canon.md` (sync discipline/merge model/
   integrity checks of the shared corpus), `monitor.md` (M1–M8 aggregation,
   signals against the norms).
-- `tools/` — maintenance scripts ×7: a container runner, an XES converter,
+- `tools/` — maintenance scripts ×8: a container runner, an XES converter,
   events/sensor validators, a d′ meter, a carrier-declaration checker, a
-  waiver-ledger scanner.
+  waiver-ledger scanner, a deferred-options index minter.
 - `docs/` — the casebook (`docs/casebook.md`: case-derived norms — an
   instructive asset of the No. 6 class) + descriptive prose
   ([`docs/methodology.md`](docs/methodology.md) — a corpus overview).

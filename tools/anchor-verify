@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# anchor-verify — the machine leg of the charter's anchor verification: every
+# backticked `path:line` anchor in the charter draft is resolved against the
+# product tree (the file exists; the line is in range) and the target line is
+# emitted as the snippet. The script reports; it does not judge — the
+# snippet-vs-claim judgment is the independent reader's (the other leg).
+# Usage: anchor-verify <charter-file> <product-root>
+# Output: per-anchor sections (ANCHOR / resolve / snippet) + the summary line
+#         "anchors: N; resolved M; unresolved K".
+# Exit:   0 all anchors resolved; 1 unresolved anchors present; 2 usage.
+set -uo pipefail
+
+charter="${1:-}"
+root="${2:-}"
+[ -n "$charter" ] && [ -n "$root" ] || { echo "usage: anchor-verify <charter-file> <product-root>" >&2; exit 2; }
+[ -f "$charter" ] || { echo "anchor-verify: no charter file: $charter" >&2; exit 2; }
+[ -d "$root" ] || { echo "anchor-verify: no product root: $root" >&2; exit 2; }
+
+# the anchor pattern: backticked `path:line` — the charter's anchor typing
+anchors=$(grep -oE '`[^`]+:[0-9]+`' "$charter" | tr -d '`' | sort -u)
+if [ -z "$anchors" ]; then
+  echo "anchors: 0; resolved 0; unresolved 0"
+  echo "anchor-verify: no backticked \`path:line\` anchors found in the charter"
+  exit 0
+fi
+
+total=0; resolved=0; unresolved=0
+while IFS= read -r a; do
+  [ -n "$a" ] || continue
+  total=$((total + 1))
+  path="${a%:*}"; line="${a##*:}"
+  file="$root/$path"
+  if [ ! -f "$file" ]; then
+    echo "ANCHOR: $a"
+    echo "  resolve: FAIL (no such file: $path)"
+    unresolved=$((unresolved + 1))
+    continue
+  fi
+  lines=$(wc -l < "$file")
+  if [ "$line" -lt 1 ] || [ "$line" -gt "$lines" ]; then
+    echo "ANCHOR: $a"
+    echo "  resolve: FAIL (line out of range; file has $lines lines)"
+    unresolved=$((unresolved + 1))
+    continue
+  fi
+  resolved=$((resolved + 1))
+  echo "ANCHOR: $a"
+  echo "  resolve: OK (file lines: $lines)"
+  echo "  snippet: $(sed -n "${line}p" "$file" | sed 's/^[[:space:]]*//')"
+done <<< "$anchors"
+
+echo "anchors: $total; resolved $resolved; unresolved $unresolved"
+[ "$unresolved" -eq 0 ] && exit 0 || exit 1
