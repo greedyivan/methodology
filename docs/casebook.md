@@ -1841,3 +1841,82 @@ fix-passes live in the cycle workspace (specify zone).
 materialized into: skills/specify-change/assets/specifier-charter.md,
 Rules, clause «Красящая нога поведенческого обязательства
 (scope-completeness)».
+
+85. 85. A status flip executed outside the specifier's closing procedure is
+still a text-editing batch: the FINAL flip removed three header lines and
+with them a twins-block member, and the block kept its stale count — the
+second instance of the class in one cycle, both cures fix-now re-counts.
+The root: no role owned the re-count after ANY post-FINAL edit, so the
+flip edited twin-covered literals without a re-run. The cure: a
+post-FINAL edit by any role is a closing batch in its own right — touched
+twins lines re-run born-by-run, second declared count-carriers flip in the
+same run, and the flip record notes the re-count.
+Case domain: the medteh-stage1-product-card-accounting cycle — audit
+r1-N3 → r2-N1 (M-bound, RCA in the round-ledger r2); the re-count legs
+live in the cycle workspace (specifier-fixpass-r2.md, findings-r3 N1).
+materialized into: skills/specify-change/assets/specifier-charter.md,
+Rules, clause «Post-FINAL edits — own re-count».
+
+86. 86. A design resting on platform behavior claims (the stock composer's
+legs, the moderation flow's application semantics) gains its cheapest
+falsification when a backend-only live probe of the stock path runs BEFORE
+the dependent work streams start — with the claims independently
+reproduced from source reading first, halt-conditions pinned in advance,
+and the probe's state-after tables as the verdict surface. Here the probe
+(replace updates the same value-row in place; clear dismisses the link,
+the catalog attribute survives; halt-conditions did not fire) ran before
+any panel patching — a refutation would have rerouted the design at the
+cost of zero panel work, and the confirmation turned the source-reading
+claims into state-backed facts the panels then coded against.
+Case domain: the medteh-stage1-product-card-accounting cycle — SC-13/14/
+V-2, halt-conditions R-35/R-02, source facts F2/F4/F6 (scalar-legs
+reverification witness); the probe tables live in the cycle witnesses
+(state-after-vendor.md, state-after-admin.md).
+materialized into: this entry is the class carrier.
+
+87. 87. A write path with two doors (a dedicated API route and the stock UI
+flow through moderation) is verified honestly when each door carries its
+own state-after table — row-level state after every step (pending →
+confirm → link; replace; clear; re-read), the same invariants checked on
+both sides, with screenshots as independent witnesses for UI legs. The
+form caught what status codes alone would not: the replace leg mutating
+the value-row in place (identity of the row across the rename), the clear
+leg dismissing the link while the attribute survives — and it closed a
+prior registry option (batch value_ids noop) by absorption: the
+state-after legs became the option's execution.
+Case domain: the medteh-stage1-product-card-accounting cycle — V-1a/V-2
+(PASSED), author obligation cp1-F5 (screenshots mandatory); the tables
+live in the cycle witnesses (state-after-admin.md, state-after-vendor.md,
+shots/).
+materialized into: this entry is the class carrier.
+
+88. 88. A proof-of-concept worktree answers one question — is the mechanism
+realizable — and earns no design authority: when the author distrusts the
+POC-derived design, the claims re-verify at source level against the
+pinned platform version (here: the scalar batch legs mutate in place and
+dismiss cleanly; the alleged remove defect does not exist; the only live
+residue is the value_ids-clear no-op), and the design re-derives from the
+conventions — the POC demoted to a witness of realizability. The
+re-verification dissolved a module-sized design layer (candidate table,
+vendor route, admin queue, composite workflow) before a line was written.
+Case domain: the medteh-stage1-product-card-accounting cycle — author
+steering «POC не используем» (cp1), re-spec ruling §РЕ-СПЕК, witness
+scalar-legs-reverification.md.
+materialized into: this entry is the class carrier.
+
+89. 89. Surface inventory in scope-completeness auditing stops short of the
+app-config seams: a feature module does not exist in a Medusa-type app
+until registered in the application config (modules:[]), and a spec can
+declare the module, its table, its migration and its checks while the one
+seam that loads all of them is absent from the frame — the implementation
+then either violates the frame to register itself or silently no-ops. The
+inventory class to enumerate: config files that WIRE declared carriers
+(registration seams, path hooks, build graph entries), each declared
+module or panel surface checked against its seam the way code carriers are
+checked against testMatch. Second consecutive instance of the class
+across programs; both dissolved by re-spec (registration inverted into a
+MUST with a born leg).
+Case domain: the medteh-stage1-product-card-accounting cycle r1-N1
+(BLOCKER, medusa-config seam) + the ktru-1 precedent r1-N5 (2026-10-25);
+the item к15 spike-skill-promotion carries the firing history.
+materialized into: this entry is the class carrier.
